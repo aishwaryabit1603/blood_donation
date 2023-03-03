@@ -15,7 +15,14 @@
             background: #;
         }
         .footer_right{
-            
+            float: right;
+        }
+        .footer-right p{
+            display: inline-block;
+            vertical-align: top;
+            margin: 15px 42px 0 0;
+            color: #ffffff;
+            }   
         }
     </style>
 </head>

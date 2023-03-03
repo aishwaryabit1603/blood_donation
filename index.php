@@ -9,16 +9,16 @@
 </head>
 <body>
     <?php
-        //require ('header.php');
+       // require ('header.php');
         require ('footer.php'); 
     ?>
-    <div class = "vertical_menu">
-        <a href = "#" class = "active">HOME</a>
-        <a href = "admin.php">ADMIN LOGIN</a>
-        <a href = "#">BE A DONOR</a>
-        <a href = "#">FIND A DONOR</a>
-        <a href = "#">LOGIN</a>
-    </div>
+    <ul class = "menu">
+        <li><a href = "#" class = "active">HOME</a></li>
+        <li><a href = "admin.php">ADMIN LOGIN</a><li>
+        <li><a href = "#">BE A DONOR</a><li>
+        <li><a href = "#">FIND A DONOR</a><li>
+        <li><a href = "#">LOGIN</a><li>
+    </ul>
 
 </body>
 </html>
