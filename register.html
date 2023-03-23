@@ -1,6 +1,40 @@
-<html>
-    <head></head>
-    <body>
-        <p>hello</p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+    <LINK REL = "stylesheet" href = "css/register_form.css"
+</head>
+<body>
+    <div class="form-container">
+        <form action = "" method = "post">
+            <h3>REGISTER HERE</h3>
+            <input type = "text" name = "name" required placeholder = "ENTER YOUR NAME">
+            <input type = "text" name = "age" required placeholder = "ENTER YOUR AGE">
+            <input type = "date" name = "dob" required placeholder = "ENTER YOUR DATE-OF-BIRTH">
+            <select name = "gender" required>
+                <option value = "male">Male</option>
+                <option value = "female">Female</option>
+            </select>
+            <input type = "email" name = "email" required placeholder = "ENTER YOUR NAME">
+            <input type = "number" name = "contact" min = "10" max = "10" required placeholder = "ENTER YOUR NAME">
+            <select name = "blood_type" required>
+                    <option value = "A+">A RhD positive (A+)</option>
+                    <option value = "A-">A RhD negative (A-)</option>
+                    <option value = "B+">B RhD positive (B+)</option>
+                    <option value = "B-">B RhD negative (B-)</option>
+                    <option value = "O+">O RhD positive (O+)</option>
+                    <option value = "O-">O RhD negative (O-)</option>
+                    <option value = "AB+">AB RhD positive (AB+)</option>
+                    <option value = "AB-">AB RhD negative (AB-)</option>
+            </select>
+            <input type = "password" name = "password" required placeholder = "ENTER YOUR NAME">
+            <input type = "password" name = "confirm_password" required placeholder = "ENTER YOUR NAME">
+            <input type = "button" name = "submit">
+        </form>
+        <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
+    </div>
+</body>
 </html>
