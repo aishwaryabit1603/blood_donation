@@ -12,13 +12,15 @@
        // require ('header.php');
         require ('footer.php'); 
     ?>
+    <nav class = "menu">
     <ul class = "menu">
         <li><a href = "#" class = "active">HOME</a></li>
         <li><a href = "admin.php">ADMIN LOGIN</a><li>
-        <li><a href = "#">BE A DONOR</a><li>
+        <li><a href = "register.php">BE A DONOR</a><li>
         <li><a href = "#">FIND A DONOR</a><li>
         <li><a href = "#">LOGIN</a><li>
     </ul>
+</nav>
 
 </body>
 </html>
