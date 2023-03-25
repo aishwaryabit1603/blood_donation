@@ -48,7 +48,7 @@
             </select><br>
 
             <label for="inputState">State</label>
-            <select class="form-control" id="inputState">
+            <select id="inputState" onchange="city(this.value)" required>
                 <option value="SelectState">Select State</option>
                 <option value="Andra Pradesh">Andra Pradesh</option>
                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -92,7 +92,7 @@
             <label for="inputDistrict">District</label>
             <select class="form-control" id="inputDistrict">
                 <option value="">-- select one -- </option>
-            </select>
+            </select><br>
 
             <label>SET PASSWORD : </label>
             <input type = "password" name = "password" required placeholder = "SET PASSWORD"><br>
