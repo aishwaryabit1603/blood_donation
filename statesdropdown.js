@@ -37,29 +37,27 @@
   Delhi: ["Central Delhi","East Delhi","New Delhi","North Delhi","North East Delhi","North West Delhi","Shahdara","South Delhi","South East Delhi","South West Delhi","West Delhi"],
   Lakshadweep: ["Lakshadweep"],
   Puducherry: ["Karaikal","Mahe","Puducherry","Yanam"]
-};
+}
 
+// todo : loader functions
 windows.onload = function()
 {
   // get all input from html elements from the dom
-  const stateselection = document.querySelector("#state");
-  const districtselection = document.querySelector("#district");
-}
+  var stateselection = document.getElementById("#state");
+  var districtselection = document.getElementById("#district");
+  
+  //state selection
+  for(var state in StateDistrictinfo) {
+    stateselection.options[stateselection.options.length] = new Option(state,state);
+  }
 
-for(let state in StateDistrictinfo) {
-  stateselection.options[stateselection.options.length] = new Option(state,state);
-}
+  // country change event listener
+  stateselection.onchange = function() {
 
-// country change event listener
-stateselection.onchange = (e) => {
-  districtselection.disabled = false;
-  // clear all options from district selection
-  districtselection.length = 1;
-
-  for(let district in StateDistrictinfo[e.target.value]){
-    districtselection.options[districtselection.options.length] = new option(state,state);
+    districtselection.length = 1;
+    for(var district in StateDistrictinfo[this.value]){
+      districtselection.options[districtselection.options.length] = new option(district,district);
+    }
   }
 }
-
-
 
