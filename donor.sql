@@ -14,10 +14,10 @@ CREATE TABLE donors(
     mobile_no varchar(20) NOT NULL UNIQUE,
     email varchar(20) NOT NULL,
     state varchar(20) NOT NULL,
-    district varchar(20) NOT NULL,
+    district varchar(20) NOT NULL
 )  ENGINE = InnoDB DEFAULT CHARSET = latin1 COLLATE = latin1_swedish_ci;
 
-INSERT INTO donors(id)(id,"user_name","password","name",dob,"sex","bloodgroup",mobile_no,"email","state","district")
+INSERT INTO donors (id,"user_name","password","name",dob,"sex","bloodgroup",mobile_no,"email","state","district")
 values
 (1, 'Ramsingla', 'p@ssw0rd', 'Ram Singla', '1980-01-01', 'M', 'A pos', '123-456-7890', 'ram@gmail.com', 'Chandigarh', 'Chandigarh'),
 (2, 'Shamsingla', 'p@ssw0rd', 'Sham Singla', '1982-02-14', 'F', 'O neg', '123-456-7891', 'sham@gmail.com', 'UttarPradesh', 'Aligarh'),
@@ -43,5 +43,6 @@ values
 --indexes for table donors
 
 ALTER TABLE donors
-    MODIFY id int(10) NOT NULL AUTO_INCREMENT 
+    MODIFY id int(10) NOT NULL AUTO_INCREMENT,INCREMENT, AUTO_INCR;
 COMMIT;
+
