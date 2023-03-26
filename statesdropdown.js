@@ -43,20 +43,19 @@
 windows.onload = function()
 {
   // get all input from html elements from the dom
-  var stateselection = document.getElementById("#state");
-  var districtselection = document.getElementById("#district");
+  var stateselection = document.getElementById("state");
+  var districtselection = document.getElementById("district");
   
   //state selection
-  for(var state in StateDistrictinfo) {
-    stateselection.options[stateselection.options.length] = new Option(state,state);
+  for(var x in StateDistrictinfo) {
+    stateselection.options[stateselection.options.length] = new Option(StateDistrictinfo[x].item,x);
   }
 
   // country change event listener
   stateselection.onchange = function() {
-
     districtselection.length = 1;
-    for(var district in StateDistrictinfo[this.value]){
-      districtselection.options[districtselection.options.length] = new option(district,district);
+    for(var y in StateDistrictinfo[this.value].districtselection){
+      districtselection.options[districtselection.options.length] = new option(y,y);
     }
   }
 }

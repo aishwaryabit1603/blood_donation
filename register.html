@@ -7,6 +7,36 @@
     require "db_connection.php";
 
     //checking if all post fields are SET
+    if(isset($_POST['name']) && isset($_POST['sex']) && isset($_POST['dob']) &&isset($_POST['bloodgroup']) &&isset($_POST['mobile_no']) &&isset($_POST['email']) &&isset($_POST['state']) && isset($_POST['district']) && isset($_POST['user_name']) &&isset($_POST['password']))
+    {
+        if (!empty($_POST['name']) && !empty($_POST['sex']) && !empty($_POST['dob']) && !empty($_POST['bloodgroup']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) && !empty($_POST['state']) && !empty($_POST['district']) && !empty($_POST['user_name']) && !empty($_POST['password'])) 
+        {
+            // Store POST variables in local variables
+            $user = $_POST['user_name'];
+            $pw = md5($_POST['password']);
+            $f_name = $_POST['name'];
+            $birthday = $_POST['dob'];
+            $sex = $_POST['sex'];
+            $blood = $_POST['bloodgroup'];
+            $mobile = $_POST['mobile_no'];
+            $email = $_POST['email'];
+            $state = $_POST['state'];
+            $district = $_POST['district']
+        }
+    }
+
+    //checking if session is active or NOT
+    if (isset($_SESSION['sess_user_id']) && !empty($_SESSION['sess_user_id'])) 
+    {
+        // If a session is active
+        $sess = $_SESSION['sess_user_id'];
+        $SQL = "UPDATE donors SET user_name='" .$user . "',password='" . $pw . "',name='" . $f_name . "',dob='" . $birthday . "',sex='" . $sex . "',bloodgroup='" . $blood . "',mobile_no='" . $mobile . "',email='" . $email . "',state='" . $state . "',district='" . $district . "' WHERE id='" . $sess . "'";
+    } 
+    else 
+    {
+        $SQL = "INSERT INTO donors ("user_name", "password", "name", dob, "sex", "bloodgroup", mobile_no, "email","state","district") VALUES ('" . $user . "', '" . $pw . "', '" . $f_name . "', '" . $birthday . "', '" . $sex . "', '" . $blood . "', '" . $mobile . "', '" . $email . "', '" . $state . "', '" . $district . "')";
+    }
+
     
 ?>
 <!DOCTYPE html>
@@ -70,9 +100,6 @@
             
             <label>SET PASSWORD : </label>
             <input type = "password" name = "password" required placeholder = "SET PASSWORD"><br>
-
-            <label>CONFIRM PASSWORD : </label>
-            <input type = "password" name = "confirm_password" required placeholder = "CONFIRM PASSWORD"><br>
 
             <input type = "button" name = "submit" VALUE = "SUBMIT"><br>
 
