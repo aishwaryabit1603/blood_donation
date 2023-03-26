@@ -36,15 +36,18 @@ var Delhi = ["Central Delhi","East Delhi","New Delhi","North Delhi","North East 
 var Lakshadweep = ["Lakshadweep"];
 var Puducherry = ["Karaikal","Mahe","Puducherry","Yanam"];
 
-
-$("#inputState").change(function(){
-  var StateSelected = $(this).val();
+windows.onload = function()
+{
+  var StateSelected = document.getElementById("inputstate");
+}
+StateSelected.onchange(function(){
+  
   var optionsList;
   var htmlString = "";
-
+  StateSelected.length = 1;
   switch (StateSelected) {
     case "Andra Pradesh":
-        optionsList = AndraPradesh;
+        optionsList = AndhraPradesh;
         break;
     case "Arunachal Pradesh":
         optionsList = ArunachalPradesh;
@@ -82,7 +85,7 @@ $("#inputState").change(function(){
     case "Kerala":
         optionsList = Kerala;
         break;
-    case  "Madya Pradesh":
+    case  "Madhya Pradesh":
         optionsList = MadhyaPradesh;
         break;
     case "Maharashtra":
@@ -153,10 +156,10 @@ $("#inputState").change(function(){
         break;
 }
 
-
-  for(var i = 0; i < optionsList.length; i++){
+for(var i = 0; i < optionsList.length; i++)
+{
     htmlString = htmlString+"<option value='"+ optionsList[i] +"'>"+ optionsList[i] +"</option>";
-  }
-  $("#inputDistrict").html(htmlString);
+}
+$("#inputDistrict").html(htmlString);
 
 });
