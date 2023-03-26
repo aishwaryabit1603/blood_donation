@@ -40,7 +40,7 @@ windows.onload = function()
 {
   var StateSelected = document.getElementById("inputstate");
 }
-console.log(StateSelected);
+prompt(StateSelected);
 StateSelected.onchange(function(){
   
   var optionsList;
