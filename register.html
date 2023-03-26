@@ -1,3 +1,13 @@
+<?php
+    //start a session output buffering
+    ob_start();
+    session_start();
+
+    //must require db connection file
+    require "db_connection.php";
+
+    //
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +43,7 @@
             <input type = "email" name = "email" required placeholder = "ENTER YOUR email"><br>
             
             <label>CONTACT NUMBER : </label>
-            <input type = "tel" name = "contact" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required placeholder = "ENTER YOUR contact number"><br>
+            <input type = "tel" name = "contact" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required placeholder = "ENTER YOUR PHONE NUMBER"><br>
             
             <label>BLOOD TYPE : </label>
             <select name = "blood_type" required>
@@ -47,16 +57,14 @@
                     <option value = "AB-">AB RhD negative (AB-)</option>
             </select><br>
 
-            <label for="inputState">State</label>
+            <select id = "state" name="state_input" size = "1">
+                <option value = "" selected = "selected">--Select State--</option>
+            </select><br>
+            <select id = "district" name="district_input" size = "1">
+                <option value = "" selected = "selected">--Select District--</option>
+            </select><br>
+    
             
-            <label for="inputDistrict">District</label>
-            <select id="state_input" name="state_input"></select>
-            <select name="district_input" id="district_input"></select>
-            <script language="javascript">
-            populateStates("state_input", "district_input");
-            </script>
-            <br>
-
             <label>SET PASSWORD : </label>
             <input type = "password" name = "password" required placeholder = "SET PASSWORD"><br>
 
