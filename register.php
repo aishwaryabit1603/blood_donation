@@ -119,7 +119,7 @@
           var selectedStateIndex = document.getElementById(stateElementId).selectedIndex;
           var districtElement = document.getElementById(districtElementId);
           districtElement.length = 0;
-          districtElement.options[0] = new Option('Select district', '');
+          districtElement.options[0] = new Option('Select district', '-1');
           districtElement.selectedIndex = 0;
           var district_ar = district_arr[selectedStateIndex].split("|");
           for (var i = 0; i < district_ar.length; i++) 
