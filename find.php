@@ -86,7 +86,7 @@
           }
         }
 
-        
+
       </script>
 </head>
 <body>
@@ -102,13 +102,14 @@
         <option value = "AB+">AB RhD positive (AB+)</option>
         <option value = "AB-">AB RhD negative (AB-)</option>
     </select><br>
-    <label>STATE</label>
+    <label>STATE : </label>
         <select id="state_input" name="state_input" required></select><br>
-    <label>DISTRICT</label><br>
+    <label>DISTRICT : </label><br>
         <select name="district_input" id="district_input" required></select>
         <script language="javascript">
             populateStates("state_input", "district_input");
         </script>
+    <input type = "submit" value = "submit">
     </form>
 </body>
 </html>
