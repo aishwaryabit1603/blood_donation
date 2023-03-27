@@ -151,10 +151,8 @@
       </scrip>
 </head>
 <body>
-    kmkljl
 <form action = "register.php" method = "post">
     <h3>REGISTER HERE</h3>
-    knlkjnkljn
     <label>Name : </label>
     <input type = "text" name = "name" required placeholder = "ENTER YOUR NAME"><br>
     
