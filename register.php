@@ -154,7 +154,7 @@
 <body>
     
     <div class="form-container">
-        <form action = "" method = "POST">
+        <form action = "register.php" method = "POST">
             <h3>REGISTER HERE</h3>
             
             <label>Name : </label>
