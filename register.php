@@ -162,7 +162,7 @@
             
             <label>DATE OF BIRTH : </label>
             <input type = "date" name = "dob" required placeholder = "ENTER YOUR DATE-OF-BIRTH"><br>
-            
+            l;l,
             <label>GENDER : </label>
             <select name = "gender" required>
                 <option value = "male">Male</option>
