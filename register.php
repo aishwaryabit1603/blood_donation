@@ -148,10 +148,9 @@
             };
           }
         }
-      </scrip>
+      </script>
 </head>
 <body>
-<p>dijsiojfjfodj</p>
 <form action = "register.php" method = "post">
     <h3>REGISTER HERE</h3>
     <label>Name : </label>
