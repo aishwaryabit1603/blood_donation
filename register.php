@@ -154,7 +154,7 @@
 <body>
     
     <div class="form-container">
-        <form action = "" method = "post" action="javascript:handleClick()">
+        <form action = "" method = "POST">
             <h3>REGISTER HERE</h3>
             
             <label>Name : </label>
@@ -204,8 +204,7 @@
 
             <input type = "button" name = "clear" value = "CLEAR">
         </form>
-        <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
-        
     </div>
+    <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
 </body>
 </html>
