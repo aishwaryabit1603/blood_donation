@@ -87,17 +87,17 @@
         transition: all 0.2s ease-in-out;
         opacity: 1;
       }
-      figure {
+      #first figure {
         position: absolute;
         display: block;
         width: 400px;
         margin: 100px auto;
-        top: 25%;
+        top: 20%;
         left: 50%;
         margin: 0 0 0 -200px;
       }
 
-      figure:before {
+      #first figure:before {
         content: "";
         position: absolute;
         display: block;
@@ -142,7 +142,7 @@
         );
       }
 
-      figure:after {
+      #first figure:after {
         content: "";
         position: absolute;
         display: block;
@@ -159,7 +159,7 @@
           0px 2em 4em 0.5em rgba(0, 0, 0, 0.1), inset 0 0.2em 0.1em #fff;
       }
 
-      img {
+      #start img {
         background: #fff;
         position: relative;
         display: block;
@@ -180,12 +180,12 @@
         <div class="dot"></div>
       </nav>
     </header>
-    <figure>
-      <img src="blood_screen.jpg" alt="blood_donation" />
+    <figure id="first">
+      <img id="start" src="blood_screen.jpg" alt="blood_donation" />
     </figure>
-    <figure>
-      <img src="reasontodonate.jpg" alt="whydonateblood" />
-    </figure>
+    <br />
+    <br />
+    <img src="reasontodonate.jpg" alt="whydonateblood" />
 
     <footer></footer>
   </body>
