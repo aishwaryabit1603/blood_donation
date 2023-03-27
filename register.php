@@ -158,32 +158,26 @@
 <div class="form-container">
     <form action = "" method = "post" action="javascript:handleClick()">
         <h3>REGISTER HERE</h3>
-    <div class="user-details">
-          <div class="input-box">
-              <label>Name : </label>
-            <input type = "text" name = "name" required placeholder = "ENTER YOUR NAME"><br>
-          </div>
-        <div class="input-box">
+        
+        <label>Name : </label>
+        <input type = "text" name = "name" required placeholder = "ENTER YOUR NAME"><br>
+        
         <label>DATE OF BIRTH : </label>
         <input type = "date" name = "dob" required placeholder = "ENTER YOUR DATE-OF-BIRTH"><br>
-        </div>
-        <div class = "options">
+        
         <label>GENDER : </label>
         <select name = "gender" required>
-            <option value = "male" id = "dot-1">Male</option>
-            <option value = "female" id = "dot-2">Female</option>
-            <option value = "other" id = "dot-3">Other</option>
+            <option value = "male">Male</option>
+            <option value = "female">Female</option>
+            <option value = "other">Other</option>
         </select><br>
-        </div>
-        <div class="input-box">
+        
         <label>EMAIL : </label>
         <input type = "email" name = "email" required placeholder = "ENTER YOUR email"><br>
-        </div>
-        <div class="input-box">
+        
         <label>CONTACT NUMBER : </label>
-        <input type = "tel" name = "mobile_no" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required placeholder = "ENTER YOUR PHONE NUMBER"><br>
-        </div>
-        <div class="options">
+        <input type = "tel" name = "contact" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required placeholder = "ENTER YOUR PHONE NUMBER"><br>
+        
         <label>BLOOD TYPE : </label>
         <select name = "blood_type" required>
               <option value = "A+">A RhD positive (A+)</option>
@@ -195,9 +189,7 @@
               <option value = "AB+">AB RhD positive (AB+)</option>
               <option value = "AB-">AB RhD negative (AB-)</option>
         </select><br>
-        </div>
 
-        <div class="input-box">
         <label>STATE</label>
         <select id="state_input" name="state_input" required></select><br>
         <label>DISTRICT</label>
@@ -205,19 +197,15 @@
         <script language="javascript">
             populateStates("state_input", "district_input");
         </script>
-        <div class="input-box">
+        
+        <br>
         <label>SET PASSWORD : </label>
         <input type = "password" name = "password" required placeholder = "SET PASSWORD"><br>
-         </div>
-         <div class="button">
+
         <input type = "button" name = "submit" VALUE = "SUBMIT"><br>
-        </div>
-        <div class = "button">
+
         <input type = "button" name = "clear" value = "CLEAR">
-        </div>
-        </form>
-        </div>
-    </div>
+    </form>
     <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
     
 </div>
