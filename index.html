@@ -1,95 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="TEXT/CSS" href="css/front_style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="TEXT/CSS" href="css/front_style.css" />
     <style>
-        /* VERTICAL MENU HOME PAGE */
+      /* VERTICAL MENU HOME PAGE */
 
-* {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-ul{
-	display: flex;
-	width: 100%;
-	height: 20vh;
-	margin: 0;
-    margin-top: 0;
-	max-width: 1000px;
-	justify-content: space-between;
-	text-align: center;
-}
-li {
-    padding: 1rem 2rem 1.15rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: #060606;
-	min-width: 100px;
-    font-size: medium;
-	margin: 0;
-}
+      * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      ul {
+        display: flex;
+        width: 100%;
+        height: 20vh;
+        margin: 0;
+        margin-top: 0;
+        padding: 0;
+        max-width: 1000px;
+        justify-content: space-between;
+        text-align: center;
+      }
+      li {
+        padding: 1rem 2rem 1.15rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: #060606;
+        min-width: 100px;
+        font-size: medium;
+        margin: 0;
+      }
 
-li:hover {
-  background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
-  background-size: 100% 100%;
-  color: #ffffff;
-  animation: spring 300ms ease-out;
-  text-shadow: 0 -1px 0 #ef816c;
-  font-weight: bold;
-}
-li:active {
-  transform: translateY(4px);
-}
+      li:hover {
+        background-image: url("https://scottyzen.sirv.com/Images/v/button.png");
+        background-size: 100% 100%;
+        color: #ffffff;
+        animation: spring 300ms ease-out;
+        text-shadow: 0 -1px 0 #ef816c;
+        font-weight: bold;
+      }
+      li:active {
+        transform: translateY(4px);
+      }
 
-@keyframes spring {
-  15% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1.2, 1.1);
-  }
-  40% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(0.95, 0.95);
-  }
-  75% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1.05, 1);
-  }
-  100% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1, 1);
-  }
-}
+      @keyframes spring {
+        15% {
+          -webkit-transform-origin: center center;
+          -webkit-transform: scale(1.2, 1.1);
+        }
+        40% {
+          -webkit-transform-origin: center center;
+          -webkit-transform: scale(0.95, 0.95);
+        }
+        75% {
+          -webkit-transform-origin: center center;
+          -webkit-transform: scale(1.05, 1);
+        }
+        100% {
+          -webkit-transform-origin: center center;
+          -webkit-transform: scale(1, 1);
+        }
+      }
 
-.shameless-plug{
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  padding: 8px 20px;
-  color: #ccc;
-  text-decoration: none;
-}
+      .shameless-plug {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        padding: 8px 20px;
+        color: #ccc;
+        text-decoration: none;
+      }
     </style>
     <title>BLOOD DONATION</title>
-</head>
-<body>
+  </head>
+  <body>
     <?php
-       // require ('header.php');
-        require ('footer.php'); 
-    ?>
-    <ul class = "menu">
-        <li><a href = "#" class = "active">HOME</a></li>
-        <li><a href = "admin.html">ADMIN LOGIN</a><li>
-        <li><a href = "register.php">REGISTER</a><li>
-        <li><a href = "find.php">FIND A DONOR</a><li>
-        <li><a href = "#">LOGIN</a><li>
+      // require ('header.php');
+      require ('footer.php'); 
+  ?>
+    <ul class="menu">
+      <li><a href="#" class="active">HOME</a></li>
+      <li><a href="admin.html">ADMIN LOGIN</a></li>
+      <li></li>
+      <li><a href="register.php">REGISTER</a></li>
+      <li></li>
+      <li><a href="find.php">FIND A DONOR</a></li>
+      <li></li>
+      <li><a href="#">LOGIN</a></li>
+      <li></li>
     </ul>
-    <img src="blood_screen.jpg" alt="blood_donation">
-    <br>
-    <img src = "reasontodonate.jpg" alt = "whydonateblood">
 
-</body>
+    <img src="blood_screen.jpg" alt="blood_donation" />
+    <br />
+    <img src="reasontodonate.jpg" alt="whydonateblood" />
+  </body>
 </html>
