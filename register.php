@@ -171,6 +171,7 @@
             <select name = "gender" required>
                 <option value = "male">Male</option>
                 <option value = "female">Female</option>
+                <option value = "other">Other</option>
             </select><br>
             
             <label>EMAIL : </label>
@@ -181,14 +182,14 @@
             
             <label>BLOOD TYPE : </label>
             <select name = "blood_type" required>
-                    <option value = "A+">A RhD positive (A+)</option>
-                    <option value = "A-">A RhD negative (A-)</option>
-                    <option value = "B+">B RhD positive (B+)</option>
-                    <option value = "B-">B RhD negative (B-)</option>
-                    <option value = "O+">O RhD positive (O+)</option>
-                    <option value = "O-">O RhD negative (O-)</option>
-                    <option value = "AB+">AB RhD positive (AB+)</option>
-                    <option value = "AB-">AB RhD negative (AB-)</option>
+                  <option value = "A+">A RhD positive (A+)</option>
+                  <option value = "A-">A RhD negative (A-)</option>
+                  <option value = "B+">B RhD positive (B+)</option>
+                  <option value = "B-">B RhD negative (B-)</option>
+                  <option value = "O+">O RhD positive (O+)</option>
+                  <option value = "O-">O RhD negative (O-)</option>
+                  <option value = "AB+">AB RhD positive (AB+)</option>
+                  <option value = "AB-">AB RhD negative (AB-)</option>
             </select><br>
 
             <label>STATE</label>
