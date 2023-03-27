@@ -155,59 +155,59 @@
 </head>
 <body>
     
-<div class="form-container">
-    <form action = "" method = "post" action="javascript:handleClick()">
-        <h3>REGISTER HERE</h3>
-        
-        <label>Name : </label>
-        <input type = "text" name = "name" required placeholder = "ENTER YOUR NAME"><br>
-        
-        <label>DATE OF BIRTH : </label>
-        <input type = "date" name = "dob" required placeholder = "ENTER YOUR DATE-OF-BIRTH"><br>
-        
-        <label>GENDER : </label>
-        <select name = "gender" required>
-            <option value = "male">Male</option>
-            <option value = "female">Female</option>
-            <option value = "other">Other</option>
-        </select><br>
-        
-        <label>EMAIL : </label>
-        <input type = "email" name = "email" required placeholder = "ENTER YOUR email"><br>
-        
-        <label>CONTACT NUMBER : </label>
-        <input type = "tel" name = "contact" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required placeholder = "ENTER YOUR PHONE NUMBER"><br>
-        
-        <label>BLOOD TYPE : </label>
-        <select name = "blood_type" required>
-              <option value = "A+">A RhD positive (A+)</option>
-              <option value = "A-">A RhD negative (A-)</option>
-              <option value = "B+">B RhD positive (B+)</option>
-              <option value = "B-">B RhD negative (B-)</option>
-              <option value = "O+">O RhD positive (O+)</option>
-              <option value = "O-">O RhD negative (O-)</option>
-              <option value = "AB+">AB RhD positive (AB+)</option>
-              <option value = "AB-">AB RhD negative (AB-)</option>
-        </select><br>
+  <div class="form-container">
+      <form action = "" method = "post" action="javascript:handleClick()">
+          <h3>REGISTER HERE</h3>
+          
+          <label>Name : </label>
+          <input type = "text" name = "name" required placeholder = "ENTER YOUR NAME"><br>
+          
+          <label>DATE OF BIRTH : </label>
+          <input type = "date" name = "dob" required placeholder = "ENTER YOUR DATE-OF-BIRTH"><br>
+          
+          <label>GENDER : </label>
+          <select name = "gender" required>
+              <option value = "male">Male</option>
+              <option value = "female">Female</option>
+              <option value = "other">Other</option>
+          </select><br>
+          
+          <label>EMAIL : </label>
+          <input type = "email" name = "email" required placeholder = "ENTER YOUR email"><br>
+          
+          <label>CONTACT NUMBER : </label>
+          <input type = "tel" name = "contact" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required placeholder = "ENTER YOUR PHONE NUMBER"><br>
+          
+          <label>BLOOD TYPE : </label>
+          <select name = "blood_type" required>
+                <option value = "A+">A RhD positive (A+)</option>
+                <option value = "A-">A RhD negative (A-)</option>
+                <option value = "B+">B RhD positive (B+)</option>
+                <option value = "B-">B RhD negative (B-)</option>
+                <option value = "O+">O RhD positive (O+)</option>
+                <option value = "O-">O RhD negative (O-)</option>
+                <option value = "AB+">AB RhD positive (AB+)</option>
+                <option value = "AB-">AB RhD negative (AB-)</option>
+          </select><br>
 
-        <label>STATE</label>
-        <select id="state_input" name="state_input" required></select><br>
-        <label>DISTRICT</label>
-        <select name="district_input" id="district_input" required></select>
-        <script language="javascript">
-            populateStates("state_input", "district_input");
-        </script>
-        
-        <br>
-        <label>SET PASSWORD : </label>
-        <input type = "password" name = "password" required placeholder = "SET PASSWORD"><br>
+          <label>STATE</label>
+          <select id="state_input" name="state_input" required></select><br>
+          <label>DISTRICT</label>
+          <select name="district_input" id="district_input" required></select>
+          <script language="javascript">
+              populateStates("state_input", "district_input");
+          </script>
+          
+          <br>
+          <label>SET PASSWORD : </label>
+          <input type = "password" name = "password" required placeholder = "SET PASSWORD"><br>
 
-        <input type = "button" name = "submit" VALUE = "SUBMIT"><br>
+          <input type = "button" name = "submit" VALUE = "SUBMIT"><br>
 
-        <input type = "button" name = "clear" value = "CLEAR">
-    </form>
-    <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
-    
-</div>
+          <input type = "button" name = "clear" value = "CLEAR">
+      </form>
+      <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
+      
+  </div>
 </body>
 </html>
