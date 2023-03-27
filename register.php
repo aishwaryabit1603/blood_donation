@@ -151,10 +151,10 @@
       </scrip>
 </head>
 <body>
-    
-<form action = "register.php" method = "post" action="javascript:handleClick()">
+    kmkljl
+<form action = "register.php" method = "post">
     <h3>REGISTER HERE</h3>
-    
+    knlkjnkljn
     <label>Name : </label>
     <input type = "text" name = "name" required placeholder = "ENTER YOUR NAME"><br>
     
