@@ -8,7 +8,7 @@
     $connection = mysqli_connect($db_host,$db_user,$db_password,$db_database);
 
     // if connection fails alert msgbox
-    if(mysqli_connect_erno())
+    if(!$connection)
     {
         die('Connect not Connect: '.mysqli_error($connection));
     }
