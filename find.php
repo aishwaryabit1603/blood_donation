@@ -1,3 +1,10 @@
+<?php
+ob_start();
+session_start();
+require "db_connection.php";
+ 
+?>
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,11 +92,10 @@
             };
           }
         }
-
-
       </script>
 </head>
 <body>
+    <h1>SEARCH FOR DONORS HERE </h1><BR>
     <form action="" method = "POST">
     <label>BLOOD TYPE REQUIRED: </label>
     <select name = "blood_type" required>
@@ -111,5 +117,31 @@
         </script>
     <input type = "submit" value = "submit">
     </form>
+<?php
+    if(isset($_POST['blood_type']) && isset($_POST['state_input']) && isset($_POST['district_input']))
+    {
+        $blood_required = $_POST['blood_type'];
+        $state_required = $_POST['state_input'];
+        $district_required = $_POST['district_input'];
+
+        $query = "SELECT name,sex,bloodgroup,mobile_no,email,state,district FROM donors where bloodgroup = '$blood_required' AND state = '$state_required' AND district = '$district_required' ";
+        $query_run = mysqli_query($connection,$query);
+
+        while($row = mysqli_fetch_array($query_run))
+        {
+            ?>
+                <form action = "" method = "">
+                    <input type="text" name = "name" value = "<?php echo $row['name'] ?>"/>
+                    <input type="text" name = "sex" value = "<?php echo $row['sex'] ?>"/>
+                    <input type="text" name = "bloodgroup" value = "<?php echo $row['bloodgroup'] ?>"/>
+                    <input type="text" name = "mobile_no" value = "<?php echo $row['mobile_no'] ?>"/>
+                    <input type="text" name = "email" value = "<?php echo $row['email'] ?>"/>
+                    <input type="text" name = "state" value = "<?php echo $row['state'] ?>" />
+                    <input type="text" name = "district" value = "<?php echo $row['district'] ?>"/>
+                </form>
+            <?php
+        }
+    }
+?>
 </body>
 </html>

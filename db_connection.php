@@ -6,7 +6,6 @@
 
     // connecting to database
     $connection = mysqli_connect($db_host,$db_user,$db_password,$db_database);
-
     // if connection fails alert msgbox
     if(!$connection)
     {
