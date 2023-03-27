@@ -68,7 +68,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTRATION FORM</title>
-    
+    <LINK REL = "stylesheet" href = "css/register_form.css">
     <script type="text/javascript">
         var states_arr = new Array("Andhra Pradesh" , "Arunachal Pradesh" , "Assam" , "Bihar" , "Chhattisgarh" , "Goa" , "Gujarat" , "Haryana" , "Himachal Pradesh" , "Jammu and Kashmir" , "Jharkhand" , "Karnataka" , "Kerala" , "Madhya Pradesh" , "Maharashtra" , "Manipur" , "Meghalaya" , "Mizoram" , "Nagaland" , "Orissa" , "Punjab" , "Rajasthan" , "Sikkim" , "Tamil Nadu" , "Telangana" , "Tripura" , "Uttar Pradesh" , "Uttaranchal" , "West Bengal" , "Andaman and Nicobar Islands" , "Chandigarh" , "Dadra and Nagar Haveli" , "Daman and Diu" , "Delhi" , "Lakshadweep" , "Pondicherry");
     
@@ -152,15 +152,20 @@
       </scrip>
 </head>
 <body>
-        <form action = "register.php" method = "POST">
+    
+    <div class="form-container">
+        <form action = "register.php" method = "post" action="javascript:handleClick()">
             <h3>REGISTER HERE</h3>
             
             <label>Name : </label>
             <input type = "text" name = "name" required placeholder = "ENTER YOUR NAME"><br>
             
+            <label>AGE : </label>
+            <input type = "text" name = "age" required placeholder = "ENTER YOUR AGE"><br>
+            
             <label>DATE OF BIRTH : </label>
             <input type = "date" name = "dob" required placeholder = "ENTER YOUR DATE-OF-BIRTH"><br>
-            l;l,
+            
             <label>GENDER : </label>
             <select name = "gender" required>
                 <option value = "male">Male</option>
@@ -202,6 +207,8 @@
 
             <input type = "button" name = "clear" value = "CLEAR">
         </form>
-    <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
+        <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
+        
+    </div>
 </body>
 </html>
