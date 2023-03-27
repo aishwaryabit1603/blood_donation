@@ -23,15 +23,15 @@
       $state = $_POST['state'];
       $district = $_POST['district'];
       //checking if session is active or NOT
-      if (isset($_SESSION['sess_user_id']) && !empty($_SESSION['sess_user_id'])) 
+      if (isset($_SESSION['session_user_id']) && !empty($_SESSION['session_user_id'])) 
       {
         // If a session is active
-        $sess = $_SESSION['sess_user_id'];
+        $sess = $_SESSION['session_user_id'];
         $SQL = "UPDATE donors SET user_name='" .$user . "',password='" . $pw . "',name='" . $f_name . "',dob='" . $birthday . "',sex='" . $sex . "',bloodgroup='" . $blood . "',mobile_no='" . $mobile . "',email='" . $email . "',state='" . $state . "',district='" . $district . "' WHERE id='" . $sess . "'";
       } 
       else 
       {
-        $SQL = "INSERT INTO donors ("user_name", "password", "name", dob, "sex", "bloodgroup", mobile_no, "email","state","district") VALUES ('" . $user . "', '" . $pw . "', '" . $f_name . "', '" . $birthday . "', '" . $sex . "', '" . $blood . "', '" . $mobile . "', '" . $email . "', '" . $state . "', '" . $district . "')";
+        $SQL = "INSERT INTO donors (user_name, password, name, dob, sex, bloodgroup, mobile_no, email,state,district) VALUES ('" . $user . "', '" . $pw . "', '" . $f_name . "', '" . $birthday . "', '" . $sex . "', '" . $blood . "', '" . $mobile . "', '" . $email . "', '" . $state . "', '" . $district . "')";
       }
       $query_run = mysqli_query($connection,$SQL);
       if($query_run)
