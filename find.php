@@ -111,10 +111,10 @@ require "db_connection.php";
     <label>STATE : </label>
         <select id="state_input" name="state_input" required></select><br>
     <label>DISTRICT : </label>
-        <select name="district_input" id="district_input" required></select>
+        <select name="district_input" id="district_input" required>--SELECT DISTRICT</select>
         <script language="javascript">
             populateStates("state_input", "district_input");
-        </script>
+        </script><br>
     <input type = "submit" value = "submit">
     </form>
 <?php
