@@ -152,8 +152,6 @@
       </scrip>
 </head>
 <body>
-    
-    <div class="form-container">
         <form action = "register.php" method = "POST">
             <h3>REGISTER HERE</h3>
             
@@ -204,7 +202,6 @@
 
             <input type = "button" name = "clear" value = "CLEAR">
         </form>
-    </div>
     <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
 </body>
 </html>
