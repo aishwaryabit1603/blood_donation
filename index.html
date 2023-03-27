@@ -6,18 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="TEXT/CSS" href="css/front_style.css" />
     <title>BLOOD DONATION</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #272727;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .navMenu {
+        position: absolute;
+        top: 30%;
+        left: 45%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      .navMenu a {
+        color: #f6f4e6;
+        text-decoration: none;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        font-weight: 500;
+        display: inline-block;
+        width: 200px;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .navMenu a:hover {
+        color: #fddb3a;
+      }
+
+      .navMenu .dot {
+        width: 6px;
+        height: 6px;
+        background: #fddb3a;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-transform: translateX(40px);
+        transform: translateX(30px);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .navMenu a:nth-child(1):hover ~ .dot {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+
+      .navMenu a:nth-child(2):hover ~ .dot {
+        -webkit-transform: translateX(240px);
+        transform: translateX(240px);
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+
+      .navMenu a:nth-child(3):hover ~ .dot {
+        -webkit-transform: translateX(445px);
+        transform: translateX(445px);
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+
+      .navMenu a:nth-child(4):hover ~ .dot {
+        -webkit-transform: translateX(680px);
+        transform: translateX(680px);
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     <?php
       require ('footer.php'); 
     ?>
-    <ul class="menu">
-      <li><a href="#" class="active">HOME</a></li>
-      <li><a href="admin.html">ADMIN LOGIN</a></li>
-      <li><a href="register.php">REGISTER</a></li>
-      <li><a href="find.php">FIND A DONOR</a></li>
-      <li><a href="#">LOGIN</a></li>
-    </ul>
+    <nav class="navMenu">
+      <a href="#" class="active">Home</a>
+      <a href="admin.html">ADMIN</a>
+      <a href="#">LOGIN</a>
+      <a href="find.php">FIND DONOR</a>
+      <div class="dot"></div>
+    </nav>
 
     <img src="blood_screen.jpg" alt="blood_donation" />
     <br />
