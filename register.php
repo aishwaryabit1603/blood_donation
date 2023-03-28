@@ -151,7 +151,7 @@
       </script>
 </head>
 <body>
-<form action = "register.php" method = "post">
+<form action = "register.php" method = "post" onsubmit="myFunction()">
     <h3>REGISTER HERE</h3>
     <label>Name : </label>
     <input type = "text" name = "name" required placeholder = "ENTER YOUR NAME"><br>
@@ -200,9 +200,14 @@
     <input type = "password" name = "password" required placeholder = "SET PASSWORD"><br>
 
     <input type = "button" name = "submit" VALUE = "SUBMIT"><br>
-
+    
     <input type = "button" name = "clear" value = "CLEAR">
 </form>
+<script>
+function myFunction() {
+  alert("The form was submitted");
+}
+</script>
 <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
         
 </body>
