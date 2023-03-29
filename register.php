@@ -171,6 +171,7 @@ $color-primary: #ABA194;
 body {
     font-family: $font-family;
     font-size: $font-size;
+    color = #ABA194;
     background-size: 200% 100% !important;
     animation: move 10s ease infinite;
     transform: translate3d(0, 0, 0);
@@ -235,7 +236,7 @@ body {
     font-family: $font-family;
     -webkit-appearance: none;
     outline: 0;
-    border: 0;
+    border: 1;
     color: black;
     background: $color-primary;
     transition: 0.3s;
@@ -366,17 +367,17 @@ function myFunction() {
         </div>
         
         <div class="form__group">
-            <input type="tel" placeholder="Contact No" class="form__input" name = "contact"/>
+            <input type="tel" placeholder="Contact No" class="form__input" name = "mobile_no"/>
         </div>
         <div class="form__group">
             
-<div class="form__group">
+        <div class="form__group">
             <input type="date" placeholder="Date Of Birth" name = "dob" class="form__input" />
         </div>
         <div class="form__group">
           
         <div class="form__group">
-           <select name = "sex" name = "" class="form__input" required/>
+           <select name = "sex" class="form__input" required/>
                 <option value = "" selected>GENDER</option>
                 <option value = "male">Male</option>
                 <option value = "female">Female</option>
