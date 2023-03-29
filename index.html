@@ -87,112 +87,18 @@
         transition: all 0.2s ease-in-out;
         opacity: 1;
       }
-      figure {
-        position: absolute;
-        display: block;
-        width: 400px;
-        margin: 100px auto;
-        top: 50%;
-        left: 50%;
-        margin: 0 0 0 -200px;
-      }
-
-      figure:before {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 150%;
-        height: 60%;
-        top: -16%;
-        left: -16%;
-        background-color: #f8f8f8;
-        z-index: -1;
-        box-shadow: inset 0px 10px 0.5em rgba(0, 0, 0, 0.25),
-          inset 0.1em 0px 0.1em rgba(0, 0, 0, 0.1),
-          inset -0.1em 0px 0.1em rgba(0, 0, 0, 0.05), 0 0.3em 0.2em #fff;
-        background-image: -moz-radial-gradient(
-          50% 50%,
-          circle farthest-corner,
-          #ffffff,
-          #f8f8f8 100%
-        );
-        background-image: -webkit-radial-gradient(
-          50% 50%,
-          circle farthest-corner,
-          #ffffff,
-          #f8f8f8 100%
-        );
-        background-image: -o-radial-gradient(
-          50% 50%,
-          circle farthest-corner,
-          #ffffff,
-          #f8f8f8 100%
-        );
-        background-image: -ms-radial-gradient(
-          50% 50%,
-          circle farthest-corner,
-          #ffffff,
-          #f8f8f8 100%
-        );
-        background-image: radial-gradient(
-          50% 50%,
-          circle farthest-corner,
-          #ffffff,
-          #f8f8f8 100%
-        );
-      }
-
-      figure:after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-        top: -22.5%;
-        left: -22.5%;
-        background: #f8f8f8;
-        z-index: -2;
-        box-shadow: 0px 1em 2em -1em rgba(0, 0, 0, 0.4),
-          0px 2em 2em -1em rgba(0, 0, 0, 0.3),
-          0px 3em 2em -1em rgba(0, 0, 0, 0.2),
-          0px 4em 1.5em -1em rgba(0, 0, 0, 0.15),
-          0px 2em 4em 0.5em rgba(0, 0, 0, 0.1), inset 0 0.2em 0.1em #fff;
-      }
-
-      #start img {
-        background: #fff;
-        position: relative;
-        display: block;
-        width: 88%;
-        height: auto;
-        padding: 6%;
-        box-shadow: inset 0px 0.3em 0.1em rgba(0, 0, 0, 0.2);
-      }
     </style>
   </head>
   <body>
     <header>
       <nav class="navMenu">
         <a href="#" class="active">Home</a>
-        <a href="admin.html">ADMIN</a>
+        <a href="register.php">REGISTER</a>
         <a href="login.html">LOGIN</a>
         <a href="find.php">FIND DONOR</a>
         <div class="dot"></div>
       </nav>
     </header>
-    <figure>
-      <img id="start" src="blood_screen.jpg" alt="blood_donation" />
-    </figure>
-    <br />
-    <br />
-    <figure class="second">
-      <img
-        src="reasontodonate.jpg"
-        alt="whydonateblood"
-        style="margin-top: 30%"
-        ;
-      />
-    </figure>
 
     <footer></footer>
   </body>
