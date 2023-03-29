@@ -187,6 +187,8 @@ body {
 .user__header {
     text-align: center;
     opacity: 0;
+    height : 100px;
+    width: 100;
     transform: translate3d(0, 500px, 0);
     animation: arrive 500ms ease-in-out 0.7s forwards;
 }
