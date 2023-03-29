@@ -327,26 +327,26 @@ body {
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
     </header>
   
-    <form class="form">
+      <form class="form">
         <div class="form__group">
-            <input type="text" placeholder="Username" name = "user_name" class="form__input" required />
+          <input type="text" placeholder="Username" name = "user_name" class="form__input" required />
         </div>
         
         <div class="form__group">
-            <input type="text" name = "name" placeholder="name" class="form__input" required />
+          <input type="text" name = "name" placeholder="name" class="form__input" required />
         </div>
         
         <div class="form__group">
-            <input type="email" placeholder="Email" name = "email" class="form__input" required />
+          <input type="email" placeholder="Email" name = "email" class="form__input" required />
         </div>
         
         <div class="form__group">
-            <input type="number" placeholder="Contact No" class="form__input" name = "mobile_no" required/>
+          <input type="number" placeholder="Contact No" class="form__input" name = "mobile_no" required/>
         </div>
         <div class="form__group">
             
         <div class="form__group">
-            <input type="date" onblur="return dobcheck()" placeholder="Date Of Birth" name = "dob" class="form__input" required >
+          <input type="date" onblur="return dobcheck()" placeholder="Date Of Birth" name = "dob" class="form__input" required >
         </div>
         <div class="form__group">
           
@@ -358,41 +358,37 @@ body {
                 <option value = "other">Other</option>
            </select>
         </div>
+        
         <div class="form__group">
-            
-        </div>
-        <div class="form__group">
-            <select name = "blood_type"  class="form__input" required>
-     <option value = " " selected required>Blood Type</option>
-          
-          <option value = "A+">A RhD positive (A+)</option>
-          <option value = "A-">A RhD negative (A-)</option>
-          <option value = "B+">B RhD positive (B+)</option>
-          <option value = "B-">B RhD negative (B-)</option>
-          <option value = "O+">O RhD positive (O+)</option>
-          <option value = "O-">O RhD negative (O-)</option>
-          <option value = "AB+">AB RhD positive (AB+)</option>
-          <option value = "AB-">AB RhD negative (AB-)</option>
-    </select>
+          <select name = "blood_type"  class="form__input" required>
+            <option value = " " selected required>Blood Type</option>
+            <option value = "A+">A RhD positive (A+)</option>
+            <option value = "A-">A RhD negative (A-)</option>
+            <option value = "B+">B RhD positive (B+)</option>
+            <option value = "B-">B RhD negative (B-)</option>
+            <option value = "O+">O RhD positive (O+)</option>
+            <option value = "O-">O RhD negative (O-)</option>
+            <option value = "AB+">AB RhD positive (AB+)</option>
+            <option value = "AB-">AB RhD negative (AB-)</option>
+          </select>
         </div>
         
- <div class="form__group">
-    <select id="state_input" name="state_input" class="form__input" required>
-    </select>
-    <select name="district_input" id="district_input" class="form__input" required></select>
-    <script language="javascript">
-      populateStates("state_input", "district_input");
-    </script>
+      <div class="form__group">
+        <select id="state_input" name="state_input" class="form__input" required>
+        </select>
+        <select name="district_input" id="district_input" class="form__input" required></select>
+        <script language="javascript">
+            populateStates("state_input", "district_input");
+        </script>
         </div>
             
         <div class="form__group">
-            <input type="password" placeholder="Password" class="form__input" name = "password" required/>
+          <input type="password" placeholder="Password" class="form__input" name = "password" required/>
         </div>
       
         <button class="btn" type="submit" name = "submit">Register</button>
         <button class="btn" type="reset">Clear</button>
- 
- <script>
+    <script>
 function myFunction() {
   alert("The form was submitted");
 }
