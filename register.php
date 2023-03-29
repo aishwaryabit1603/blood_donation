@@ -6,7 +6,7 @@
   //must require db connection file
   require "db_connection.php";
 
-  if(isset($_POST['name']) && isset($_POST['sex']) && isset($_POST['dob']) &&isset($_POST['bloodgroup']) &&isset($_POST['mobile_no']) &&isset($_POST['email']) &&isset($_POST['state']) && isset($_POST['district']) && isset($_POST['user_name']) &&isset($_POST['password']))
+  if(isset($_POST['submit']))
   {
     //checking if all post fields are SET
     if (!empty($_POST['name']) && !empty($_POST['sex']) && !empty($_POST['dob']) && !empty($_POST['bloodgroup']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) && !empty($_POST['state']) && !empty($_POST['district']) && !empty($_POST['user_name']) && !empty($_POST['password'])) 
@@ -178,12 +178,11 @@
         var record1 = new Date(sum);      
         if(record1 > d1)
         {
-
-            alert("Sorry ! Minors need parential guidance to use this website");
-            document.getElementById('bday').blur();
-            document.getElementById('bday').value="";
-            document.getElementById('bday').focus();
-            return false;
+          alert("Sorry ! Minors need parential guidance to use this website");
+          document.getElementById('bday').blur();
+          document.getElementById('bday').value="";
+          document.getElementById('bday').focus();
+          return false;
         }
     } 
 }
@@ -330,24 +329,24 @@ body {
   
     <form class="form">
         <div class="form__group">
-            <input type="text" placeholder="Username" name = "user_name" class="form__input" />
+            <input type="text" placeholder="Username" name = "user_name" class="form__input" required />
         </div>
         
         <div class="form__group">
-            <input type="text" name = "name" placeholder="name" class="form__input" />
+            <input type="text" name = "name" placeholder="name" class="form__input" required />
         </div>
         
         <div class="form__group">
-            <input type="email" placeholder="Email" name = "email" class="form__input" />
+            <input type="email" placeholder="Email" name = "email" class="form__input" required />
         </div>
         
         <div class="form__group">
-            <input type="number" placeholder="Contact No" class="form__input" name = "mobile_no"/>
+            <input type="number" placeholder="Contact No" class="form__input" name = "mobile_no" required/>
         </div>
         <div class="form__group">
             
         <div class="form__group">
-            <input type="date" onblur="return dobcheck()" placeholder="Date Of Birth" name = "dob" class="form__input" >
+            <input type="date" onblur="return dobcheck()" placeholder="Date Of Birth" name = "dob" class="form__input" required >
         </div>
         <div class="form__group">
           
@@ -387,10 +386,10 @@ body {
         </div>
             
         <div class="form__group">
-            <input type="password" placeholder="Password" class="form__input" name = "password"/>
+            <input type="password" placeholder="Password" class="form__input" name = "password" required/>
         </div>
       
-        <button class="btn" type="submit">Register</button>
+        <button class="btn" type="submit" name = "submit">Register</button>
         <button class="btn" type="reset">Clear</button>
  
  <script>
