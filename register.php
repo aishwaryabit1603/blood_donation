@@ -1,66 +1,4 @@
-<?php
-  //start a session output buffering
-  ob_start();
-  session_start();
-
-  //must require db connection file
-  require "db_connection.php";
-
-  if(isset($_POST['submit']))
-  {
-    //checking if all post fields are SET
-    if (!empty($_POST['name']) && !empty($_POST['sex']) && !empty($_POST['dob']) && !empty($_POST['bloodgroup']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) && !empty($_POST['state']) && !empty($_POST['district']) && !empty($_POST['user_name']) && !empty($_POST['password'])) 
-    {
-      // Store POST variables in local variables
-      $user = $_POST['user_name'];
-      $pw = $_POST['password'];
-      $f_name = $_POST['name'];
-      $birthday = $_POST['dob'];
-      $sex = $_POST['sex'];
-      $blood = $_POST['bloodgroup'];
-      $mobile = $_POST['mobile_no'];
-      $email = $_POST['email'];
-      $state = $_POST['state'];
-      $district = $_POST['district'];
-      //checking if session is active or NOT
-      if (isset($_SESSION['session_user_id']) && !empty($_SESSION['session_user_id'])) 
-      {
-        // If a session is active
-        $sess = $_SESSION['session_user_id'];
-        $SQL = "UPDATE donors SET user_name='" .$user . "',password='" . $pw . "',name='" . $f_name . "',dob='" . $birthday . "',sex='" . $sex . "',bloodgroup='" . $blood . "',mobile_no='" . $mobile . "',email='" . $email . "',state='" . $state . "',district='" . $district . "' WHERE id='" . $sess . "'";
-      } 
-      else 
-      {
-        $SQL = "INSERT INTO donors (user_name, password, name, dob, sex, bloodgroup, mobile_no, email,state,district) VALUES ('" . $user . "', '" . $pw . "', '" . $f_name . "', '" . $birthday . "', '" . $sex . "', '" . $blood . "', '" . $mobile . "', '" . $email . "', '" . $state . "', '" . $district . "')";
-      }
-      $query_run = mysqli_query($connection,$SQL);
-      if($query_run)
-      {
-        // if query successful
-        echo '<script language = "javascript">';
-        echo 'alert("Message Successfully Sent !!")';
-        echo '</script>';
-        if (isset($_SESSION['session_user_id']) && !empty($_SESSION['session_user_id']))
-        {
-          header("location: logout.php");
-        }
-      }
-      else
-      {
-        echo '<script language = "javascript">';
-        echo 'alert("Registration Failed !!")';
-        echo '</script>';
-      }
-    }
-    else
-    {
-      echo '<script language = "javascript">';
-      echo 'alert("Please Fill and Select All Required fields")';
-      echo '</script>';
-    }
-}
-
-?>
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -329,6 +267,7 @@
   
       <form class="form">
         <?php include('errors.php'); ?>
+
         <div class="form__group">
           <input type="text" placeholder="Username" name = "user_name" class="form__input" required />
         </div>
@@ -384,17 +323,20 @@
         </div>
             
         <div class="form__group">
-          <input type="password" placeholder="Password" class="form__input" name = "password" required/>
+          <input type="password" placeholder="Password" class="form__input" name = "password_1" required/>
+        </div>
+
+        <div class="form__group">
+          <input type="password" placeholder="Confirm Password" class="form__input" name = "password_2" required/>
         </div>
       
-        <button class="btn" type="submit" name = "submit">Register</button>
+        <button class="btn" type="submit" name = "reg_user">Register</button>
         <button class="btn" type="reset">Clear</button>
-    <script>
-function myFunction() {
-  alert("The form was submitted");
-}
-</script>
     </form>
+    <div class = "form_group">
+        <a href = "login.html" name = "form_input">CLICK HERE TO LOGIN!!</a>
+    </div>
+    
 </div> 
 </body>
 </html>

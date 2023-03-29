@@ -1,8 +1,7 @@
 <?php
-ob_start();
-session_start();
-require "db_connection.php";
- 
+  ob_start();
+  session_start();
+  require "db_connection.php";
 ?>
  
 <!DOCTYPE html>
