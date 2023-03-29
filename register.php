@@ -238,6 +238,7 @@ body {
     outline: 0;
     border: 0;
     color: black;
+    text-decoration-thickness: 3px; 
     background: $color-primary;
     transition: 0.3s;
     
