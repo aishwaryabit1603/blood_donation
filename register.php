@@ -236,7 +236,7 @@ body {
     font-family: $font-family;
     -webkit-appearance: none;
     outline: 0;
-    border: 1;
+    border: 0;
     color: black;
     background: $color-primary;
     transition: 0.3s;
@@ -367,7 +367,7 @@ function myFunction() {
         </div>
         
         <div class="form__group">
-            <input type="tel" placeholder="Contact No" class="form__input" name = "mobile_no"/>
+            <input type="number" placeholder="Contact No" class="form__input" name = "mobile_no"/>
         </div>
         <div class="form__group">
             
