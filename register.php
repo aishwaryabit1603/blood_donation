@@ -269,7 +269,7 @@ body {
     outline: 0;
     border: 0;
     color: black;
-    text-decoration-thickness: 3px; 
+    text-decoration-thickness: 5px; 
     background: $color-primary;
     transition: 0.3s;
     
