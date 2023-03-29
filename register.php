@@ -171,7 +171,7 @@ $color-primary: #ABA194;
 body {
     font-family: $font-family;
     font-size: $font-size;
-    color = #ABA194;
+    color = $color-primary;
     background-size: 200% 100% !important;
     animation: move 10s ease infinite;
     transform: translate3d(0, 0, 0);
