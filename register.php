@@ -373,7 +373,7 @@ function myFunction() {
         <div class="form__group">
             
         <div class="form__group">
-            <input type="date" placeholder="Date Of Birth" name = "dob" class="form__input" />
+            <input type="date" placeholder="Date Of Birth" name = "dob" class="form__input" >
         </div>
         <div class="form__group">
           
