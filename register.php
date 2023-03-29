@@ -118,7 +118,6 @@
           var selectedStateIndex = document.getElementById(stateElementId).selectedIndex;
           var districtElement = document.getElementById(districtElementId);
           districtElement.length = 1;
-          districtElement.options[0] = new Option('Select district', '-1');
           districtElement.selectedIndex = 0;
           var district_ar = district_arr[selectedStateIndex].split("|");
           for (var i = 0; i < district_ar.length; i++) 
@@ -132,7 +131,8 @@
           // given the id of the <select> tag as function argument, it inserts <option> tags
           var stateElement = document.getElementById(stateElementId);
           stateElement.length = 0;
-          stateElement.options[0] = new Option('Select state', '-1');
+          stateElement.options[0] = new Option('Select State', '-1');
+          districtElement.options[0] = new Option('Select district', '-1');
           stateElement.selectedIndex = 0;
           for (var i = 1; i < states_arr.length; i++)
           {
