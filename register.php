@@ -156,8 +156,8 @@
           form.classList.add('form--no') 
         });
       </script>
-<style>
-$font-family:   "Roboto";
+      <style>
+        $font-family:   "Roboto";
 $font-size:     14px;
 $color-primary: #ABA194;
 
@@ -165,7 +165,6 @@ $color-primary: #ABA194;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -187,8 +186,6 @@ body {
 .user__header {
     text-align: center;
     opacity: 0;
-    height : 10px;
-    width : 10px;
     transform: translate3d(0, 500px, 0);
     animation: arrive 500ms ease-in-out 0.7s forwards;
 }
@@ -351,7 +348,7 @@ function myFunction() {
 -->
 <div class="user">
     <header class="user__header">
-        <img src="https://ih1.redbubble.net/image.2601472927.6683/st,small,845x845-pad,1000x1000,f8f8f8.u3.jpg" alt="" />
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
     </header>
   
     <form class="form">
@@ -378,7 +375,7 @@ function myFunction() {
         <div class="form__group">
           
         <div class="form__group">
-           <select name = "sex" class="form__input" required/>
+           <select name = "sex" name = "" class="form__input" required/>
                 <option value = "" selected>GENDER</option>
                 <option value = "male">Male</option>
                 <option value = "female">Female</option>
@@ -390,7 +387,10 @@ function myFunction() {
         </div>
         <div class="form__group">
             <select name = "blood_type"  class="form__input" required>
-     <option value = " " selected required> Blood Type  </option>
+     <option value = " " selected required>
+         Blood Type
+                </option>
+          
           <option value = "A+">A RhD positive (A+)</option>
           <option value = "A-">A RhD negative (A-)</option>
           <option value = "B+">B RhD positive (B+)</option>
@@ -426,8 +426,5 @@ function myFunction() {
 </script>
     </form>
 </div> 
-<div>
-
-</div>
 </body>
 </html>
