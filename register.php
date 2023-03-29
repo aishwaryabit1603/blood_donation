@@ -118,7 +118,7 @@
           var selectedStateIndex = document.getElementById(stateElementId).selectedIndex;
           var districtElement = document.getElementById(districtElementId);
           districtElement.length = 0;
-          districtElement.options[0] = new Option('Select district', '-1');
+          districtElement.options[0] = new Option('Select district', '0');
           districtElement.selectedIndex = 0;
           var district_ar = district_arr[selectedStateIndex].split("|");
           for (var i = 0; i < district_ar.length; i++) 
@@ -126,7 +126,7 @@
             districtElement.options[districtElement.length] = new Option(district_ar[i], district_ar[i]);
           }
         }
-    
+         
         function populateStates(stateElementId, districtElementId)
         {
           // given the id of the <select> tag as function argument, it inserts <option> tags
@@ -134,7 +134,7 @@
           stateElement.length = 0;
           stateElement.options[0] = new Option('Select state', '-1');
           stateElement.selectedIndex = 0;
-          for (var i = 0; i < states_arr.length; i++)
+          for (var i = 1; i < states_arr.length; i++)
           {
             stateElement.options[stateElement.length] = new Option(states_arr[i], states_arr[i]);
           }
@@ -235,7 +235,7 @@ body {
     -webkit-appearance: none;
     outline: 0;
     border: 0;
-    color: white;
+    color: black;
     background: $color-primary;
     transition: 0.3s;
     
@@ -387,9 +387,7 @@ function myFunction() {
         </div>
         <div class="form__group">
             <select name = "blood_type"  class="form__input" required>
-     <option value = " " selected required>
-         Blood Type
-                </option>
+     <option value = " " selected required>Blood Type</option>
           
           <option value = "A+">A RhD positive (A+)</option>
           <option value = "A-">A RhD negative (A-)</option>
@@ -406,16 +404,15 @@ function myFunction() {
     <select id="state_input" name="state_input" class="form__input" required>
     </select>
     <select name="district_input" id="district_input" class="form__input" required></select>
-     <script language="javascript">
-        populateStates("state_input", "district_input");
+    <script language="javascript">
+      populateStates("state_input", "district_input");
     </script>
         </div>
             
         <div class="form__group">
             <input type="password" placeholder="Password" class="form__input" name = "password"/>
         </div>
-        
-        
+      
         <button class="btn" type="submit">Register</button>
         <button class="btn" type="reset">Clear</button>
  
