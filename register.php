@@ -68,12 +68,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTRATION FORM</title>
+
     <script type="text/javascript">
-        var states_arr = new Array("Andhra Pradesh" , "Arunachal Pradesh" , "Assam" , "Bihar" , "Chhattisgarh" , "Goa" , "Gujarat" , "Haryana" , "Himachal Pradesh" , "Jammu and Kashmir" , "Jharkhand" , "Karnataka" , "Kerala" , "Madhya Pradesh" , "Maharashtra" , "Manipur" , "Meghalaya" , "Mizoram" , "Nagaland" , "Orissa" , "Punjab" , "Rajasthan" , "Sikkim" , "Tamil Nadu" , "Telangana" , "Tripura" , "Uttar Pradesh" , "Uttaranchal" , "West Bengal" , "Andaman and Nicobar Islands" , "Chandigarh" , "Dadra and Nagar Haveli" , "Daman and Diu" , "Delhi" , "Lakshadweep" , "Pondicherry");
+        var states_arr = new Array("Select State" , "Andhra Pradesh" , "Arunachal Pradesh" , "Assam" , "Bihar" , "Chhattisgarh" , "Goa" , "Gujarat" , "Haryana" , "Himachal Pradesh" , "Jammu and Kashmir" , "Jharkhand" , "Karnataka" , "Kerala" , "Madhya Pradesh" , "Maharashtra" , "Manipur" , "Meghalaya" , "Mizoram" , "Nagaland" , "Orissa" , "Punjab" , "Rajasthan" , "Sikkim" , "Tamil Nadu" , "Telangana" , "Tripura" , "Uttar Pradesh" , "Uttaranchal" , "West Bengal" , "Andaman and Nicobar Islands" , "Chandigarh" , "Dadra and Nagar Haveli" , "Daman and Diu" , "Delhi" , "Lakshadweep" , "Pondicherry");
     
         var district_arr = new Array();
     
-        district_arr[0] = "";
+        district_arr[0] = "Select District";
         district_arr[1] = "Anantapur|Chittoor|Cuddapah|East Godavari|Guntur|Krishna|Kurnool|Nellore|Prakasam|Srikakulam|Vishakapatnam|Vizianagaram|West Godavari";
         district_arr[2] = "Anjaw|Changlang|Dibang Valley|East Kameng|East Siang|Kra Daadi|Kurung Kumey|Lohit|Longding|Lower Dibang Valley|Lower Subansiri|Namsai|Papum Pare|Siang|Tawang|Tirap|Upper Siang|Upper Subansiri|West Kameng|West Siang";
         district_arr[3] = "Baksa|Barpeta|Bongaigaon|Cachar|Chirang|Darrang|Dhemaji|Dhubri|Dibrugarh|Dima Hasao|Goalpara|Golaghat|Hailakandi|Jorhat|Kamrup M|Kamrup R|Karbi Anglong|Karimganj|Kokrajhar|Lakhimpur|Marigaon|Nagaon|Nalbari|Sibsagar|Sonitpur|Tinsukia|Udalguri";
@@ -148,22 +149,158 @@
             };
           }
         }
+        const button = document.querySelector('.btn')
+        const form   = document.querySelector('.form')
+
+        button.addEventListener('click', function() {
+          form.classList.add('form--no') 
+        });
       </script>
+<style>
+$font-family:   "Roboto";
+$font-size:     14px;
+$color-primary: #ABA194;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+    background-size: 200% 100% !important;
+    animation: move 10s ease infinite;
+    transform: translate3d(0, 0, 0);
+    background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+    height: 100vh
+}
+
+.user {
+    width: 90%;
+    max-width: 340px;
+    margin: 10vh auto;
+}
+
+.user__header {
+    text-align: center;
+    opacity: 0;
+    transform: translate3d(0, 500px, 0);
+    animation: arrive 500ms ease-in-out 0.7s forwards;
+}
+
+.user__title {
+    font-size: $font-size;
+    margin-bottom: -10px;
+    font-weight: 500;
+    color: white;
+}
+
+.form {
+    margin-top: 40px;
+    border-radius: 6px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate3d(0, 500px, 0);
+    animation: arrive 500ms ease-in-out 0.9s forwards;
+}
+
+.form--no {
+    animation: NO 1s ease-in-out;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-family: $font-family;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    transition: 0.3s;
+    
+    &:focus {
+        background: darken(#fff, 3%);
+    }
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-family: $font-family;
+    -webkit-appearance: none;
+    outline: 0;
+    border: 0;
+    color: white;
+    background: $color-primary;
+    transition: 0.3s;
+    
+    &:hover {
+        background: darken($color-primary, 5%);
+    }
+}
+
+@keyframes NO {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes arrive {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: 100% 0
+    }
+
+    100% {
+        background-position: 0 0
+    }
+}
+      </style>
 </head>
 <body>
+<!--
 <form action = "register.php" method = "post" onsubmit="myFunction()">
     <h3>REGISTER HERE</h3>
     <label>Name : </label>
     <input type = "text" name = "name" required placeholder = "ENTER YOUR NAME"><br>
     
-    <label>AGE : </label>
-    <input type = "text" name = "age" required placeholder = "ENTER YOUR AGE"><br>
-    
     <label>DATE OF BIRTH : </label>
     <input type = "date" name = "dob" required placeholder = "ENTER YOUR DATE-OF-BIRTH"><br>
     
     <label>GENDER : </label>
-    <select name = "gender" required>
+    <select name = "sex" required>
         <option value = "male">Male</option>
         <option value = "female">Female</option>
         <option value = "other">Other</option>
@@ -209,6 +346,86 @@ function myFunction() {
 }
 </script>
 <h3>Already have an account <a href = "login.html">LOGIN HERE</a></h3>
+-->
+<div class="user">
+    <header class="user__header">
+        <img src="https://ih1.redbubble.net/image.2601472927.6683/st,small,845x845-pad,1000x1000,f8f8f8.u3.jpg" alt="" />
+    </header>
+  
+    <form class="form">
+        <div class="form__group">
+            <input type="text" placeholder="Username" name = "user_name" class="form__input" />
+        </div>
         
+        <div class="form__group">
+            <input type="text" name = "name" placeholder="name" class="form__input" />
+        </div>
+        
+        <div class="form__group">
+            <input type="email" placeholder="Email" name = "email" class="form__input" />
+        </div>
+        
+        <div class="form__group">
+            <input type="tel" placeholder="Contact No" class="form__input" name = "contact"/>
+        </div>
+        <div class="form__group">
+            
+<div class="form__group">
+            <input type="date" placeholder="Date Of Birth" name = "dob" class="form__input" />
+        </div>
+        <div class="form__group">
+          
+        <div class="form__group">
+           <select name = "sex" class="form__input" required/>
+                <option value = "" selected>GENDER</option>
+                <option value = "male">Male</option>
+                <option value = "female">Female</option>
+                <option value = "other">Other</option>
+           </select>
+        </div>
+        <div class="form__group">
+            
+        </div>
+        <div class="form__group">
+            <select name = "blood_type"  class="form__input" required>
+     <option value = " " selected required> Blood Type  </option>
+          <option value = "A+">A RhD positive (A+)</option>
+          <option value = "A-">A RhD negative (A-)</option>
+          <option value = "B+">B RhD positive (B+)</option>
+          <option value = "B-">B RhD negative (B-)</option>
+          <option value = "O+">O RhD positive (O+)</option>
+          <option value = "O-">O RhD negative (O-)</option>
+          <option value = "AB+">AB RhD positive (AB+)</option>
+          <option value = "AB-">AB RhD negative (AB-)</option>
+    </select>
+        </div>
+        
+ <div class="form__group">
+    <select id="state_input" name="state_input" class="form__input" required>
+    </select>
+    <select name="district_input" id="district_input" class="form__input" required></select>
+     <script language="javascript">
+        populateStates("state_input", "district_input");
+    </script>
+        </div>
+            
+        <div class="form__group">
+            <input type="password" placeholder="Password" class="form__input" name = "password"/>
+        </div>
+        
+        
+        <button class="btn" type="submit">Register</button>
+        <button class="btn" type="reset">Clear</button>
+ 
+ <script>
+function myFunction() {
+  alert("The form was submitted");
+}
+</script>
+    </form>
+</div> 
+<div>
+
+</div>
 </body>
 </html>
