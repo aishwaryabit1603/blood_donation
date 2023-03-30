@@ -325,10 +325,8 @@
       
         <button class="btn" type="submit" name = "reg_user">Register</button>
         <button class="btn" type="reset">Clear</button>
-    </form>
-    <div class = "btn">
         <a href = "login.html" name = "form_input">CLICK HERE TO LOGIN!!</a>
-    </div>
+    </form>
 </div> 
 </body>
 </html>
