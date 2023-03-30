@@ -213,6 +213,24 @@
             background: darken($color-primary, 5%);
         }
       }
+      a{
+        display: block;
+        width: 100%;
+        padding: 20px;
+        font-family: $font-family;
+        -webkit-appearance: none;
+        outline: 0;
+        border: 0;
+        color: black;
+        text-decoration-thickness: 5px; 
+        background: $color-primary;
+        transition: 0.3s;
+        
+        &:hover {
+            background: darken($color-primary, 5%);
+        }
+
+      }
 
       @keyframes NO {
       from, to {
@@ -325,8 +343,11 @@
       
         <button class="btn" type="submit" name = "reg_user">Register</button>
         <button class="btn" type="reset">Clear</button>
-        <a href = "login.html" name = "form_input">CLICK HERE TO LOGIN!!</a>
     </form>
+    <div class = "form__group">
+      <a href = "login.html" name = "form_input">CLICK HERE TO LOGIN!!</a>
+    </div>
+    
 </div> 
 </body>
 </html>
