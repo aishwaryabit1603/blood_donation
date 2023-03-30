@@ -1,4 +1,5 @@
-<?php include('server.php') ?>
+<?php include "server.php"; ?>
+<?php include 'errors.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -266,7 +267,7 @@
     </header>
   
       <form class="form">
-        <?php include('errors.php'); ?>
+        
 
         <div class="form__group">
           <input type="text" placeholder="Username" name = "user_name" class="form__input" required />
