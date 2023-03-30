@@ -285,7 +285,7 @@
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
     </header>
   
-      <form class="form" method = "POST" action = "register.php">
+      <form class="form" method = "POST" action = "" enctype = "multipart/form-data">
         <div class="form__group">
           <input type="text" name = "name" placeholder="Name" class="form__input" required />
         </div>
@@ -344,11 +344,10 @@
           <input type="password" placeholder="Confirm Password" class="form__input" name = "password_2" required/>
         </div>
       
-        <button class="btn" type="submit" name = "reg_user">Register</button>
+        <input class="btn" type="submit">Register</input>
         <button class="btn" type="reset">Clear</button>
     </form>
      <a href = "login.html" name = "form_input">CLICK HERE TO LOGIN!!</a>
-    
 </div> 
 </body>
 </html>
