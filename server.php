@@ -118,7 +118,6 @@ if (isset($_POST['login_user'])) {
              
             // Storing username in session variable
             $_SESSION['email'] = $email;
-             
             // Welcome message
             $_SESSION['success'] = "You have logged in!";
 
