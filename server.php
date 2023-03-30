@@ -3,6 +3,7 @@
 // Starting the session, necessary
 // for using session variables
 session_start();
+ob_start();
 require "db_connection.php" ;
 // Declaring and hoisting the variables
 
@@ -120,6 +121,8 @@ if (isset($_POST['login_user'])) {
              
             // Welcome message
             $_SESSION['success'] = "You have logged in!";
+
+            header(lovcation)
         }
         else {
              
