@@ -8,7 +8,7 @@
     // means the user is yet to login
     // User will be sent to 'login.php' page
     // to allow the user to login
-    if (!isset($_SESSION['username'])) 
+    if (!isset($_SESSION['email'])) 
     {
         $_SESSION['msg'] = "You have to log in first";
         header('location: login.html');
@@ -20,7 +20,7 @@
     // after logging out
     if (isset($_GET['logout'])) {
         session_destroy();
-        unset($_SESSION['username']);
+        unset($_SESSION['email']);
         header("location: login.html");
     }
 ?>
@@ -53,11 +53,11 @@
 
       <!-- information of the user logged in -->
       <!-- welcome message for the logged in user -->
-      <?php if (isset($_SESSION['username'])) : ?>
+      <?php if (isset($_SESSION['email'])) : ?>
       <p>
         Welcome
         <strong>
-          <?php echo $_SESSION['username']; ?>
+          <?php echo $_SESSION['email']; ?>
         </strong>
       </p>
 

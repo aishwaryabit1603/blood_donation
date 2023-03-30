@@ -264,8 +264,10 @@
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
     </header>
   
-      <form class="form">
+      <form class="form" method = "POST" action = "register.php">
       
+        <?php include('errors.php'); ?>
+
         <div class="form__group">
           <input type="text" name = "name" placeholder="name" class="form__input" required />
         </div>
