@@ -123,7 +123,7 @@ if (isset($_POST['login_user'])) {
              
             // Page on which the user is sent
             // to after logging in
-            header('location: user_page.php');
+            header('location: user_page.html');
         }
         else {
              
