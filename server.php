@@ -3,10 +3,11 @@
 // Starting the session, necessary
 // for using session variables
 session_start();
-require "db_connection.php"
+require "db_connection.php" ;
 // Declaring and hoisting the variables
 
-$user = " ";
+
+$username = " ";
 $pw_1 = "";
 $f_name = "";
 $birthday = "";
@@ -28,7 +29,7 @@ if (isset($_POST['reg_user'])) {
     // in the variables
     // Data sanitization is done to prevent
     // SQL injections
-    $user = mysqli_real_escape_string($db_database, $_POST['user_name']);
+    $username = mysqli_real_escape_string($db_database, $_POST['user_name']);
     $f_name = mysqli_real_escape_string($db_database, $_POST['name']);
     $birthday = mysqli_real_escape_string($db_database, $_POST['dob']);
     $sex = mysqli_real_escape_string($db_database, $_POST['sex']);
@@ -42,7 +43,7 @@ if (isset($_POST['reg_user'])) {
   
     // Ensuring that the user has not left any input field blank
     // error messages will be displayed for every blank input
-    if (empty($user)) { array_push($errors, "Username is required"); }
+    if (empty($username)) { array_push($errors, "Username is required"); }
     if (empty($f_name)) { array_push($errors, "Full Name is required"); }
     if (empty($birthday)) { array_push($errors, "Date of Birth is required"); }
     if (empty($sex)) { array_push($errors, "Gender is required"); }
@@ -72,7 +73,7 @@ if (isset($_POST['reg_user'])) {
   
         // Storing username of the logged in user,
         // in the session variable
-        $_SESSION['username'] = $user;
+        $_SESSION['username'] = $username;
          
         // Welcome message
         $_SESSION['success'] = "You have logged in";
