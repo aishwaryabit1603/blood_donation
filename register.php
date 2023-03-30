@@ -265,12 +265,7 @@
     </header>
   
       <form class="form">
-        
-
-        <div class="form__group">
-          <input type="text" placeholder="Username" name = "user_name" class="form__input" required />
-        </div>
-        
+      
         <div class="form__group">
           <input type="text" name = "name" placeholder="name" class="form__input" required />
         </div>
