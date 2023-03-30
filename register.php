@@ -1,5 +1,5 @@
 <?php include "server.php"; ?>
-<?php include "C:\xampp\htdocs\blood_donation\error.php"; ?>
+<?php include "C:\xampp\htdocs\blood_donation\error.html"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
