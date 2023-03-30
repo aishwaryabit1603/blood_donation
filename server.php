@@ -6,8 +6,6 @@ session_start();
 require "db_connection.php" ;
 // Declaring and hoisting the variables
 
-
-$username = " ";
 $pw_1 = "";
 $f_name = "";
 $birthday = "";
@@ -21,7 +19,7 @@ $pw_2 = "";
 
 $errors = array();
 $_SESSION['success'] = "";
-  
+
 // Registration code
 if (isset($_POST['reg_user'])) {
   
@@ -29,7 +27,6 @@ if (isset($_POST['reg_user'])) {
     // in the variables
     // Data sanitization is done to prevent
     // SQL injections
-    $username = mysqli_real_escape_string($db_database, $_POST['user_name']);
     $f_name = mysqli_real_escape_string($db_database, $_POST['name']);
     $birthday = mysqli_real_escape_string($db_database, $_POST['dob']);
     $sex = mysqli_real_escape_string($db_database, $_POST['sex']);
@@ -42,7 +39,6 @@ if (isset($_POST['reg_user'])) {
   
     // Ensuring that the user has not left any input field blank
     // error messages will be displayed for every blank input
-    if (empty($username)) { array_push($errors, "Username is required"); }
     if (empty($f_name)) { array_push($errors, "Full Name is required"); }
     if (empty($birthday)) { array_push($errors, "Date of Birth is required"); }
     if (empty($sex)) { array_push($errors, "Gender is required"); }
@@ -57,7 +53,8 @@ if (isset($_POST['reg_user'])) {
         array_push($errors, "The two passwords do not match");
         // Checking if the passwords match
     }
-  
+    
+
     // If the form is error free, then register the user
     if (count($errors) == 0) {
          
@@ -65,14 +62,14 @@ if (isset($_POST['reg_user'])) {
         $password = md5($password_1);
          
         // Inserting data into table
-        $query = "INSERT INTO donors (user_name,password,name,dob,sex,bloodgroup,mobile_no,email,state,district)
-                  VALUES('$user','$password' '$f_name', '$birthday', '$sex', '$blood' , '$mobile' , '$email' ,'$state' , '$district' )";
+        $query = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)
+                  VALUES('$password' '$f_name', '$birthday', '$sex', '$blood' , '$mobile' , '$email' ,'$state' , '$district' )";
         
         mysqli_query($db_database, $query);
   
         // Storing username of the logged in user,
         // in the session variable
-        $_SESSION['user_name'] = $username;
+        $_SESSION['email'] = $email;
          
         // Welcome message
         $_SESSION['success'] = "You have logged in";
@@ -113,7 +110,7 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($results) == 1) {
              
             // Storing username in session variable
-            $_SESSION['user_name'] = $username;
+            $_SESSION['email'] = $email;
              
             // Welcome message
             $_SESSION['success'] = "You have logged in!";
@@ -125,7 +122,7 @@ if (isset($_POST['login_user'])) {
         else {
              
             // If the username and password doesn't match
-            array_push($errors, "Username or password incorrect");
+            array_push($errors, "Email or password incorrect");
         }
     }
 }
