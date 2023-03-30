@@ -3,7 +3,6 @@
 // Starting the session, necessary
 // for using session variables
 session_start();
-include "error.php";
 require "db_connection.php" ;
 // Declaring and hoisting the variables
 
@@ -53,10 +52,11 @@ if (isset($_POST['reg_user'])) {
   
     if ($pw_1 != $pw_2) {
         array_push($errors, "The two passwords do not match");
+        echo '<script>alert("Passwords do not match ")</script>';
         // Checking if the passwords match
     }
     
-
+    
     // If the form is error free, then register the user
     if (count($errors) == 0) {
          
@@ -81,6 +81,10 @@ if (isset($_POST['reg_user'])) {
         echo '<script>alert("Successful Resgistration")</script>';
         header('location: index.html');
     }
+    else
+    {
+       var_dump($errors);
+    }
 }
   
 // User login
@@ -97,7 +101,6 @@ if (isset($_POST['login_user'])) {
     if (empty($pw_1)) {
         array_push($errors, "Password is required");
     }
-  
     // Checking for the errors
     if (count($errors) == 0) {
          

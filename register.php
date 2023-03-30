@@ -265,9 +265,6 @@
     </header>
   
       <form class="form" method = "POST" action = "register.php">
-      
-        <?php include('error.php'); ?>
-
         <div class="form__group">
           <input type="text" name = "name" placeholder="Name" class="form__input" required />
         </div>
@@ -332,7 +329,6 @@
     <div class = "btn">
         <a href = "login.html" name = "form_input">CLICK HERE TO LOGIN!!</a>
     </div>
-    
 </div> 
 </body>
 </html>
