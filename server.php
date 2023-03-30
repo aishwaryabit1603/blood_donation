@@ -120,10 +120,6 @@ if (isset($_POST['login_user'])) {
              
             // Welcome message
             $_SESSION['success'] = "You have logged in!";
-             
-            // Page on which the user is sent
-            // to after logging in
-            header('location: user_page.html');
         }
         else {
              
