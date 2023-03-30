@@ -219,14 +219,15 @@
         width: 100%;
         padding: 20px;
         font-family: $font-family;
-        font-size:  14px;
+        font-size:  20px;
         -webkit-appearance: none;
         outline: 0;
         border: 0;
         color: black;
-        text-weight:200;
+        text-weight:100;
+        text-decoration : none;
         text-decoration-thickness: 10px; 
-        background: $color-primary;
+        background: white;
         transition: 0.3s;
         &:hover {
             background: darken($color-primary, 5%);
