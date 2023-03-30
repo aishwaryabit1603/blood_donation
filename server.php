@@ -38,8 +38,7 @@ if (isset($_POST['reg_user'])) {
     $email = mysqli_real_escape_string($db_database, $_POST['email']);
     $state = mysqli_real_escape_string($db_database, $_POST['state']);
     $district = mysqli_real_escape_string($db_database, $_POST['district']);
-    $pw_1  = mysqli_real_escape_string($db_database, $_POST['password_1']);
-    $pw_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+    $pw_1  = mysqli_real_escape_string($db_database, $_POST['password']);
   
     // Ensuring that the user has not left any input field blank
     // error messages will be displayed for every blank input
@@ -66,14 +65,14 @@ if (isset($_POST['reg_user'])) {
         $password = md5($password_1);
          
         // Inserting data into table
-        $query = "INSERT INTO donors (username,password,name,dob,sex,bloodgroup,mobile_no,email,state,district);
+        $query = "INSERT INTO donors (user_name,password,name,dob,sex,bloodgroup,mobile_no,email,state,district)
                   VALUES('$user','$password' '$f_name', '$birthday', '$sex', '$blood' , '$mobile' , '$email' ,'$state' , '$district' )";
-         
+        
         mysqli_query($db_database, $query);
   
         // Storing username of the logged in user,
         // in the session variable
-        $_SESSION['username'] = $username;
+        $_SESSION['user_name'] = $username;
          
         // Welcome message
         $_SESSION['success'] = "You have logged in";
@@ -114,7 +113,7 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($results) == 1) {
              
             // Storing username in session variable
-            $_SESSION['username'] = $username;
+            $_SESSION['user_name'] = $username;
              
             // Welcome message
             $_SESSION['success'] = "You have logged in!";
