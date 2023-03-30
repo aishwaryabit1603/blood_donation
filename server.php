@@ -94,7 +94,7 @@ if (isset($_POST['login_user'])) {
     // Data sanitization to prevent SQL injection
     $email = mysqli_real_escape_string($db_database, $_POST['email']);
     $pw_1 = mysqli_real_escape_string($db_database, $_POST['password_1']);
-  
+    
     // Error message if the input field is left blank
     if (empty($email)) {
         array_push($errors, "Email is required");
