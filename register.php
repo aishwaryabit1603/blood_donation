@@ -213,19 +213,21 @@
             background: darken($color-primary, 5%);
         }
       }
-      a{
+      a
+      {
         display: block;
         width: 100%;
         padding: 20px;
         font-family: $font-family;
+        font-size:  14px;
         -webkit-appearance: none;
         outline: 0;
         border: 0;
         color: black;
-        text-decoration-thickness: 5px; 
+        text-weight:200;
+        text-decoration-thickness: 10px; 
         background: $color-primary;
         transition: 0.3s;
-        
         &:hover {
             background: darken($color-primary, 5%);
         }
@@ -344,9 +346,7 @@
         <button class="btn" type="submit" name = "reg_user">Register</button>
         <button class="btn" type="reset">Clear</button>
     </form>
-    <div class = "form__group">
-      <a href = "login.html" name = "form_input">CLICK HERE TO LOGIN!!</a>
-    </div>
+     <a href = "login.html" name = "form_input">CLICK HERE TO LOGIN!!</a>
     
 </div> 
 </body>
