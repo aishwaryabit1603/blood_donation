@@ -159,15 +159,17 @@ body {
 }
 
 .button__icon {
-	font-size: 24px;
+	font-size: 30px;
+	font-weight:300;
 	margin-left: 10px;
 	color: #7875B5;
 }
 
+
 .social-login {	
 	position: relative;
 	height: 140px;
-	width: 160px;
+	width: 130px;
 	text-align: center;
 	bottom: 0px;
 	right: 0px;
@@ -200,7 +202,7 @@ body {
 }
 
 .social-login__icon:hover {
-	transform: scale(1.1);	
+	transform: scale(1);	
 }
   </style>
   </head>
@@ -208,24 +210,28 @@ body {
     <div class="container">
         <div class="screen">
             <div class="screen__content">
-                <form class="login" method = "post" action = "login.html">
+                <form class="login" action = "login.html" method = "post">
                     <div class="login__field">
                         <i class="login__icon fas fa-user"></i>
                         <input type="text" class="login__input" name = "email" placeholder="Email">
                     </div>
                     <div class="login__field">
                         <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" name = "password" placeholder="Password">
+                        <input type="password" class="login__input" placeholder="Password" name = "password">
                     </div>
+                    <button class="button login__submit" name = "login_user">
+                        <span class="button__text">Log In Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
             <div class="social-login">
                     <div class="social-icons">
-                        <a href = "user_page.html" class="social-login__icon " name = "login_user"> LOGIN
-                        </a>
                         <a href="register.php" class="social-login__icon ">
-                            REGISTER HERE !!
-                        </a>
+                             REGISTER HERE !!
+                             </a>
+                        
                     </div>
                 </form>
+                
                 </div>
             </div>
             <div class="screen__background">
