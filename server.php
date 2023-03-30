@@ -79,7 +79,7 @@ if (isset($_POST['reg_user'])) {
          
         // Page on which the user will be
         // redirected after logging in
-        echo '<script>alert("Successful Resgistration")</script>';
+        echo '<script>alert("Successful Registration")</script>';
         header('location: index.html');
     }
     else
@@ -122,7 +122,7 @@ if (isset($_POST['login_user'])) {
             // Welcome message
             $_SESSION['success'] = "You have logged in!";
 
-            header(lovcation)
+            header('location : user_page.html');
         }
         else {
              
