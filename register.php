@@ -1,5 +1,5 @@
 <?php include "server.php"; ?>
-<?php include "C:\xampp\htdocs\blood_donation\error.html"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -266,10 +266,10 @@
   
       <form class="form" method = "POST" action = "register.php">
       
-        <?php include('errors.php'); ?>
+        <?php include('error.php'); ?>
 
         <div class="form__group">
-          <input type="text" name = "name" placeholder="name" class="form__input" required />
+          <input type="text" name = "name" placeholder="Name" class="form__input" required />
         </div>
         
         <div class="form__group">

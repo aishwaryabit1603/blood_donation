@@ -3,10 +3,10 @@
 // Starting the session, necessary
 // for using session variables
 session_start();
+include "error.php";
 require "db_connection.php" ;
 // Declaring and hoisting the variables
 
-$pw_1 = "";
 $f_name = "";
 $birthday = "";
 $sex = "";
@@ -15,6 +15,7 @@ $mobile = "";
 $email = "";
 $state = "";
 $district = "";
+$pw_1 = "";
 $pw_2 = "";
 
 $errors = array();
@@ -30,12 +31,13 @@ if (isset($_POST['reg_user'])) {
     $f_name = mysqli_real_escape_string($db_database, $_POST['name']);
     $birthday = mysqli_real_escape_string($db_database, $_POST['dob']);
     $sex = mysqli_real_escape_string($db_database, $_POST['sex']);
-    $blood = mysqli_real_escape_string($db_database, $_POST['bloodgroup']);
+    $blood = mysqli_real_escape_string($db_database, $_POST['blood_type']);
     $mobile = mysqli_real_escape_string($db_database, $_POST['mobile_no']);
     $email = mysqli_real_escape_string($db_database, $_POST['email']);
-    $state = mysqli_real_escape_string($db_database, $_POST['state']);
-    $district = mysqli_real_escape_string($db_database, $_POST['district']);
-    $pw_1  = mysqli_real_escape_string($db_database, $_POST['password']);
+    $state = mysqli_real_escape_string($db_database, $_POST['state_input']);
+    $district = mysqli_real_escape_string($db_database, $_POST['district_input']);
+    $pw_1  = mysqli_real_escape_string($db_database, $_POST['password_1']);
+    $pw_2  = mysqli_real_escape_string($db_database, $_POST['password_2']);
   
     // Ensuring that the user has not left any input field blank
     // error messages will be displayed for every blank input
@@ -59,11 +61,11 @@ if (isset($_POST['reg_user'])) {
     if (count($errors) == 0) {
          
         // Password encryption to increase data security
-        $password = md5($password_1);
+        $password_final = md5($password_1);
          
         // Inserting data into table
         $query = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)
-                  VALUES('$password' '$f_name', '$birthday', '$sex', '$blood' , '$mobile' , '$email' ,'$state' , '$district' )";
+                  VALUES('$password_final' '$f_name', '$birthday', '$sex', '$blood' , '$mobile' , '$email' ,'$state' , '$district' )";
         
         mysqli_query($db_database, $query);
   
@@ -76,7 +78,8 @@ if (isset($_POST['reg_user'])) {
          
         // Page on which the user will be
         // redirected after logging in
-        header('location: user_page.php');
+        echo '<script>alert("Successful Resgistration")</script>';
+        header('location: index.html');
     }
 }
   
@@ -85,13 +88,13 @@ if (isset($_POST['login_user'])) {
      
     // Data sanitization to prevent SQL injection
     $email = mysqli_real_escape_string($db_database, $_POST['email']);
-    $password = mysqli_real_escape_string($db_database, $_POST['password']);
+    $pw_1 = mysqli_real_escape_string($db_database, $_POST['password_1']);
   
     // Error message if the input field is left blank
     if (empty($email)) {
         array_push($errors, "Email is required");
     }
-    if (empty($password)) {
+    if (empty($pw_1)) {
         array_push($errors, "Password is required");
     }
   
@@ -99,10 +102,10 @@ if (isset($_POST['login_user'])) {
     if (count($errors) == 0) {
          
         // Password matching
-        $password = md5($password);
+        $password_final = md5($pw_1);
          
         $query = "SELECT * FROM donors WHERE email=
-                '$email' AND password='$password'";
+                '$email' AND password='$password_final'";
         $results = mysqli_query($db_database, $query);
   
         // $results = 1 means that one user with the
