@@ -344,9 +344,9 @@
           <input type="password" placeholder="Confirm Password" class="form__input" name = "password_2" required/>
         </div>
         <div class="form__group">
-          <input class="btn" type="submit">Register</input>
+          <input type="submit" value = "Register now"/>
         </div>
-        
+
         <button class="btn" type="reset">Clear</button>
     </form>
      <a href = "login.html" name = "form_input">CLICK HERE TO LOGIN!!</a>
