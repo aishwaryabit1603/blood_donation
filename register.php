@@ -1,5 +1,15 @@
 <?php 
   include 'db_connection.php';
+  $f_name = "";
+  $birthday = "";
+  $sex = "";
+  $blood = "";
+  $mobile = "";
+  $email = "";
+  $state = "";
+  $district = "";
+  $pw_1 = "";
+  $pw_2 = "";
   if(isset($_POST['submit']))
   {
     $f_name = mysqli_real_escape_string($connection, $_POST['name']);
@@ -13,8 +23,7 @@
     $pw_1  = mysqli_real_escape_string($connection, md5($_POST['password_1']));
     $pw_2  = mysqli_real_escape_string($connection, md5($_POST['password_2']));
   }
-  $query = "SELECT  * FROM 'blood_donation' where email = '$email' AND 
-  password = '$pw_1'";
+  $query = "SELECT  * FROM blood_donation where email = '$email' AND password = '$pw_1'";
   $select = mysqli_query($connection,$query) or die('query failed');
   if(mysqli_num_rows($select) > 0)
   {
