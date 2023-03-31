@@ -343,9 +343,8 @@
             }
             else
             {
-              $query = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)
-              VALUES('$pw_1' '$f_name', '$birthday', '$sex', '$blood' , '$mobile' , '$email' ,'$state' , '$district' )";
-              $insert = mysqli_query($connection,$query);
+              $insert = mysqli_query($connection,"INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)
+              VALUES ('$pw_1' '$f_name', '$birthday', '$sex', '$blood' , '$mobile' , '$email' ,'$state' , '$district' )");
               if($insert)
               {
                 $message[] = "Registered Successfully";
