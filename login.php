@@ -22,12 +22,12 @@ if(isset($_POST['login_user']))
         $res = mysqli_query($connection,$query);
         if($res)
         {
-           echo "login successful";
+            echo '<script>alert("login successful")</script>';
            //header("location:")
         }
         else
         {
-            echo "Invalid data";
+            echo '<script>alert("Invalid email or password")</script>';
         }
     }
 }
