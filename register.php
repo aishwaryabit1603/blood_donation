@@ -23,7 +23,7 @@
     $pw_1  = mysqli_real_escape_string($connection, md5($_POST['password_1']));
     $pw_2  = mysqli_real_escape_string($connection, md5($_POST['password_2']));
   }
-  $query = "SELECT  * FROM $db_database where email = '$email' AND password = '$pw_1'";
+  $query = " SELECT * FROM donors where email = '$email' AND password = '$pw_1' ";
   $select = mysqli_query($connection,$query) or die('query failed');
   if(mysqli_num_rows($select) > 0)
   {
