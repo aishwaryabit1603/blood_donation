@@ -1,4 +1,26 @@
-<?php include "server.php"; ?>
+<?php 
+  include 'db_connection.php';
+  if(isset($_POST['submit']))
+  {
+    $f_name = mysqli_real_escape_string($connection, $_POST['name']);
+    $birthday = mysqli_real_escape_string($connection, $_POST['dob']);
+    $sex = mysqli_real_escape_string($connection, $_POST['sex']);
+    $blood = mysqli_real_escape_string($connection, $_POST['blood_type']);
+    $mobile = mysqli_real_escape_string($connection, $_POST['mobile_no']);
+    $email = mysqli_real_escape_string($connection, $_POST['email']);
+    $state = mysqli_real_escape_string($connection, $_POST['state_input']);
+    $district = mysqli_real_escape_string($connection, $_POST['district_input']);
+    $pw_1  = mysqli_real_escape_string($connection, md5($_POST['password_1']));
+    $pw_2  = mysqli_real_escape_string($connection, md5($_POST['password_2']));
+  }
+  $query = "SELECT  * FROM 'blood_donation' where email = '$email' AND 
+  password = '$pw_1'";
+  $select = mysqli_query($connection,$query) or die('query failed');
+  if(mysqli_num_rows($select) > 0)
+  {
+    $message[] = 'User Already exist'; 
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -234,6 +256,16 @@
         }
 
       }
+      .message{
+        margin : 5px 0;
+        width : 100%;
+        border-radius: 5px;
+        padding : 10px;
+        text-align : center;
+        background-color : var(--red);
+        color:var(--white);
+        font-size : 20px;
+      }
 
       @keyframes NO {
       from, to {
@@ -286,6 +318,38 @@
     </header>
   
       <form class="form" method = "POST" action = "" enctype = "multipart/form-data">
+        <?php
+          if(isset($message))
+          {
+            foreach($msg as $message)
+            {
+              echo '<div class = "message">'.$msg.'</div>';
+            }
+          }
+          else
+          {
+            if($pw_1 != $pw_2)
+            {
+              $message[] = 'Confirm password not matched ';
+            }
+            else
+            {
+              $query = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)
+              VALUES('$password_final' '$f_name', '$birthday', '$sex', '$blood' , '$mobile' , '$email' ,'$state' , '$district' )";
+              $insert = mysqli_query($connection,$query) or die('query failed');
+              if($insert)
+              {
+                $message[] = "Registered Successfully";
+                header('location:login.html');
+              } 
+              else
+              {
+                $message = "Registration failed";
+              }
+            }
+          }
+        ?>
+        
         <div class="form__group">
           <input type="text" name = "name" placeholder="Name" class="form__input" required />
         </div>
@@ -344,7 +408,7 @@
           <input type="password" placeholder="Confirm Password" class="form__input" name = "password_2" required/>
         </div>
         <div class="form__group">
-          <input type="submit" value = "Register now" class="form__input"/>
+          <input type="submit" value = "Register now" class="form__input" name = "submit"/>
         </div>
 
         <button class="btn" type="reset">Clear</button>
