@@ -17,7 +17,7 @@
       $pw_1  = mysqli_real_escape_string($connection, md5($_POST['password_1']));
       $pw_2  = mysqli_real_escape_string($connection, md5($_POST['password_2']));
 
-      if(strlen($mobile < 10))
+      if(!strlen($mobile == 10))
       {
         array_push($error,"Mobile no should be = 10"); 
       }
