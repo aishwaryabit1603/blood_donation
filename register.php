@@ -330,9 +330,9 @@
         <?php
           if(isset($message))
           {
-            foreach($msg as $message)
+            foreach($messages as $message)
             {
-              echo '<div class = "message">'.$msg.'</div>';
+              echo '<div class = "message">'.$messages.'</div>';
             }
           }
           else
