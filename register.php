@@ -419,7 +419,7 @@
           <input type="password" placeholder="Confirm Password" class="form__input" name = "password_2" required/>
         </div>
         <div class="form__group">
-          <input type="submit" value = "Register now" class="form__input" name = "submit"/>
+          <input type="submit" placeholder = "Register now" class="form__input" name = "submit"/>
         </div>
 
         <button class="btn" type="reset">Clear</button>
