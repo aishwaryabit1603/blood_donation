@@ -27,6 +27,7 @@
   }
   $query = " SELECT * FROM donors where email = '$email' AND password = '$pw_1' ";
   $select = mysqli_query($connection,$query) or die('query failed');
+  echo mysqli_num_rows($select);
   if(mysqli_num_rows($select) > 0)
   {
     $message[] = 'User Already exist'; 
@@ -360,7 +361,6 @@
             }
           }
         ?>
-        
         <div class="form__group">
           <input type="text" name = "name" placeholder="Name" class="form__input" required />
         </div>
