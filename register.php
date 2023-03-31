@@ -1,4 +1,5 @@
 <?php 
+  ob_start();
   include 'db_connection.php';
   $f_name = "";
   $birthday = "";
@@ -30,7 +31,6 @@
     $message[] = 'User Already exist'; 
   }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
