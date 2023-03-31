@@ -40,18 +40,34 @@
       */
       //if(count($error) == 0)
       //{
-        $sql = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
-        $result = mysqli_query($connection,$sql);
-        if($result)
+
+        $query = "Select * from donors where email = $email || mobile_no = $mobile";
+        $res = mysqli_query($connection,$query);
+        if($res)
         {
-          echo '<script type ="text/JavaScript">';  
-          echo 'alert("Registration Successful ")';  
-          echo '</script>';
-          header("Location: index.html");
+          $num = mysqli_num_rows($res);
+          if($num > 0)
+          {
+            echo '<script type ="text/JavaScript">';  
+            echo 'alert("User already exist !!")';  
+            echo '</script>';
+          }
         }
         else
         {
-          die(mysqli_error($connection));
+          $sql = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
+          $result = mysqli_query($connection,$sql);
+          if($result)
+          {
+            echo '<script type ="text/JavaScript">';  
+            echo 'alert("Registration Successful ")';  
+            echo '</script>';
+            header("Location: login.html");
+          }
+          else
+          {
+            die(mysqli_error($connection));
+          }
         }
       //}
      /* else
