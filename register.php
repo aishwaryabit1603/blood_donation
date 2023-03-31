@@ -12,7 +12,6 @@
   $pw_1 = '';
   $pw_2 = '';
   $message = [];
-  echo count($message);
   if(isset($_POST['submit']))
   {
     $f_name = mysqli_real_escape_string($connection, $_POST['name']);
@@ -28,6 +27,7 @@
   }
   $query = " SELECT * FROM donors where email = '$email' AND password = '$pw_1' ";
   $select = mysqli_query($connection,$query) or die('query failed');
+  echo $email." ".$pw_1;
   if(mysqli_num_rows($select) > 0)
   {
     $message[] = 'User Already exist'; 
@@ -370,7 +370,7 @@
         </div>
         
         <div class="form__group">
-          <input type="number" placeholder="Contact No" class="form__input" name = "mobile_no" required/>
+          <input type="tel" placeholder="Contact No" class="form__input" name = "mobile_no" required/>
         </div>
         <div class="form__group">
             
