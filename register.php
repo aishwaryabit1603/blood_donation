@@ -1,6 +1,8 @@
 <?php
   require 'db_connection.php';
   $error = [];
+  $success = 0;
+  $user = 0;
   if(isset($_POST['submit']))
   {
     if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']) && !empty($_POST['password_1']) &&!empty($_POST['password_2']))
@@ -48,9 +50,7 @@
           $num = mysqli_num_rows($res);
           if($num > 0)
           {
-            echo '<script type ="text/JavaScript">';  
-            echo 'alert("User already exist !!")';  
-            echo '</script>';
+            echo '<script>alert("User already Exists !!")</script>';
           }
         }
         else
@@ -59,9 +59,7 @@
           $result = mysqli_query($connection,$sql);
           if($result)
           {
-            echo '<script type ="text/JavaScript">';  
-            echo 'alert("Registration Successful ")';  
-            echo '</script>';
+            echo '<script>alert("Registration Successful !! ")</script>';
             header("Location: login.html");
           }
           else
