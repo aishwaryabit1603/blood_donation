@@ -1,27 +1,11 @@
 <?php
-    //Starting the session, to use and
-    // store data in session variable
-    
+
     session_start();
 
-    // If the session variable is empty, this
-    // means the user is yet to login
-    // User will be sent to 'login.php' page
-    // to allow the user to login
     if (!isset($_SESSION['email'])) 
     {
-        $_SESSION['msg'] = "You have to log in first";
+        echo '<script>alert("You have to log in first")</script>';
         header('location: login.html');
-    }
-
-    // Logout button will destroy the session, and
-    // will unset the session variables
-    // User will be headed to 'login.php'
-    // after logging out
-    if (isset($_GET['logout'])) {
-        session_destroy();
-        unset($_SESSION['email']);
-        header("location: login.html");
     }
 ?>
 <!DOCTYPE html>
@@ -35,11 +19,6 @@
       <h2>USER</h2>
     </div>
     <div class="content">
-      <!-- Creating notification when the
-				user logs in -->
-
-      <!-- Accessible only to the users that
-				have logged in already -->
       <?php if (isset($_SESSION['success'])) : ?>
       <div class="error success">
         <h3>
@@ -61,11 +40,11 @@
         </strong>
       </p>
 
-      <p>
-        <a href="index.php?logout='1'" style="color: red">
-          Click here to Logout
+      <div class = "container">
+        <a href="logout.php" style="color: red">
+          Logout
         </a>
-      </p>
+    </div>
       <?php endif ?>
     </div>
   </body>
