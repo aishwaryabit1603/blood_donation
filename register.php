@@ -6,7 +6,7 @@
     if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']) && !empty($_POST['password_1']) &&!empty($_POST['password_2']))
     {
       $f_name = $_POST['name'];
-      $birthday =$_POST['dob'];
+      $birthday = $_POST['dob'];
       $sex = $_POST['sex'];
       $blood = $_POST['blood_type'];
       $mobile = $_POST['mobile_no'];
