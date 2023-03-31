@@ -21,7 +21,8 @@ if(isset($_POST['login_user']))
 
         $query = "Select * from donors where email = '$email' && password = '$pw_1'";
         $res = mysqli_query($connection,$query);
-        if($res)
+        $num = mysqli_num_rows($res);
+        if($num == 1)
         {
             echo '<script>alert("login successful")</script>';
            //header("location:")
