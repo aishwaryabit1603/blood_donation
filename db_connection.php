@@ -11,4 +11,12 @@
     {
         die('Connect not Connect: '.mysqli_error($connection));
     }
+    else
+    {
+        echo "connection successful";
+        if(mysqli_select_db($connection,'$db_database'))
+        {
+            echo "db selected";
+        }
+    }
 ?>
