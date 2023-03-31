@@ -48,6 +48,7 @@
           echo '<script type ="text/JavaScript">';  
           echo 'alert("Registration Successful ")';  
           echo '</script>';
+          header("Location: index.html");
         }
         else
         {
@@ -62,6 +63,7 @@
           echo 'alert($error)';  
           echo '</script>';
         }
+        header("Location: register.html");
       }
     }
   }
@@ -70,5 +72,6 @@
     echo "<script type ='text/JavaScript'>";  
     echo "alert('Registration Failed')";  
     echo '</script>';
+    header("Location: register.html");
   }
 ?>
