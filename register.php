@@ -14,8 +14,8 @@
       $email = $_POST['email'];
       $state = $_POST['state_input'];
       $district = $_POST['district_input'];
-      $pw_1  = md5($_POST['password_1']);
-      $pw_2  = md5($_POST['password_2']);
+      $pw_1  = $_POST['password_1'];
+      $pw_2  = $_POST['password_2'];
 
       if(!strlen($mobile == 10))
       {
