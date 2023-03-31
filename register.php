@@ -27,7 +27,8 @@
   }
   $query = " SELECT * FROM donors where email = '$email' AND password = '$pw_1' ";
   $select = mysqli_query($connection,$query);
-  if(mysqli_num_rows($select) > 0)
+  $count = mysqli_num_rows($select);
+  if( $count > 0)
   {
     $message[] = 'User Already exist'; 
   }
