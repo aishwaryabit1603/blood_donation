@@ -11,6 +11,7 @@
   $district = "";
   $pw_1 = "";
   $pw_2 = "";
+  $message = [];
   if(isset($_POST['submit']))
   {
     $f_name = mysqli_real_escape_string($connection, $_POST['name']);
