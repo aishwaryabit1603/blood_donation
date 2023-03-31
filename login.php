@@ -18,7 +18,8 @@ if(isset($_POST['login_user']))
     {
         $email = $_POST['email'];
         $pw_1  = $_POST['password_1'];
-        $query = "Select * from donors where email = $email && password = $pw_1";
+
+        $query = "Select * from donors where email = '$email' && password = '$pw_1'";
         $res = mysqli_query($connection,$query);
         if($res)
         {
