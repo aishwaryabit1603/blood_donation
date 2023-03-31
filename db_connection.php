@@ -13,7 +13,7 @@
     }
     else
     {
-        echo "connection successful";
+        echo "connection successful\n";
         if(mysqli_select_db($connection,'blood_donation'))
         {
             echo "db selected";
