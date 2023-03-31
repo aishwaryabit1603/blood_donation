@@ -14,7 +14,7 @@
     else
     {
         echo "connection successful";
-        if(mysqli_select_db($connection,'$db_database'))
+        if(mysqli_select_db($connection,'blood_donation'))
         {
             echo "db selected";
         }
