@@ -41,7 +41,7 @@
 
       if(count($error) == 0)
       {
-        $sql = "INSERT INTO donors VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
+        $sql = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
         $result = mysqli_query($connection,$sql);
         if($result)
         {
