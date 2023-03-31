@@ -15,7 +15,7 @@
       $district = $_POST['district_input'];
       $pw_1  = $_POST['password_1'];
       $pw_2  = $_POST['password_2'];
-
+      /*
       if(!strlen($mobile == 10))
       {
         array_push($error,"Mobile no should be = 10"); 
@@ -37,14 +37,9 @@
       {
         array_push($error,"Not Eligible to donate blood");
       }
-      foreach($error as $error)
-        {
-          echo '<script type ="text/JavaScript">';  
-          echo 'alert($error)';  
-          echo '</script>';
-        }
-      if(count($error) == 0)
-      {
+      */
+      //if(count($error) == 0)
+      //{
         $sql = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
         $result = mysqli_query($connection,$sql);
         if($result)
@@ -58,8 +53,8 @@
         {
           die(mysqli_error($connection));
         }
-      }
-      else
+      //}
+     /* else
       {
         foreach($error as $error)
         {
@@ -68,7 +63,7 @@
           echo '</script>';
         }
         header("Location: register.html");
-      }
+      }*/
     }
   }
   else
