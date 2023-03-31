@@ -1,16 +1,16 @@
 <?php 
   ob_start();
   include 'db_connection.php';
-  $f_name = "";
-  $birthday = "";
-  $sex = "";
-  $blood = "";
-  $mobile = "";
-  $email = "";
-  $state = "";
-  $district = "";
-  $pw_1 = "";
-  $pw_2 = "";
+  $f_name = '';
+  $birthday = 0;
+  $sex = '';
+  $blood = '';
+  $mobile = 0;
+  $email = '';
+  $state = '';
+  $district = '';
+  $pw_1 = '';
+  $pw_2 = '';
   $message = [];
   if(isset($_POST['submit']))
   {
@@ -27,8 +27,7 @@
   }
   $query = " SELECT * FROM donors where email = '$email' AND password = '$pw_1' ";
   $select = mysqli_query($connection,$query) or die('query failed');
-  echo mysqli_num_rows($query);
-  if(mysqli_num_rows($select) > 0)
+  if(mysqli_num_rows($select) > )
   {
     $message[] = 'User Already exist'; 
   }
