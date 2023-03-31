@@ -26,8 +26,7 @@
     $pw_2  = mysqli_real_escape_string($connection, md5($_POST['password_2']));
   }
   $query = " SELECT * FROM donors where email = '$email' AND password = '$pw_1' ";
-  $select = mysqli_query($connection,$query) or die('query failed');
-  echo $email." ".$pw_1;
+  $select = mysqli_query($connection,$query);
   if(mysqli_num_rows($select) > 0)
   {
     $message[] = 'User Already exist'; 
