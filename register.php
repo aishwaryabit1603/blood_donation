@@ -1,5 +1,4 @@
 <?php
-  ob_start();
   require 'db_connection.php';
   $error = [];
   if(isset($_POST['submit-form']))
