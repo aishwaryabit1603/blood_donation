@@ -37,7 +37,12 @@
       {
         array_push($error,"Not Eligible to donate blood");
       }
-
+      foreach($error as $error)
+        {
+          echo '<script type ="text/JavaScript">';  
+          echo 'alert($error)';  
+          echo '</script>';
+        }
       if(count($error) == 0)
       {
         $sql = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
