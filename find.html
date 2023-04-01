@@ -302,27 +302,13 @@
 
       <form class="form" method="post" action="find.php">
         <div class="form__group">
-          <div class="form__input">
-            <p
-              style="
-                display: block;
-                width: 120%;
-                height: 100%;
-                padding: 0 px;
-                font-family: $font-family;
-                -webkit-appearance: none;
-                outline: 0;
-                border: 0;
-                color: black;
-                background: white;
-                transition: 0.3s;
-              "
-            >
-              Select Blood Type required :
-            </p>
-          </div>
+          <input
+            type="text"
+            placeholder="Search For Donor Details"
+            class="form__input"
+            diables
+          />
         </div>
-
         <div class="form__group">
           <select name="blood_type" class="form__input" required>
             <option value=" " selected disabled required>Blood Type</option>
