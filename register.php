@@ -23,6 +23,7 @@
           if($num > 0)
           {
             echo '<script>alert("User already Exists !!")</script>';
+            header('location:register.html');
           }
         }
         else
@@ -32,10 +33,11 @@
           if($result)
           {
             echo '<script>alert("Registration Successful !! ")</script>';
-            header("Location: login.html");
+            header('Location:login.html');
           }
           else
           {
+            echo 'hi';
             die(mysqli_error($connection));
           }
         }
