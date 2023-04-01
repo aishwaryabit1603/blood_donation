@@ -14,13 +14,15 @@
     <link rel="icon" type="image/x-icon" href="images\icon2.ico" />
   </head>
   <body>
-    <div class="header">
-     
-    </div>
-
       <!-- information of the user logged in -->
       <!-- welcome message for the logged in user -->
-      <?php if (isset($_SESSION['email'])) : ?>
+      <?php 
+      if (isset($_SESSION['email']))
+        {
+          $email = $_SESSION['email'];
+          echo '$email';
+        }
+      ?>
         Welcome
   
       <div class = "container">
@@ -28,7 +30,6 @@
           Logout
         </a>
     </div>
-      <?php endif ?>
     </div>
   </body>
 </html>
