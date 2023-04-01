@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTRATION FORM</title>
-    <link rel="icon" type="image/x-icon" href="icon2.ico" />
+    <link rel="icon" type="image/x-icon" href="images\icon2.ico" />
     <script type="text/javascript">
         var states_arr = new Array("Select State" , "Andhra Pradesh" , "Arunachal Pradesh" , "Assam" , "Bihar" , "Chhattisgarh" , "Goa" , "Gujarat" , "Haryana" , "Himachal Pradesh" , "Jammu and Kashmir" , "Jharkhand" , "Karnataka" , "Kerala" , "Madhya Pradesh" , "Maharashtra" , "Manipur" , "Meghalaya" , "Mizoram" , "Nagaland" , "Orissa" , "Punjab" , "Rajasthan" , "Sikkim" , "Tamil Nadu" , "Telangana" , "Tripura" , "Uttar Pradesh" , "Uttaranchal" , "West Bengal" , "Andaman and Nicobar Islands" , "Chandigarh" , "Dadra and Nagar Haveli" , "Daman and Diu" , "Delhi" , "Lakshadweep" , "Pondicherry");
         var district_arr = new Array();
@@ -251,8 +251,21 @@
     <header class="user__header">
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
     </header>
-  
       <form class="form" method = "post" action = "register.php">
+        <div class="form__group">
+          <input
+            type="text"
+            placeholder="Register As A Donor"
+            class="form__input"
+            disabled
+            style="
+              font-weight: 500;
+              font-size: 20px;
+              color: black;
+              background-color: #fff;
+            "
+          />
+        </div>
         <div class="form__group">
           <input type="text" name = "name" placeholder="Name" class="form__input" required />
         </div>
