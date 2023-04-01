@@ -1,7 +1,6 @@
 <?php
 
     session_start();
-
     if (!isset($_SESSION['email'])) 
     {
         echo '<script>alert("You have to log in first")</script>';
@@ -18,17 +17,6 @@
     <div class="header">
       <h2>USER</h2>
     </div>
-    <div class="content">
-      <?php if (isset($_SESSION['success'])) : ?>
-      <div class="error success">
-        <h3>
-          <?php
-				echo $_SESSION['success'];
-				unset($_SESSION['success']);
-		    ?>
-        </h3>
-      </div>
-      <?php endif ?>
 
       <!-- information of the user logged in -->
       <!-- welcome message for the logged in user -->
@@ -39,7 +27,7 @@
           <?php echo $_SESSION['email']; ?>
         </strong>
       </p>
-
+  
       <div class = "container">
         <a href="logout.php" style="color: red">
           Logout
