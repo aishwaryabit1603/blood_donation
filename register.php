@@ -23,8 +23,7 @@
         if($num > 0)
         {
           echo '<script>alert("User already Exists !!")</script>';
-          
-          header('location:register.html');
+          header("location: register.html");
         }
       }
       else

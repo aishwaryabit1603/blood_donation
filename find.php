@@ -10,6 +10,12 @@
 
             $query = "SELECT name,sex,bloodgroup,mobile_no,email,state,district FROM donors where bloodgroup = '$blood_required' && state = '$state_required' && district = '$district_required' ";
             $result = mysqli_query($connection,$query);
+            $count = mysqli_num_rows($result);
+            if($count == 0)
+            {
+                echo "<script>alert('Sorry No Donor Available')</script>";
+                header('location:index.html');
+            }
         }
     }
 
@@ -22,7 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Donor</title>
     <link rel="icon" type="image/x-icon" href="images\icon2.ico" />
-    <style>
+<style>
        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 *{
     font-family: 'Poppins', sans-serif;
@@ -147,8 +153,7 @@ input[type="text"]{
     margin: 2rem auto 1rem;
     margin-right: 0;
 }
-
-    </style>
+</style>
 </head>
 <body>
 
