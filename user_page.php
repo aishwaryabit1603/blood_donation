@@ -20,7 +20,7 @@
       if (isset($_SESSION['email']))
         {
           $email = $_SESSION['email'];
-          echo '$email';
+          echo $email;
         }
       ?>
         Welcome
