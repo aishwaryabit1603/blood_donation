@@ -1,5 +1,5 @@
 <?php
-
+    require 'db_connection.php';
     session_start();
     if (!isset($_SESSION['email'])) 
     {
@@ -15,18 +15,13 @@
   </head>
   <body>
     <div class="header">
-      <h2>USER</h2>
+     
     </div>
 
       <!-- information of the user logged in -->
       <!-- welcome message for the logged in user -->
       <?php if (isset($_SESSION['email'])) : ?>
-      <p>
         Welcome
-        <strong>
-          <?php echo $_SESSION['email']; ?>
-        </strong>
-      </p>
   
       <div class = "container">
         <a href="logout.php" style="color: red">

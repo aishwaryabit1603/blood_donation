@@ -28,7 +28,7 @@ if(isset($_POST['login_user']))
             echo '<script>alert("login successful")</script>';
             session_start();
             $_SESSION['email'] = $email;
-            header('location:user_page.html');
+            header('location:user_page.php');
         }
         else
         {
