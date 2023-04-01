@@ -14,31 +14,6 @@
       $district = $_POST['district_input'];
       $pw_1  = $_POST['password_1'];
       $pw_2  = $_POST['password_2'];
-      /*
-      if(!strlen($mobile == 10))
-      {
-        array_push($error,"Mobile no should be = 10"); 
-      }
-      if($pw_1 != $pw_2)
-      {
-        array_push($error,"Confirm password does not match");
-      }
-
-      if (!filter_var($email, FILTER_VALIDATE_EMAIL))
-      {
-        array_push($error,"Not a valid email address");  
-      }
-
-      // validation donor > 18
-      $today = date("Y-m-d");
-      $diff = date_diff(date_create($birthday), date_create($today));
-      if($diff < 18)
-      {
-        array_push($error,"Not Eligible to donate blood");
-      }
-      */
-      //if(count($error) == 0)
-      //{
 
         $query = "Select * from donors where email = $email || mobile_no = $mobile";
         $res = mysqli_query($connection,$query);
@@ -64,17 +39,6 @@
             die(mysqli_error($connection));
           }
         }
-      //}
-     /* else
-      {
-        foreach($error as $error)
-        {
-          echo '<script type ="text/JavaScript">';  
-          echo 'alert($error)';  
-          echo '</script>';
-        }
-        header("Location: register.html");
-      }*/
     }
   }
   else
