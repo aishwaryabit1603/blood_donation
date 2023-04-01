@@ -15,7 +15,7 @@
       $pw_1  = $_POST['password_1'];
       $pw_2  = $_POST['password_2'];
 
-        $query = "Select * from donors where email = $email || mobile_no = $mobile";
+        $query = "Select * from donors where email = '$email' || mobile_no = '$mobile' ";
         $res = mysqli_query($connection,$query);
         if($res)
         {
