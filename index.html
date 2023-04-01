@@ -8,99 +8,501 @@
     <link rel="icon" type="image/x-icon" href="images\icon2.ico" />
     <title>BLOOD DONATION</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-      * {
-        margin: 0;
-        padding: 0;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-      }
+      *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
 
-      body {
-        background: #272727;
-        font-family: "Montserrat", sans-serif;
-      }
+img {
+  display: block;
+  width: 100%;
+  max-width: 1500px;
+}
 
-      .navMenu {
-        position: absolute;
-        top: 10%;
-        left: 45%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
+body {
+  background: #ffcccb;
+  color: black;
+  width: 95%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
 
-      .navMenu a {
-        color: #f6f4e6;
-        text-decoration: none;
-        font-size: 1.2em;
-        text-transform: uppercase;
-        font-weight: 500;
-        display: inline-block;
-        width: 200px;
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-      }
+section {
+  margin: 5rem 2rem;
+}
 
-      .navMenu a:hover {
-        color: #fddb3a;
-      }
+/* Navigation Styles */
 
-      .navMenu .dot {
-        width: 6px;
-        height: 6px;
-        background: #fddb3a;
-        border-radius: 50%;
-        opacity: 0;
-        -webkit-transform: translateX(40px);
-        transform: translateX(30px);
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-      }
+header {
+  background: black;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  height: 90px;
+  z-index: 1000;
+  width: 95%;
+  font-size: 20px;
+  font-weight: 550;
+}
 
-      .navMenu a:nth-child(1):hover ~ .dot {
-        -webkit-transform: translateX(30px);
-        transform: translateX(30px);
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-        opacity: 1;
-      }
+.logo {
+  font-size: 1.25rem;
+  margin: 1rem;
+  text-transform: uppercase;
+}
 
-      .navMenu a:nth-child(2):hover ~ .dot {
-        -webkit-transform: translateX(240px);
-        transform: translateX(240px);
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.2s ease-in-out;
-        opacity: 1;
-      }
+nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  text-align: left;
+  background: black;
+  width: 100%;
+  height: 100vh;
+  padding-top: 2rem;
+  display: none;
+}
 
-      .navMenu a:nth-child(3):hover ~ .dot {
-        -webkit-transform: translateX(445px);
-        transform: translateX(445px);
-        -webkit-transition: all 0.4s ease-in-out;
-        transition: all 0.2s ease-in-out;
-        opacity: 1;
-      }
+.nav-toggle {
+  display: none;
+}
 
-      .navMenu a:nth-child(4):hover ~ .dot {
-        -webkit-transform: translateX(680px);
-        transform: translateX(680px);
-        -webkit-transition: all 0.5s ease-in-out;
-        transition: all 0.2s ease-in-out;
-        opacity: 1;
-      }
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #ffa98e;
+}
+
+.nav-toggle:checked ~ nav {
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background: black;
+  }
+
+  nav {
+    all: unset;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1em;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav li {
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+/* Section One */
+
+.section-one {
+  margin: 11rem 2rem 0;
+}
+
+.header {
+  font-size: 4.5rem;
+}
+
+.section-one-paragraph {
+  margin: 2rem 0;
+  width: 70%;
+  max-width: 500px;
+  line-height: 1.5rem;
+}
+
+.learn-more-btn {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 19.5px;
+  font-weight: 550;
+  text-decoration: none;
+  color: black;
+}
+
+.learn-more-btn:hover {
+  background: #e32636;
+  color: white;
+}
+
+/* Section Two */
+
+/* Section Three */
+
+.section-three h3 {
+  margin: auto auto;
+  padding: auto auto;
+  width: 80%;
+  background: white;
+  border-radius: 20px;
+  max-width: 600px;
+  height: 50px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Section Four */
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.section-four p {
+  margin-bottom: 1.5rem;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+.section-four-btn {
+  margin-bottom: 1rem;
+  width: 500px;
+}
+
+/* Section Five */
+
+.section-five-flex-group {
+  flex-direction: row-reverse;
+}
+
+.section-five p {
+  margin-bottom: 3 rem;
+  font-size: 20px;
+  font-weight: bolder;
+  width: 500px;
+  height: 100px;
+  line-height: 1.5em;
+}
+
+/* Section Six */
+
+.section-six p {
+  margin-bottom: 2rem;
+  font-size: 20px;
+  font-weight: bolder;
+  width: 500px;
+  height: 100px;
+  line-height: 2.5em;
+}
+
+/* Flex Group Mobile */
+
+@media (max-width: 800px) {
+  .flex-group {
+    flex-direction: column;
+  }
+}
+
+/* Section Seven */
+
+.section-seven h3 {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 700px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section-seven-btn {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  font-size: 22px;
+}
+
+/* Section Eight */
+
+.section-eight h4 {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.section-eight p {
+  line-height: 1.5rem;
+}
+
+.section-eight img {
+}
+
+.flex-group-eight {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 800px) {
+  .flex-group-eight {
+    flex-direction: column;
+  }
+}
+
+/* Section Nine */
+
+.section-nine {
+  margin-top: 15rem;
+}
+
+.section-nine h3 {
+  margin: auto auto;
+  padding: auto auto;
+  width: 80%;
+  background: white;
+  border-radius: 20px;
+  max-width: 800px;
+  height: 50px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+/* Section Ten */
+
+.section-ten h3 {
+  margin: 15rem auto 2rem;
+  max-width: 1000px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  height: 200px;
+  text-align: center;
+}
+
+.section-ten-btn {
+  text-align: center;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 10rem;
+}
+
     </style>
   </head>
   <body>
-    <header>
-      <nav class="navMenu">
-        <a href="#" class="active">Home</a>
-        <a href="register.html">REGISTER</a>
-        <a href="login.html">LOGIN</a>
-        <a href="find.html">FIND DONOR</a>
-        <div class="dot"></div>
-      </nav>
-    </header>
-
-    <footer></footer>
+    <body>
+      <header>
+        <h1 class="logo">Instrument</h1>
+        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        <nav>
+          <ul>
+            <li> <a href="">HOME</a></li>
+            <li> <a href="register.html">Register</a></li>
+            <li> <a href="login.html">Login</a></li>
+            <li> <a href="find.html">Find Donor</a></li>
+            <li> <a href="admin.html">Admin</a></li>
+          </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+      </header>
+    
+      <!-- Section One -->
+    
+      <section class="section-one">
+        <h2 class="header">Be the reason for someone’s heartbeat</h2>
+        <p class="section-one-paragraph"></p>
+        <a href="register.html" class="learn-more-btn">JOIN US TO SAVE LIVES </a>
+      </section>
+    
+      <!-- Section Two -->
+      <section class="section=two">
+        <img src=images\front.jpeg>
+      </section>
+    
+      <!-- Section Three -->
+      <section class="section-three">
+        <h3>Give the gift of life to others</h3>
+      </section>
+    
+      <!-- Section Four -->
+      <section class="section-four">
+        <div class="flex-group">
+          <div>
+            <img src=https://jnj-content-lab.brightspotcdn.com/dims4/default/0fba69d/2147483647/strip/true/crop/1000x463+0+102/resize/1440x666!/quality/90/?url=http%3A%2F%2Fjnj-brightspot.s3.amazonaws.com%2Fba%2F7a%2F1a1da0404ec2bf8a21e270178fd0%2Fshutterstock-294174608-1-copy.jpg>
+          </div>
+          <div class="content-container">
+            <p>Blood can be stored only for a limited period of time before use. Regular blood donation by a sufficient number of healthy people is needed to ensure that blood will always be available whenever and wherever it is needed. </p>
+            <a href="https://www.firstpost.com/world/world-blood-donor-day-13-reasons-why-you-should-donate-blood-3583133.html" class="learn-more-btn section-four-btn">WHY DONATE BLOOD ?</a>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Section Five -->
+      <section class="section-five">
+        <div class="flex-group section-five-flex-group">
+          <div>
+            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQ6fPbNBBvlDC9m2l6k_dLjjGevOfp2u-r-gKnQb5ulEspNUs44955WoPUAHX9zJhsac&usqp=CAU>
+          </div>
+          <div class="content-container">
+            <p>NOT EVERYONE CAN DONATE <br>BLOOD !! VERIFY YOUR <br>ELIGIBILITY BEFORE BLOOD DONATION</p><br>
+            <a href="https://www.redcrossblood.org/donate-blood/how-to-donate/eligibility-requirements.html" class="learn-more-btn section-four-btn">Eligible To Donate Blood?</a>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Section six -->
+      <section class="section-six">
+        <div class="flex-group">
+          <div>
+            <img src=https://cdn5.vectorstock.com/i/1000x1000/15/69/blood-group-icon-with-drop-set-vector-17361569.jpg>
+          </div>
+          <div class="content-container">
+            <p>
+              NOT EVERY BLOOD GROUP CAN DONATE BLOOD TO EVERY OTHER BLOOD GROUP
+            </p>
+            <a href="" class="learn-more-btn section-four-btn">See who can you donate blood to?</a>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Section Seven -->
+    
+      <section class="section-seven">
+        <h3>“Drops of life and hope for a dying cove,<br>
+    
+          Prayers wrapped in transparent white cloak,<br>
+    
+          No tears, no money can replace this living soul,<br>
+    
+          Indeed, it is the greatest gift that a man can bestow.”</h3>
+        <a href="" class="learn-more-btn section-seven-btn">BLOOD TYPES AVAILABLE</a>
+      </section>
+      <!-- Section Eight -->
+      <section class="section-eight">
+        <div class="flex-group-eight">
+          <div>
+            <img src=images\o.png>
+            <h4>O 🩸 Group </h4>
+            <p>has no antigens, but both anti-A and anti-B antibodies in the plasma</p>
+          </div>
+    
+          <div>
+            <img src=images\a.png>
+            <h4>A🩸 Group </h4>
+            <p>has A antigens on the red blood cells with anti-B antibodies in the plasma</p>
+          </div>
+          <div>
+            <img src=images\b.png>
+            <h4>B🩸 Group</h4>
+            <p>has B antigens with anti-A antibodies in the plasma
+            </p>
+          </div>
+          <div>
+            <img src=images\ab.png>
+            <h4>AB🩸 Group</h4>
+            <p>has both A and B antigens, but no antibodies</p>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Section Nine -->
+    
+      <section class="section-nine">
+        <div class="logo-container">
+          <div>
+    
+            <center>
+              <h3>TIPS: Before Blood Donation" </h3><br>
+              <br>
+              <iframe width="800" height="400" src="https://www.youtube.com/embed/YHxdhI5ZrHc" title="TIPS: Before Blood Donation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <center>
+                <br>
+                <br>
+                <center>
+                  <h3>TIPS: AFTER Blood Donation" </h3><br>
+                  <br>
+                  <iframe width="800" height="400" src="https://www.youtube.com/embed/NYZBmdT_o8I" title="Tips: After Blood Donation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </center>
+    
+          </div>
+          <div>
+            <center>
+              <br>
+              <h3>What happens to your body after blood donation ?</h3><br>
+              <br><iframe width="800" height="400" src="https://www.youtube.com/embed/MU8CrgctkWM" title="What Happens to Your Body After You Donate Blood" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </center>
+          </div>
+        </div>
+      </section>
+    
+      <section class="section-ten">
+        <h3>Blood Bank Donation Management Website Made by : Aishwarya Class : BCA 6th sem Section : A Roll No 2241602</h3>
+        <a href="mailto:aishwaryasingla123@gmail.com" class="learn-more-btn section-ten-btn">Get In Touch</a>
+      </section>
+    
+    </body>
   </body>
 </html>
