@@ -15,32 +15,33 @@
       $pw_1  = $_POST['password_1'];
       $pw_2  = $_POST['password_2'];
 
-        $query = "Select * from donors where email = '$email' || mobile_no = '$mobile' ";
-        $res = mysqli_query($connection,$query);
-        if($res)
+      $query = "Select * from donors where email = '$email' || mobile_no = '$mobile' ";
+      $res = mysqli_query($connection,$query);
+      if($res)
+      {
+        $num = mysqli_num_rows($res);
+        if($num > 0)
         {
-          $num = mysqli_num_rows($res);
-          if($num > 0)
-          {
-            echo '<script>alert("User already Exists !!")</script>';
-            header('location:register.html');
-          }
+          echo '<script>alert("User already Exists !!")</script>';
+          
+          header('location:register.html');
+        }
+      }
+      else
+      {
+        $sql = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
+        $result = mysqli_query($connection,$sql);
+        if($result)
+        {
+          echo '<script>alert("Registration Successful !! ")</script>';
+          header('Location:login.html');
         }
         else
         {
-          $sql = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
-          $result = mysqli_query($connection,$sql);
-          if($result)
-          {
-            echo '<script>alert("Registration Successful !! ")</script>';
-            header('Location:login.html');
-          }
-          else
-          {
-            echo 'hi';
-            die(mysqli_error($connection));
-          }
+          echo 'hi';
+          die(mysqli_error($connection));
         }
+      }
     }
   }
   else
