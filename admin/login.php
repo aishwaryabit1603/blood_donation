@@ -11,7 +11,7 @@
         }
         else
         {
-          echo '<script>alert("Wrong email or password !! Try again"</script>)';  
+          //echo '<script>alert("Wrong email or password !! Try again"</script>)';  
           header('location:login.php');
         }
       }
