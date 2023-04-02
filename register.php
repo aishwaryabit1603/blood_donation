@@ -28,6 +28,10 @@
           echo '<script>alert("User already Exists !!")</script>';
           header("location: register.html");
         }
+        else
+        {
+          echo "error ............";
+        }
       }
       else
       {
