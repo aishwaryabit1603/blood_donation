@@ -3,7 +3,7 @@
     {
       if(isset($_POST['email']) && isset($_POST['password']))
       {
-        if($_POST['email'] == "admin@gmail.com" && $_POST['email'] == "admin")
+        if($_POST['email'] == "admin@gmail.com" && $_POST['password'] == "admin")
         {
           session_start();
           $_SESSION['email'] = "admin@gmail.com";
