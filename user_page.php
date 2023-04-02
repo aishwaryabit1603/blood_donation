@@ -49,21 +49,12 @@ body{
 }
 .wrapper .left h3{
   background: linear-gradient(to right,#E9967A,#E9967A);
-  padding: 30px 25px;
+  padding: 25px 25px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   text-align: center;
-  font-size:30px;
-  color: #fff;
-}
-
-.wrapper .left h4{
-  margin-bottom: 10px;
   font-size:25px;
-}
-
-.wrapper .left p{
-  font-size: 20px;
+  color: #fff;
 }
 
 .wrapper .right{
@@ -166,8 +157,8 @@ body{
     <div class="left">
         <h3> NAME : </h3>
         <h3><?php echo strtoupper($name); ?></h3>
-        <h3>Blood TYPE :</h3 
-         <h3><?php echo $blood; ?></h3>
+        <h3>Blood TYPE :</h3> 
+        <h3><?php echo $blood; ?></h3>
     </div>
     <div class="right">
         <div class="info">
