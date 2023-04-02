@@ -1,5 +1,6 @@
 <?
     require 'db_connection.php';
+    echo "0";
     if(isset($_POST['submit']))
     {
       echo "1";
