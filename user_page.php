@@ -164,7 +164,9 @@ body{
 
 <div class="wrapper">
     <div class="left">
-        <h3><?php echo $name; ?></h3>
+        <h3> NAME : </h3>
+        <h3><?php echo strtoupper($name); ?></h3>
+        <h3>Blood TYPE :</h3 
          <h3><?php echo $blood; ?></h3>
     </div>
     <div class="right">
@@ -205,11 +207,6 @@ body{
             </div>
     </div>
 </div>
-      <div class = "container">
-        <a href="logout.php" style="color: red">
-          Logout
-        </a>
-    </div>
     </div>
   </body>
 </html>
