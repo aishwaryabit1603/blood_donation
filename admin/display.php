@@ -132,7 +132,7 @@
         <tbody>
             <tr>
                 <td colspan="4"></td>
-                <td><a class="Add"  id="Add">Add</a></td>
+                <td><a class="Add" href = "register.html"  id="Add">Add</a></td>
             </tr>
         </tbody>
         </table>
