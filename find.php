@@ -1,24 +1,5 @@
 <?php
     require 'db_connection.php' ;
-    if(isset($_POST['submit']))
-    {
-        if(isset($_POST['blood_type']) && isset($_POST['state_input']) && isset($_POST['district_input']))
-        {
-            $blood_required = $_POST['blood_type'];
-            $state_required = $_POST['state_input'];
-            $district_required = $_POST['district_input'];
-
-            $query = "SELECT name,sex,bloodgroup,mobile_no,email,state,district FROM donors where bloodgroup = '$blood_required' && state = '$state_required' && district = '$district_required' ";
-            $result = mysqli_query($connection,$query);
-            $count = mysqli_num_rows($result);
-            if($count == 0)
-            {
-                echo "<script>alert('Sorry No Donor Available')</script>";
-                header('location:index.html');
-            }
-        }
-    }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -175,6 +156,24 @@
                 </thead>
                 <tbody>
         <?php
+            if(isset($_POST['submit']))
+            {
+                if(isset($_POST['blood_type']) && isset($_POST['state_input']) && isset($_POST['district_input']))
+                {
+                    $blood_required = $_POST['blood_type'];
+                    $state_required = $_POST['state_input'];
+                    $district_required = $_POST['district_input'];
+        
+                    $query = "SELECT name,sex,bloodgroup,mobile_no,email,state,district FROM donors where bloodgroup = '$blood_required' && state = '$state_required' && district = '$district_required' ";
+                    $result = mysqli_query($connection,$query);
+                    $count = mysqli_num_rows($result);
+                    if($count == 0)
+                    {
+                        echo "<script>alert('Sorry No Donor Available')</script>";
+                        header('location:index.html');
+                    }
+                }
+            }
             while($row = mysqli_fetch_array($result))
             {
         ?>
