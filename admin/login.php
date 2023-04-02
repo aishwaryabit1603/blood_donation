@@ -1,4 +1,5 @@
 <?
+    require 'db_connection.php';
     if(isset($_POST['submit']))
     {
       if(isset($_POST['email']) && isset($_POST['password']))
@@ -105,7 +106,7 @@
   <body>
     <div class="login-page">
       <div class="form">
-        <form class="login-form" action="login.php" method="post" autocomplete="off">
+        <form class="login-form" action="admin\login.php" method="post" autocomplete="off">
           <input type="text" placeholder="Email" name = "email"/>
           <input type="password" placeholder="password" name = "password"/>
           <input class="btn" type="submit" name = "submit" placeholder="Login" />
