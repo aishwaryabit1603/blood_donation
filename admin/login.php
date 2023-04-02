@@ -108,7 +108,7 @@
         <form class="login-form" action="login.php" method="post" autocomplete="off">
           <input type="text" placeholder="Email" name = "email"/>
           <input type="password" placeholder="password" name = "password"/>
-          <input class="btn" type="submit" placeholder="Login" />
+          <input class="btn" type="submit" name = "submit" placeholder="Login" />
         </form>
       </div>
     </div>
