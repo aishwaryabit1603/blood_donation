@@ -174,7 +174,6 @@
               </div>
             </div>
         </div>
-      
       <div class="projects">
             <h3></h3>
             <div class="projects_data">
