@@ -8,11 +8,11 @@
         {
           session_start();
           $_SESSION['email'] = "admin@gmail.com";
-          header('location: admin\index.php');
+          header('location: C:\xampp\htdocs\blood_donation\admin\index.php');
         }
         else
         {
-          header('location: index.php');
+          header('location: C:\xampp\htdocs\blood_donation\index.html');
         }
       }
     }
