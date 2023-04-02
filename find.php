@@ -30,129 +30,129 @@
     <link rel="icon" type="image/x-icon" href="images\icon2.ico" />
 <style>
        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-*{
-    font-family: 'Poppins', sans-serif;
-}
-body{
-    background: #f6eded;
-}
-.container{
-    max-width: 992px;
-    margin: auto;
-    width: 100%;
-    padding: 0 15px;
-    overflow: auto;
-}
-h1{
-    color: #850000;
-}
-#table-container{
-    overflow: auto;
-}
-table{
-    max-width: 100%;
-    text-align: center;
-    min-width: 50rem;
-    width: 100%;
-}
-table tbody:last-child{
-    box-shadow: 0px 1px #850000;
-}
-table tbody tr:nth-child(even) {
-    background-color: #85000012;
-  }
-table thead{
-    background: #850000;
-    color: white;
-}
-table tbody:last-child td{
-    padding: 19px 0
-}
-td img{
-    width: 90px;
-    height: auto;
-}
-th{
-    min-width: 3rem;
-    font-size:14px;
-    padding: 15px 10px;
-}
-td {  
-    padding: 10px ;
-    font-size:13px;
-}
-.Remove{
-    background: #850000;
-    color: white;
-    padding: 10px ;
-    border-radius: 5px; 
-    cursor: pointer;
-}
-.Add , #addTotable{
-    color: #850000;
-    border: 1px solid #850000;
-    background: #fff;
-    padding: 10px ;
-    border-radius: 5px; 
-    cursor: pointer;
-}
+    *{
+        font-family: 'Poppins', sans-serif;
+    }
+    body{
+        background: #f6eded;
+    }
+    .container{
+        max-width: 992px;
+        margin: auto;
+        width: 100%;
+        padding: 0 15px;
+        overflow: auto;
+    }
+    h1{
+        color: #850000;
+    }
+    #table-container{
+        overflow: auto;
+    }
+    table{
+        max-width: 100%;
+        text-align: center;
+        min-width: 50rem;
+        width: 100%;
+    }
+    table tbody:last-child{
+        box-shadow: 0px 1px #850000;
+    }
+    table tbody tr:nth-child(even) {
+        background-color: #85000012;
+    }
+    table thead{
+        background: #850000;
+        color: white;
+    }
+    table tbody:last-child td{
+        padding: 19px 0
+    }
+    td img{
+        width: 90px;
+        height: auto;
+    }
+    th{
+        min-width: 3rem;
+        font-size:14px;
+        padding: 15px 10px;
+    }
+    td {  
+        padding: 10px ;
+        font-size:13px;
+    }
+    .Remove{
+        background: #850000;
+        color: white;
+        padding: 10px ;
+        border-radius: 5px; 
+        cursor: pointer;
+    }
+    .Add , #addTotable{
+        color: #850000;
+        border: 1px solid #850000;
+        background: #fff;
+        padding: 10px ;
+        border-radius: 5px; 
+        cursor: pointer;
+    }
 
-#popup{
-    background: #fff;
-    width: 100%;
-    z-index: 9;
-    padding: 15px;
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-.popup-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0 20px 20px;
-    border: 1px solid #888;
-    max-width: 500px;
-    width: 100%;
-  }
-.popup-header{
-position: relative;
-}
-.popup-header span{
-    display: flex;
-    justify-content: end;
-    color: #850000;
-    font-size: 24px;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-}
-.input-group label{
-    display: block;
-    margin-top: 1rem;
-}
-input[type="text"]{
-    outline: none;
-    border: 1px solid #850000;
-    width: -webkit-fill-available;
-    padding: 7px;
-    border-radius: 10px;
-    margin: 1rem 0;
-}
-.input-group:focus-within label {
-    color: #850000;
-}
-.btn-group{
-    width: fit-content;
-    margin: 2rem auto 1rem;
-    margin-right: 0;
-}
+    #popup{
+        background: #fff;
+        width: 100%;
+        z-index: 9;
+        padding: 15px;
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    .popup-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0 20px 20px;
+        border: 1px solid #888;
+        max-width: 500px;
+        width: 100%;
+    }
+    .popup-header{
+    position: relative;
+    }
+    .popup-header span{
+        display: flex;
+        justify-content: end;
+        color: #850000;
+        font-size: 24px;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .input-group label{
+        display: block;
+        margin-top: 1rem;
+    }
+    input[type="text"]{
+        outline: none;
+        border: 1px solid #850000;
+        width: -webkit-fill-available;
+        padding: 7px;
+        border-radius: 10px;
+        margin: 1rem 0;
+    }
+    .input-group:focus-within label {
+        color: #850000;
+    }
+    .btn-group{
+        width: fit-content;
+        margin: 2rem auto 1rem;
+        margin-right: 0;
+    }
 </style>
 </head>
 <body>
@@ -173,8 +173,8 @@ input[type="text"]{
                     </tr>
                 </thead>
                 <tbody>
-        <?php 
-            while($row=mysqli_fetch_assoc($result))
+        <?php
+            while($row = mysqli_fetch_assoc($result))
             {
         ?>
 		<tr>
