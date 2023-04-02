@@ -4,10 +4,10 @@
     if(isset($_POST['submit']))
     {
       echo "1";
-      if(isset($_POST['email']) && isset($_POST['password']))
+      if(isset($_POST['username']) && isset($_POST['password']))
       {
         echo "2";
-        if($_POST['email'] == "admin@gmail.com" && $_POST['password'] == "admin")
+        if($_POST['username'] == "admin" && $_POST['password'] == "admin")
         {
           echo "3";
           session_start();
@@ -16,7 +16,7 @@
         }
         else
         {
-          header('location: C:\xampp\htdocs\blood_donation\index.html');
+          header('location: blood_donation\index.html');
         }
       }
     }
@@ -111,7 +111,7 @@
     <div class="login-page">
       <div class="form">
         <form class="login-form" action="" method="post" autocomplete="off">
-          <input type="text" placeholder="Email" name = "email"/>
+          <input type="text" placeholder="Username" name = "username"/>
           <input type="password" placeholder="password" name = "password"/>
           <input class="btn" type="submit" name = "submit" placeholder="Login" />
         </form>
