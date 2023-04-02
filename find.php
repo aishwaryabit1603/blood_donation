@@ -171,12 +171,11 @@
                         <th>Mobile No</th>
                         <th>State</th>
                         <th>district</th>
-                        
                     </tr>
                 </thead>
                 <tbody>
         <?php
-            while($row = mysqli_fetch_assoc($result))
+            while($row = mysqli_fetch_array($result))
             {
         ?>
 		<tr>
