@@ -37,7 +37,7 @@
           return true;
       }
       $ans = validateAge($birthday,18);
-      if(ans == 0)
+      if($ans == 0)
       {
         $error = $error + 1;
       }
