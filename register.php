@@ -9,7 +9,10 @@
       $sex = $_POST['sex'];
       $blood = $_POST['blood_type'];
       $mobile = $_POST['mobile_no'];
-      $email = $_POST['email'];
+      $email_1 = $_POST['email'];
+      
+      $email = filter_var($email_1, FILTER_SANITIZE_EMAIL);
+
       $state = $_POST['state_input'];
       $district = $_POST['district_input'];
       $pw_1  = $_POST['password_1'];
