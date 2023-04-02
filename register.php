@@ -25,7 +25,7 @@
         $num = mysqli_num_rows($res);
         if($num > 0)
         {
-          echo "User already exists !";
+          echo $num;
           header("location: register.html");
         }
       }
