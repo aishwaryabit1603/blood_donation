@@ -67,7 +67,7 @@ body{
 }
 
 .wrapper .right{
-  width: 65%;
+  width: 70%;
   background: #fff;
   padding: 30px 25px;
   border-top-right-radius: 5px;
