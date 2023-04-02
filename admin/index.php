@@ -135,8 +135,8 @@
         <h3>WELCOME ADMIN<h3>
       </div>
       <nav>
-        <a href="users.php">USERS</a>
-        <a href="blood.php">Blood Available</a>
+        <a href="display.php">USERS LIST</a>
+        <a href="blood.php">STATISTICS</a>
         <a href="logout.php">Logout</a>
         <div id="indicator"></div>
       </nav>
