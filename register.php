@@ -25,12 +25,8 @@
         $num = mysqli_num_rows($res);
         if($num > 0)
         {
-          echo '<script>alert("User already Exists !!")</script>';
+          echo '<script>alert("User already exists !")</script>';
           header("location: register.html");
-        }
-        else
-        {
-          echo "jhgff";
         }
       }
       else
