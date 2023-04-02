@@ -8,7 +8,7 @@
         {
           session_start();
           $_SESSION['email'] = "admin@gmail.com";
-          header('location: C:\xampp\htdocs\blood_donation\admin\index.php');
+          header('location: index.php');
         }
         else
         {
@@ -106,7 +106,7 @@
   <body>
     <div class="login-page">
       <div class="form">
-        <form class="login-form" action="admin\login.php" method="post" autocomplete="off">
+        <form class="login-form" action="login.php" method="post" autocomplete="off">
           <input type="text" placeholder="Email" name = "email"/>
           <input type="password" placeholder="password" name = "password"/>
           <input class="btn" type="submit" name = "submit" placeholder="Login" />
