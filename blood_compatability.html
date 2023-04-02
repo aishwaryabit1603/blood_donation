@@ -304,7 +304,7 @@ const BLOOD_TYPES = {
 };
 const reset_button = document.getElementById("reset");
 const selector = document.getElementById("blood_selector");
-const blood_vias = document.querySelectorAll("#humans .human .blood_via");
+const blood_vias = document.querySelectorAll(".humans .blood_via");
 const blood_bag = document.querySelector("#blood_content > div.main_bag > div");
 const center_via = document.querySelector(".center_via > .blood_via");
 const blood_types = document.querySelectorAll(".blood_type");
@@ -363,22 +363,6 @@ async function setRecipents(e) {
   </head>
   <body>
     <div id="about">
-      <div class="mySocial">
-        <a
-          class="social"
-          href="https://www.linkedin.com/in/rominamartinlib/"
-          target="_new"
-          ><i class="fab fa-linkedin"></i></a
-        ><a class="social" href="https://rominamartin.github.io/" target="_new"
-          ><i class="fab fa-github"></i></a
-        ><a
-          class="social"
-          href="https://twitter.com/rominamartinlib"
-          target="_new"
-          ><i class="fab fa-twitter"></i></a
-        ><a class="social" href="https://donatinghelps.com/" target="_new"
-          ><i class="fas fa-globe"></i
-        ></a>
       </div>
     </div>
     <div id="content">
@@ -404,7 +388,7 @@ async function setRecipents(e) {
           <div class="blood_via"></div>
         </div>
       </div>
-      <div id="humans">
+      <div class="humans">
         <div class="human left">
           <div class="scribble">
             <span class="blood_type">O−</span>
