@@ -33,6 +33,7 @@ if(isset($_POST['login_user']))
         else
         {
             echo '<script>alert("Invalid email or password")</script>';
+            header('location: login.html');
         }
     }
 }
