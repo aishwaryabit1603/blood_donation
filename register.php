@@ -22,12 +22,12 @@
       echo "3";
       $query = "Select * from donors where email = '$email' || mobile_no = '$mobile' ";
       $res = mysqli_query($connection,$query);
-      echo $res;
 
       if($res)
       {
         echo "4";
         $num = mysqli_num_rows($res);
+        echo count($num);
         if($num > 0)
         {
           echo "5";
