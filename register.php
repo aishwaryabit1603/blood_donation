@@ -12,7 +12,7 @@
       $email_1 = $_POST['email'];
       
       $email = filter_var($email_1, FILTER_SANITIZE_EMAIL);
-
+      echo $email;
       $state = $_POST['state_input'];
       $district = $_POST['district_input'];
       $pw_1  = $_POST['password_1'];
@@ -25,7 +25,6 @@
         $num = mysqli_num_rows($res);
         if($num > 0)
         {
-          echo $num;
           header("location: register.html");
         }
       }
