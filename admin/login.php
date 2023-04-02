@@ -7,7 +7,7 @@
         {
           session_start();
           $_SESSION['email'] = "admin@gmail.com";
-          header('location: index.php');
+          header('location: admin\index.php');
         }
         else
         {
