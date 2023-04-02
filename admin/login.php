@@ -11,7 +11,7 @@
         }
         else
         {
-          header('location: admin\login.php');
+          header('location: index.php');
         }
       }
     }
