@@ -103,13 +103,13 @@
                 </thead>
                 <tbody>
             <?php
-                $query = "SELECT id, name, email, sex, mobile_no, bloodgroup, state, district FROM donors";
+                $query = "SELECT id_no, name, email, sex, mobile_no, bloodgroup, state, district FROM donors";
                 $result = mysqli_query($connection,$query);
                 while($row = mysqli_fetch_array($result))
                 {
             ?>
             <tr>
-                <td><?php echo $row['id'] ?> </td>
+                <td><?php echo $row['id_no'] ?> </td>
                 <td><?php echo $row['name'] ?> </td>
                 <td><?php echo $row['email'] ?></td>
                 <td><?php echo $row['sex'] ?></td>
