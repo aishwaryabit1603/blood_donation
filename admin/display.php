@@ -134,7 +134,7 @@
                 <button class="Remove" id ="update">
                 <a href="http://localhost:8080/blood_donation/admin/update.html"  onclick="window.open('http://localhost:8080/blood_donation/admin/update.html');">Update</a></button>
                 <button class="Remove" id = "delete">
-                <a href="http://localhost:8080/blood_donation/admin/delete.php?deleteid=' .<?php echo $id ?>.'" onclick="window.open('http://localhost:8080/blood_donation/admin/delete.php');">Delete</a></button>
+                <a href="http://localhost:8080/blood_donation/admin/delete.php?deleteid= '.<?php echo $id; ?>.'" onclick="window.open('http://localhost:8080/blood_donation/admin/delete.php');">Delete</a></button>
                 </td> 
             </tr>
             <?php
