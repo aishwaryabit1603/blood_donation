@@ -103,12 +103,9 @@
                 </thead>
                 <tbody>
             <?php
-                if(isset($_POST['submit']))
-                {
-                    $query = "SELECT id,name,email,sex,mobile_no,bloodgroup,,state,district FROM donors";
-                    $result = mysqli_query($connection,$query);
-                    $count = mysqli_num_rows($result);
-                }
+                $query = "SELECT id,name,email,sex,mobile_no,bloodgroup,,state,district FROM donors";
+                $result = mysqli_query($connection,$query);
+                $count = mysqli_num_rows($result);
                 while($row = mysqli_fetch_array($result))
                 {
             ?>
