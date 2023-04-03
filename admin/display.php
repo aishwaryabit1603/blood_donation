@@ -131,13 +131,7 @@
                 <td><?php echo $row['district'] ?></td>
                 <td>
                 <button class="Remove" id ="update" onclick="redirect1()"><a href - "http://localhost:8080/blood_donation/admin/update.php">Update</a></button>
-                   /**  
-                       <script>
-                        var id_no = "<?php echo $id; ?>" ;
-                        function redirect1() {
-                            window.location.href = "http://localhost:8080/blood_donation/admin/update.php" + '?id_no='+id_no;
-                        }
-                    </script> */
+                  
                 <button class="Remove" id = "delete" onclick="redirect2()">Delete</button>
                     <script>
                         var id_no = "<?php echo $id; ?>" ;
