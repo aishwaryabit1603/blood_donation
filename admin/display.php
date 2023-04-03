@@ -119,12 +119,10 @@
                 $result = mysqli_query($connection,$query);
                 while($row = mysqli_fetch_array($result))
                 {
+                    $id = $row['id_no'];
             ?>
             <tr>
-                <script>
-                    var id_no = "<?php echo $row['id_no']; ?>" ;
-                </script>
-                <td id = ><?php echo $row['id_no'] ?> </td>
+                <td><?php echo $row['id_no'] ?> </td>
                 <td><?php echo $row['name'] ?> </td>
                 <td><?php echo $row['email'] ?></td>
                 <td><?php echo $row['sex'] ?></td>
@@ -133,10 +131,10 @@
                 <td><?php echo $row['state'] ?></td>
                 <td><?php echo $row['district'] ?></td>
                 <td>
-                <button class="Remove" id ="update" onclick="redirect1()">
-                <a href="http://localhost:8080/blood_donation/admin/update.html" style="color:red;" onclick="window.open('http://localhost:8080/blood_donation/admin/update.html');">Update</a></button>
-                <button class="Remove" id = "delete" onclick="redirect2()">
-                <a href="http://localhost:8080/blood_donation/admin/delete.php" style="color:red;" onclick="window.open('http://localhost:8080/blood_donation/admin/delete.php');">Delete</a></button>
+                <button class="Remove" id ="update">
+                <a href="http://localhost:8080/blood_donation/admin/update.html"  onclick="window.open('http://localhost:8080/blood_donation/admin/update.html');">Update</a></button>
+                <button class="Remove" id = "delete">
+                <a href="http://localhost:8080/blood_donation/admin/delete.php?deleteid='.$id.'" onclick="window.open('http://localhost:8080/blood_donation/admin/delete.php');">Delete</a></button>
                 </td> 
             </tr>
             <?php
