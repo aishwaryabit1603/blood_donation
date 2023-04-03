@@ -147,7 +147,7 @@
       <nav>
         <a href="display.php">USERS LIST</a>
         <a href="blood.php">STATISTICS</a>
-        <a href="logout.php">Logout</a>
+        <a href="C:\xampp\htdocs\blood_donation\logout.php">LOGOUT</a>
         <div id="indicator"></div>
       </nav>
 </body>
