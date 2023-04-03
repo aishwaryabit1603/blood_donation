@@ -1,5 +1,5 @@
 <?php
-    require 'db_connection.php' ;
+    require 'C:\xampp\htdocs\blood_donation\db_connection.php' ;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -121,8 +121,8 @@
                 <td><?php echo $row['bloodgroup'] ?></td>
                 <td><?php echo $row['state'] ?></td>
                 <td><?php echo $row['district'] ?></td>
-                <td><a class="Remove" href = "admin\display.php">DELETE</a>
-                    <a class="Remove" href = "admin\update.php">UPDATE</a>
+                <td><a class="Remove" href = "C:\xampp\htdocs\blood_donation\admin\delete.php">DELETE</a>
+                    <a class="Remove" href = "C:\xampp\htdocs\blood_donation\admin\update.php">UPDATE</a>
                 </td>
             </tr>
             <?php
@@ -132,7 +132,7 @@
         <tbody>
             <tr>
                 <td colspan="4"></td>
-                <td><a class="Add" href = "register.html"  id="Add">Add</a></td>
+                <td><a class="Add" href = "C:\xampp\htdocs\blood_donation\register.html"  id="Add">Add</a></td>
             </tr>
         </tbody>
         </table>
