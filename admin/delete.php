@@ -6,6 +6,7 @@
     echo "<script>alert('login first !!')</script>";
     header('Location: admin_login.php');
     }
+    $id = $_GET['id_no'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

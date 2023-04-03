@@ -89,6 +89,9 @@
         cursor: pointer;
         }
     </style>
+    <script>
+        
+    </script>
 </head>
 <body>
 
@@ -116,6 +119,14 @@
                 $result = mysqli_query($connection,$query);
                 while($row = mysqli_fetch_array($result))
                 {
+                    <td><?php echo $row['id_no'] ?> </td>
+                    <td><?php echo $row['name'] ?> </td>
+                    <td><?php echo $row['email'] ?></td>
+                    <td><?php echo $row['sex'] ?></td>
+                    <td><?php echo $row['mobile_no'] ?></td>
+                    <td><?php echo $row['bloodgroup'] ?></td>
+                    <td><?php echo $row['state'] ?></td>
+                    <td><?php echo $row['district'] ?></td>
             ?>
             <tr>
                 <td><?php echo $row['id_no'] ?> </td>
@@ -127,19 +138,22 @@
                 <td><?php echo $row['state'] ?></td>
                 <td><?php echo $row['district'] ?></td>
                 <td>
-                <button class="Remove" onclick="redirect()">Update</button>
-                    <script>
-                        function redirect() {
-                            window.location.href = "http://localhost:8080/blood_donation/admin/update.php";
+                <button class="Remove" id ="update" onclick="redirect1()"><a href - "http://localhost:8080/blood_donation/admin/update.php">Update</a></button>
+                   /**  
+                       <script>
+                        var id_no = "<?php echo $id; ?>" ;
+                        function redirect1() {
+                            window.location.href = "http://localhost:8080/blood_donation/admin/update.php" + '?id_no='+id_no;
                         }
-                    </script>
-                <button class="Remove" onclick="redirect1()">Delete</button>
+                    </script> */
+                <button class="Remove" id = "delete" onclick="redirect2()">Delete</button>
                     <script>
-                    function redirect1() {
-                        window.location.href = "http://localhost:8080/blood_donation/admin/delete.php";
+                        var id_no = "<?php echo $id; ?>" ;
+                    function redirect2() {
+                        window.location.href = "http://localhost:8080/blood_donation/admin/delete.php" + '?id_no='+ id_no;
                     }
                 </script>
-                </td>
+                </td> 
             </tr>
             <?php
                 }
@@ -148,9 +162,9 @@
         <tbody>
             <tr>
                 <td colspan="4" ></td>
-                <td><button class="Add" id="Add" onclick="redirect2()">Add</button>
+                <td><button class="Add" id="Add" onclick="redirect3()">Add</button>
                 <script>
-                    function redirect2() {
+                    function redirect3() {
                         window.location.href = "http://localhost:8080/blood_donation/admin/add_user.php";
                     }
                 </script>
@@ -160,5 +174,6 @@
         </table>
         </div>
     </div>
+
 </body>
 </html>
