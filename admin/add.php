@@ -55,7 +55,6 @@
             if($result)
             {
               echo '<script>alert("Registration Successful !! ")</script>';
-              header('Location:C:\xampp\htdocs\blood_donation\admin\display.php');
             }
             else
             {
@@ -70,9 +69,9 @@
     echo "<script type ='text/JavaScript'>";  
     echo "alert('Registration Failed')";  
     echo '</script>';
-    header("Location: C:\xampp\htdocs\blood_donation\admin\display.php");
+    }
   }
-}
+  header('Location:C:\xampp\htdocs\blood_donation\admin\display.php');
 ?>
 
 
