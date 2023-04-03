@@ -154,12 +154,8 @@
         <tbody>
             <tr>
                 <td colspan="4" ></td>
-                <td><button class="Add" id="Add" onclick="redirect3()">Add</button>
-                <script>
-                    function redirect3() {
-                        window.location.href = "http://localhost:8080/blood_donation/admin/add_user.php";
-                    }
-                </script>
+                <td><button class="Add" id="Add"><a href = "C:\xampp\htdocs\blood_donation\add_user.php">Add</a></button>
+
             </td>
             </tr>
         </tbody>
