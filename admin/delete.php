@@ -6,19 +6,20 @@
     echo "<script>alert('login first !!')</script>";
     header('Location: admin_login.php');
     }
-    
-    echo $_GET['delete_id'];
+    if(isset($_GET['delete_id']))
+    {
+        $id = $_GET['delete_id'];
+
+        $sql = "delete from donors where id_no = $id";
+        $result = mysqli_query($connection,$sql);
+        if($result)
+        {
+            echo "<script>alert('Deleted Successfully !!')</script>";
+            header('Location : C:\xampp\htdocs\blood_donation\admin\display.php');
+        }
+        else
+        {
+           die(mysqli_error($connection));
+        }
+    }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="C:\xampp\htdocs\blood_donation\images\icon2.ico" />
-    <title>Delete User</title>
-</head>
-<body>
-    <h1>hi delete</h1>
-</body>
-</html>
