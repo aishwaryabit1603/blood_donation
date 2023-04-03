@@ -109,7 +109,7 @@
   <body>
     <div class="login-page">
       <div class="form">
-        <form class="login-form" action="login.php" method="post" autocomplete="off">
+        <form class="login-form" action="admin_login.php" method="post" autocomplete="off">
           <input type="text" placeholder="Username" name = "username"/>
           <input type="password" placeholder="password" name = "password"/>
           <input class="btn" type="submit" value = "Login
