@@ -120,8 +120,8 @@
                 <td><?php echo $row['bloodgroup'] ?></td>
                 <td><?php echo $row['state'] ?></td>
                 <td><?php echo $row['district'] ?></td>
-                <td><a class="Remove" href = "C:\xampp\htdocs\blood_donation\admin\delete.php">DELETE</a>
-                    <a class="Remove" href = "C:\xampp\htdocs\blood_donation\admin\update.php">UPDATE</a>
+                <td><a class="Remove" href = "C:\xampp\htdocs\blood_donation\admin\delete.php" target = "_blank">DELETE</a>
+                    <a class="Remove" href = "C:\xampp\htdocs\blood_donation\admin\update.php" target = "_blank">UPDATE</a>
                 </td>
             </tr>
             <?php
@@ -131,7 +131,7 @@
         <tbody>
             <tr>
                 <td colspan="4"></td>
-                <td><a class="Add" href = "C:\xampp\htdocs\blood_donation\register.html"  id="Add">Add</a></td>
+                <td><a class="Add" href = "C:\xampp\htdocs\blood_donation\register.html" target = "_blank" id="Add">Add</a></td>
             </tr>
         </tbody>
         </table>
