@@ -133,12 +133,8 @@
                 <td><?php echo $row['state'] ?></td>
                 <td><?php echo $row['district'] ?></td>
                 <td>
-                <button class="Remove" id ="update" onclick="redirect1()">Update</button>
-                    <script>
-                        function redirect1() {
-                            window.location.href = "http://localhost:8080/blood_donation/admin/update.php" + '?id_no='+id_no;
-                        }
-                    </script>
+                <button class="Remove" id ="update" onclick="redirect1()">
+                <a href="http://localhost:8080/blood_donation/admin/update.html" style="color:red;" onclick="window.open('http://localhost:8080/blood_donation/admin/update.php');">Update</a></button>
                 <button class="Remove" id = "delete" onclick="redirect2()">Delete</button>
                     <script>
                     function redirect2() {
@@ -156,7 +152,6 @@
                 <td colspan="4" ></td>
                 <td><button class="Add" id="Add">
                 <a href="http://localhost:8080/blood_donation/admin/add_user.html" style="color:red;" onclick="window.open('http://localhost:8080/blood_donation/admin/add_user.html');">ADD</a></button>
-
             </td>
             </tr>
         </tbody>
