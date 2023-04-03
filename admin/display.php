@@ -121,7 +121,10 @@
                 {
             ?>
             <tr>
-                <td><?php echo $row['id_no'] ?> </td>
+                <script>
+                    var id_no = "<?php echo $row['id_no']; ?>" ;
+                </script>
+                <td id = ><?php echo $row['id_no'] ?> </td>
                 <td><?php echo $row['name'] ?> </td>
                 <td><?php echo $row['email'] ?></td>
                 <td><?php echo $row['sex'] ?></td>
@@ -130,11 +133,14 @@
                 <td><?php echo $row['state'] ?></td>
                 <td><?php echo $row['district'] ?></td>
                 <td>
-                <button class="Remove" id ="update" onclick="redirect1()"><a href = "C:\xampp\htdocs\blood_donation\admin\update.php">Update</a></button>
-                  
+                <button class="Remove" id ="update" onclick="redirect1()">Update</button>
+                    <script>
+                        function redirect1() {
+                            window.location.href = "http://localhost:8080/blood_donation/admin/update.php" + '?id_no='+id_no;
+                        }
+                    </script>
                 <button class="Remove" id = "delete" onclick="redirect2()">Delete</button>
                     <script>
-                        var id_no = "<?php echo $id; ?>" ;
                     function redirect2() {
                         window.location.href = "http://localhost:8080/blood_donation/admin/delete.php" + '?id_no='+ id_no;
                     }
