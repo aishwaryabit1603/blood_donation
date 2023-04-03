@@ -151,7 +151,7 @@
                 <td><button class="Add" id="Add" onclick="redirect2()">Add</button>
                 <script>
                     function redirect2() {
-                        window.location.href = "http://localhost:8080/blood_donation/admin/add.php";
+                        window.location.href = "http://localhost:8080/blood_donation/admin/add_user.php";
                     }
                 </script>
             </td>
