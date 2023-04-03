@@ -1,3 +1,12 @@
+<?php
+     require 'C:\xampp\htdocs\blood_donation\db_connection.php';
+     session_start();
+     if($_SESSION['admin'] != true)
+     {
+       echo "<script>alert('login first !!')</script>";
+       header('Location: admin_login.php');
+     }
+?
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +17,7 @@
     <link rel="icon" type="image/x-icon" href="C:\xampp\htdocs\blood_donation\images\icon2.ico" />
 </head>
 <body>
-    <h1>Update here</h1>
+    
     
 </body>
 </html>
