@@ -120,8 +120,19 @@
                 <td><?php echo $row['bloodgroup'] ?></td>
                 <td><?php echo $row['state'] ?></td>
                 <td><?php echo $row['district'] ?></td>
-                <td><button class="Remove" ><a href = "C:\xampp\htdocs\blood_donation\admin\update.php">Update</a></button>
-                    <button class="Remove" ><a href = "C:\xampp\htdocs\blood_donation\admin\delete.php">Delete</a></button>
+                <td>
+                <button class="Remove" onclick="redirect()">Update</button>
+                    <script>
+                        function redirect() {
+                            window.location.href = "http://localhost:8080/blood_donation/admin/update.php";
+                        }
+                    </script>
+                <button class="Remove" onclick="redirect1()">Delete</button>
+                    <script>
+                    function redirect1() {
+                        window.location.href = "http://localhost:8080/blood_donation/admin/delete.php";
+                    }
+                </script>
                 </td>
             </tr>
             <?php
@@ -130,8 +141,14 @@
         </tbody>
         <tbody>
             <tr>
-                <td colspan="4"></td>
-                <td><button class="Add" id="Add"><a href = "C:\xampp\htdocs\blood_donation\admin\redirect_add.php" >Add</a></button></td>
+                <td colspan="4" ></td>
+                <td><button class="Add" id="Add" onclick="redirect2()">Add</button>
+                <script>
+                    function redirect2() {
+                        window.location.href = "http://localhost:8080/blood_donation/register.html";
+                    }
+                </script>
+            </td>
             </tr>
         </tbody>
         </table>
