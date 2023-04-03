@@ -74,9 +74,10 @@
     color: #850000;
     border: 1px solid #850000;
     background: #fff;
-    width: 80px;
-    font-weight:200;
-    font-size:18px;
+    width: 100px;
+    font-weight:400;
+    text-decoration:none;
+    font-size:20px;
     padding: 10px ;
     border-radius: 5px; 
     cursor: pointer;
