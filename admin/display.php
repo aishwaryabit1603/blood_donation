@@ -119,14 +119,6 @@
                 $result = mysqli_query($connection,$query);
                 while($row = mysqli_fetch_array($result))
                 {
-                    <td><?php echo $row['id_no'] ?> </td>
-                    <td><?php echo $row['name'] ?> </td>
-                    <td><?php echo $row['email'] ?></td>
-                    <td><?php echo $row['sex'] ?></td>
-                    <td><?php echo $row['mobile_no'] ?></td>
-                    <td><?php echo $row['bloodgroup'] ?></td>
-                    <td><?php echo $row['state'] ?></td>
-                    <td><?php echo $row['district'] ?></td>
             ?>
             <tr>
                 <td><?php echo $row['id_no'] ?> </td>
