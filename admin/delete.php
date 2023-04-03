@@ -6,7 +6,8 @@
     echo "<script>alert('login first !!')</script>";
     header('Location: admin_login.php');
     }
-    $id = $_GET['deleteid'];
+    $id = $_GET['delete_id'];
+    echo $id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
