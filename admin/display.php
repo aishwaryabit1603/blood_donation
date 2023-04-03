@@ -66,6 +66,8 @@
     color: white;
     padding: 10px ;
     border-radius: 5px; 
+    text-decoration:none;
+    font-weight:300;
     cursor: pointer;
     }
     .Add {
