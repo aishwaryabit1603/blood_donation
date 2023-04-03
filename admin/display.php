@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display USERS</title>
-    <link rel="icon" type="image/x-icon" href="images\icon2.ico" />
+    <link rel="icon" type="image/x-icon" href="C:\xampp\htdocs\blood_donation\images\icon2.ico" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
         *{
@@ -151,7 +151,7 @@
                 <td><button class="Add" id="Add" onclick="redirect2()">Add</button>
                 <script>
                     function redirect2() {
-                        window.location.href = "http://localhost:8080/blood_donation/register.html";
+                        window.location.href = "http://localhost:8080/blood_donation/admin/add.html";
                     }
                 </script>
             </td>

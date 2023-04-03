@@ -46,7 +46,7 @@
           if($num > 0)
           {
             echo '<script>alert("USER ALREADY EXISTS")</script>';
-            header('location: C:\xampp\htdocs\blood_donation\admin\display.html');
+            header('location: C:\xampp\htdocs\blood_donation\admin\display.php');
           }
           else
           {
@@ -81,7 +81,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add user</title>
-  <link rel="icon" type="image/x-icon" href="images\icon2.ico" />
+  <link rel="icon" type="image/x-icon" href="C:\xampp\htdocs\blood_donation\images\icon2.ico" />
 </head>
 <body>
   
