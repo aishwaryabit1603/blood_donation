@@ -7,7 +7,6 @@
     header('Location: admin_login.php');
     }
     
-    $id = str_replace(" ' ", ".", $id); 
     echo $_GET['delete_id'];
 ?>
 <!DOCTYPE html>
