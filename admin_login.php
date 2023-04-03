@@ -1,25 +1,24 @@
-<?
-    require 'db_connection.php';
-    echo "0";
-    if(isset($_POST['submit']))
-    {
-      echo "1";
-      if(isset($_POST['username']) && isset($_POST['password']))
+<?php
+  session_start(); // start session
+
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') { // check if the form has been submitted
+      // get form data
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+
+      // check if username and password are correct
+      if ($username === 'admin' && $password === 'admin123') 
       {
-        echo "2";
-        if($_POST['username'] == "admin" && $_POST['password'] == "admin")
-        {
-          echo "3";
-          session_start();
-          $_SESSION['email'] = "admin@gmail.com";
-          header('location: index.php');
-        }
-        else
-        {
-          header('location: blood_donation\index.html');
-        }
+        $_SESSION['admin'] = true; // set session variable to indicate admin is logged in
+        header('Location: admin\index.php'); // redirect to admin dashboard
+        exit;
       }
-    }
+      else
+      {
+        echo 'Invalid username or password';
+        header('Location: admin_login.php');
+      }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -110,10 +109,11 @@
   <body>
     <div class="login-page">
       <div class="form">
-        <form class="login-form" action="" method="post" autocomplete="off">
+        <form class="login-form" action="login.php" method="post" autocomplete="off">
           <input type="text" placeholder="Username" name = "username"/>
           <input type="password" placeholder="password" name = "password"/>
-          <input class="btn" type="submit" name = "submit" placeholder="Login" />
+          <input class="btn" type="submit" value = "Login
+          " name = "submit" placeholder="Login" />
         </form>
       </div>
     </div>
