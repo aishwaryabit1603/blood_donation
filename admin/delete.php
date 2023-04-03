@@ -7,7 +7,7 @@
     header('Location: admin_login.php');
     }
     
-    echo $_GET['delete_id'];;
+    echo $_GET['delete_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
