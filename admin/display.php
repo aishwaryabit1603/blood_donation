@@ -1,5 +1,11 @@
 <?php
-    require 'C:\xampp\htdocs\blood_donation\db_connection.php' ;
+     require 'C:\xampp\htdocs\blood_donation\db_connection.php';
+     session_start();
+     if($_SESSION['admin'] != true)
+     {
+       echo "<script>alert('login first !!')</script>";
+       header('Location: admin_login.php');
+     }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,82 +13,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Donor</title>
+    <title>Display USERS</title>
     <link rel="icon" type="image/x-icon" href="images\icon2.ico" />
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-    *{
-        font-family: 'Poppins', sans-serif;
-    }
-    body{
-        background: #f6eded;
-    }
-    .container{
-        max-width: 95%;
-        margin: 5px 5px;
-        width: 100%;
-        padding: 0 15px;
-        overflow: hidden;
-    }
-    h1{
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background: #f6eded;
+        }
+        .container{
+            max-width: 95%;
+            margin: 5px 5px;
+            width: 100%;
+            padding: 0 15px;
+            overflow: hidden;
+        }
+        h1{
+            color: #850000;
+        }
+        #table-container{
+            overflow: auto;
+        }
+        table{
+            max-width: 100%;
+            text-align: center;
+            min-width: 50rem;
+            width: 120%;
+        }
+        table tbody:last-child{
+        box-shadow: 0px 1px #850000;
+        }
+        table tr{
+        height: 80px;
+        }
+        table tbody tr:nth-child(even) {
+        background-color: #85000012;
+        }
+        table thead{
+        background: #850000;
+        color: white;
+        }
+        table tbody:last-child td{
+        padding: 19px 0
+        }
+        th{
+        min-width: 3rem;
+        font-size:14px;
+        padding: 15px 10px;
+        }
+        td {  
+        padding: 5px ;
+        font-size:13px;
+        }
+        .Remove{
+        background: #850000;
+        color: white;
+        padding: 10px ;
+        border-radius: 5px; 
+        text-decoration:none;
+        font-weight:300;
+        cursor: pointer;
+        }
+        .Add {
         color: #850000;
-    }
-    #table-container{
-        overflow: auto;
-    }
-    table{
-        max-width: 100%;
-        text-align: center;
-        min-width: 50rem;
-        width: 120%;
-    }
-    table tbody:last-child{
-    box-shadow: 0px 1px #850000;
-    }
-    table tr{
-    height: 80px;
-    }
-    table tbody tr:nth-child(even) {
-    background-color: #85000012;
-    }
-    table thead{
-    background: #850000;
-    color: white;
-    }
-    table tbody:last-child td{
-    padding: 19px 0
-    }
-    th{
-    min-width: 3rem;
-    font-size:14px;
-    padding: 15px 10px;
-    }
-    td {  
-    padding: 5px ;
-    font-size:13px;
-    }
-    .Remove{
-    background: #850000;
-    color: white;
-    padding: 10px ;
-    border-radius: 5px; 
-    text-decoration:none;
-    font-weight:300;
-    cursor: pointer;
-    }
-    .Add {
-    color: #850000;
-    border: 1px solid #850000;
-    background: #fff;
-    width: 100px;
-    font-weight:400;
-    text-decoration:none;
-    font-size:20px;
-    padding: 10px ;
-    border-radius: 5px; 
-    cursor: pointer;
-    }
-</style>
+        border: 1px solid #850000;
+        background: #fff;
+        width: 100px;
+        font-weight:400;
+        text-decoration:none;
+        font-size:20px;
+        padding: 10px ;
+        border-radius: 5px; 
+        cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
