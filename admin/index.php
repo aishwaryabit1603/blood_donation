@@ -1,5 +1,5 @@
 <?php
-    require 'db_connection.php';
+    require 'C:\xampp\htdocs\blood_donation\db_connection.php';
     session_start();
     if($_SESSION['admin'] != true)
     {
