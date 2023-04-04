@@ -2,10 +2,12 @@
      require 'C:\xampp\htdocs\blood_donation\db_connection.php';
      session_start();
      if($_SESSION['admin'] != true)
-     {
+    {
        echo "<script>alert('login first !!')</script>";
        header('Location: admin_login.php');
-     }
+    }
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,11 +135,6 @@
                 <td><?php echo $row['state'] ?></td>
                 <td><?php echo $row['district'] ?></td>
                 <td>
-                <button class="Remove" id ="update">
-                <?php  $_SESSION['row_id'] = $row['id_no']; ?>
-                <a href="http://localhost:8080/blood_donation/admin/update.html?update_id=<?php echo $row['id_no']; ?>"  style="color:white;text-decoration:none;font-weight:300;">Update</a></button>
-                </td>
-                <td>
                 <button class="Remove" id = "delete">
                 <a href="http://localhost:8080/blood_donation/admin/delete.php?delete_id=<?php echo $row['id_no']; ?>" style="color:white;text-decoration:none;font-weight:300;" >Delete</a></button>
                 </td> 
@@ -155,8 +152,10 @@
             </tr>
         </tbody>
         </table>
+
         </div>
     </div>
+
 
 </body>
 </html>
