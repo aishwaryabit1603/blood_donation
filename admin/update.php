@@ -19,6 +19,9 @@ try {
         // Validate input data
         if(empty($ids) || empty($f_name) || empty($birthday) || empty($sex) || empty($blood) || empty($mobile) || empty($email) || empty($state) || empty($district)) {
           // Handle validation errors
+          echo '<script type = "text/JavaScript">'; 
+          echo  $ids;
+          echo '</script>';
           echo '<script type = "text/JavaScript">';  
           echo "alert('Please fill all required fields')";
           echo '</script>';
