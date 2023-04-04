@@ -134,7 +134,7 @@
                 <td><?php echo $row['district'] ?></td>
                 <td>
                 <?php 
-                    $_session['row_id'] = $row['id_no'];
+                    $_SESSION['row_id'] = $row['id_no'];
                 ?> 
                 <button class="Remove" id ="update">
                 <a href="http://localhost:8080/blood_donation/admin/update.html?update_id=<?php echo $row['id_no']; ?>"  style="color:white;text-decoration:none;font-weight:300;">Update</a></button>
