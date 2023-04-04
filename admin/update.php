@@ -13,8 +13,12 @@
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         $state = $_POST['state_input'];
         $district = $_POST['district_input'];
+
+        $id = $_GET['update_id'];
+
         $sql = "UPDATE donors set name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district' where id_no = '$id' ";
         $result = mysqli_query($connection,$sql);
+        
         if($result)
         {
             echo "<script type ='text/JavaScript'>";  
