@@ -145,7 +145,7 @@
             <tr>
                 <td colspan="4" ></td>
                 <td><button class="Add" id="Add">
-                <a href="http://localhost:8080/blood_donation/admin/add_user.html" style="color:red;" onclick="window.open('http://localhost:8080/blood_donation/admin/add_user.html');">ADD</a></button>
+                <a href="http://localhost:8080/blood_donation/admin/add_user.html" style="color:red;" >ADD</a></button>
             </td>
             </tr>
         </tbody>
