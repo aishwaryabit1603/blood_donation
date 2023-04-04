@@ -5,6 +5,7 @@
     if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']))
     {
         $error = 0;
+        $id = $_GET['update_id'];
         $f_name = ucfirst($_POST['name']);
         $birthday = $_POST['dob'];
         $sex = $_POST['sex'];
@@ -37,7 +38,7 @@
 
         if($error == 0)
         {
-            $sql = "UPDATE donors set name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district'";
+            $sql = "UPDATE donors set name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district' where id_no = '$id' ";
             $result = mysqli_query($connection,$sql);
             if($result)
             {
