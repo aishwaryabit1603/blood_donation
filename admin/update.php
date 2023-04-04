@@ -37,26 +37,17 @@
 
         if($error == 0)
         {
-            $num = mysqli_num_rows($res);
-            if($num > 0)
-            { 
-              echo '<script>alert("USER ALREADY EXISTS")</script>';
-              header('location: C:\xampp\htdocs\blood_donation\admin\display.php');
-            }
-            else
+            $sql = "UPDATE donors set password = '$pw_1',name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district'";
+            $result = mysqli_query($connection,$sql);
+            if($result)
             {
-              $sql = "UPDATE donors set password = '$pw_1',name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district'";
-              $result = mysqli_query($connection,$sql);
-              if($result)
-              {
                 echo "<script type ='text/JavaScript'>";  
                 echo "alert('Updated Successfully')";  
                 echo '</script>';
-              }
-              else
-              {
+            }
+            else
+            {
                 die(mysqli_error($connection));
-              }
             }
         }
     }
