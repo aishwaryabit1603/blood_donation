@@ -39,7 +39,7 @@ try {
 } catch(Exception $e) {
   echo 'Message: ' . $e->getMessage();
   echo "<script type ='text/JavaScript'>";  
-  echo 'window.location.href = "http://localhost:8080/blood_donation/admin/update.html" ';
+  echo 'window.location.href = "http://localhost:8080/blood_donation/admin/update.php" ';
   echo '</script>';
 }
 ?>
