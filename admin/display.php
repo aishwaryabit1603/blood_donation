@@ -112,6 +112,7 @@
                         <td>State</td>
                         <td>district</td>
                         <td></td>
+                        <td></td>
                     </tr>
                 </thead>
                 <tbody>
@@ -135,6 +136,8 @@
                 <button class="Remove" id ="update">
                 <?php  $_SESSION['row_id'] = $row['id_no']; ?>
                 <a href="http://localhost:8080/blood_donation/admin/update.html?update_id=<?php echo $row['id_no']; ?>"  style="color:white;text-decoration:none;font-weight:300;">Update</a></button>
+                </td>
+                <td>
                 <button class="Remove" id = "delete">
                 <a href="http://localhost:8080/blood_donation/admin/delete.php?delete_id=<?php echo $row['id_no']; ?>" style="color:white;text-decoration:none;font-weight:300;" >Delete</a></button>
                 </td> 
