@@ -134,7 +134,7 @@
                 <button class="Remove" id ="update">
                 <a href="http://localhost:8080/blood_donation/admin/update.html" style="color:white;text-decoration:none;font-weight:300;">Update</a></button>
                 <button class="Remove" id = "delete">
-                <a href="http://localhost:8080/blood_donation/admin/delete.php?delete_id=<?php echo  $row['id_no'] ?> style="color:white;text-decoration:none;font-weight:300;">Delete</a></button>
+                <a href="http://localhost:8080/blood_donation/admin/delete.php?delete_id=<?php echo  $row['id_no']; ?> style="color:white;text-decoration:none;font-weight:300;">Delete</a></button>
                 </td> 
             </tr>
             <?php
