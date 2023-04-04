@@ -2,7 +2,7 @@
   require 'C:\xampp\htdocs\blood_donation\db_connection.php';
   if(isset($_POST['update']))
   {
-    if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']) && !empty($_POST['password_1']))
+    if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']))
     {
         $error = 0;
         $f_name = ucfirst($_POST['name']);
@@ -13,7 +13,6 @@
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         $state = $_POST['state_input'];
         $district = $_POST['district_input'];
-        $pw_1  = $_POST['password_1'];
 
         function validateAge($birthday, $age = 18)
         {
@@ -38,10 +37,6 @@
 
         if($error == 0)
         {
-          $query = "Select * from donors where email = '$email' || mobile_no = '$mobile' ";
-          $res = mysqli_query($connection,$query);
-          if($res)
-          {
             $num = mysqli_num_rows($res);
             if($num > 0)
             { 
@@ -55,18 +50,17 @@
               if($result)
               {
                 echo "<script type ='text/JavaScript'>";  
-                echo "alert('Registration Successful')";  
+                echo "alert('Updated Successfully')";  
                 echo '</script>';
               }
               else
               {
                 die(mysqli_error($connection));
               }
-          }
+            }
         }
-      }
     }
-  }  
+  }
   echo "<script type='text/javascript'>";
   echo 'window.location.href = "http://localhost:8080/blood_donation/admin/display.php" ';
   echo '</script>';

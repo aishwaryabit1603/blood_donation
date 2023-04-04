@@ -106,6 +106,7 @@
                         <td>Name</td>
                         <td>Email</td>
                         <td>Gender</td>
+                        <td>Birthday</td>
                         <td>Mobile No</td>
                         <td>Blood Type</td>
                         <td>State</td>
@@ -115,7 +116,7 @@
                 </thead>
                 <tbody>
             <?php
-                $query = "SELECT id_no, name, email, sex, mobile_no, bloodgroup, state, district FROM donors";
+                $query = "SELECT id_no, name, email, sex,dob, mobile_no, bloodgroup, state, district FROM donors";
                 $result = mysqli_query($connection,$query);
                 while($row = mysqli_fetch_array($result))
                 {
@@ -126,6 +127,7 @@
                 <td><?php echo $row['name'] ?> </td>
                 <td><?php echo $row['email'] ?></td>
                 <td><?php echo $row['sex'] ?></td>
+                <td><?php echo $row['dob'] ?></td>
                 <td><?php echo $row['mobile_no'] ?></td>
                 <td><?php echo $row['bloodgroup'] ?></td>
                 <td><?php echo $row['state'] ?></td>
