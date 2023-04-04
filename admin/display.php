@@ -114,7 +114,6 @@
                         <td>State</td>
                         <td>district</td>
                         <td></td>
-                        <td></td>
                     </tr>
                 </thead>
                 <tbody>
