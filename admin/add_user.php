@@ -18,8 +18,9 @@
         function validateAge($birthday, $age = 18)
         {
           // $birthday can be UNIX_TIMESTAMP or just a string-date.
-          if(is_string($birthday)) {
-              $birthday = strtotime($birthday);
+          if(is_string($birthday))
+          {
+            $birthday = strtotime($birthday);
           }
           // check
           // 31536000 is the number of seconds in a 365 days year.
@@ -52,13 +53,13 @@
               $sql = "INSERT INTO donors (password,name,dob,sex,bloodgroup,mobile_no,email,state,district)VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
               $result = mysqli_query($connection,$sql);
               if($result)
-            {
-              echo '<script>alert("Registration Successful !! ")</script>';
-            }
-            else
-            {
-              die(mysqli_error($connection));
-            }
+              {
+                echo '<script>alert("Registration Successful !! ")</script>';
+              }
+              else
+              {
+                die(mysqli_error($connection));
+              }
           }
         }
       }
