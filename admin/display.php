@@ -1,6 +1,7 @@
 <?php
      require 'C:\xampp\htdocs\blood_donation\db_connection.php';
      session_start();
+     session_register("row_id");
      if($_SESSION['admin'] != true)
      {
        echo "<script>alert('login first !!')</script>";
@@ -120,7 +121,6 @@
                 $result = mysqli_query($connection,$query);
                 while($row = mysqli_fetch_array($result))
                 {
-                    $id = $row['id_no'];
             ?>
             <tr>
                 <td><?php echo $row['id_no'] ?> </td>
@@ -133,10 +133,8 @@
                 <td><?php echo $row['state'] ?></td>
                 <td><?php echo $row['district'] ?></td>
                 <td>
-                <?php 
-                    $_SESSION['row_id'] = $row['id_no'];
-                ?> 
                 <button class="Remove" id ="update">
+                <?php  $_SESSION['row_id'] = $row['id_no']; ?>
                 <a href="http://localhost:8080/blood_donation/admin/update.html?update_id=<?php echo $row['id_no']; ?>"  style="color:white;text-decoration:none;font-weight:300;">Update</a></button>
                 <button class="Remove" id = "delete">
                 <a href="http://localhost:8080/blood_donation/admin/delete.php?delete_id=<?php echo $row['id_no']; ?>" style="color:white;text-decoration:none;font-weight:300;" >Delete</a></button>
