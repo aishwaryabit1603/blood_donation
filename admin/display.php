@@ -92,7 +92,7 @@
     <script>
   // Override the browser back button
     window.addEventListener('popstate', function(event) {
-        window.location.replace('index.php');
+        window.location.replace('C:\xampp\htdocs\blood_donation\admin\index.php');
     });
     </script>
 </head>
