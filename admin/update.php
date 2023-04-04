@@ -10,13 +10,13 @@
         $sex = $_POST['sex'];
         $blood = $_POST['blood_type'];
         $mobile = $_POST['mobile_no'];
-        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        $email = $_POST['email'];
         $state = $_POST['state_input'];
         $district = $_POST['district_input'];
 
-        $id = $_GET['update_id'];
+        $ids = $_GET['update_id'];
 
-        $sql = "UPDATE donors set name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district' where id_no = $id ";
+        $sql = "UPDATE donors SET name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district' WHERE id_no = $ids ";
         $result = mysqli_query($connection,$sql);
 
         if($result)
@@ -270,7 +270,7 @@
     <header class="user__header">
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
     </header>
-    <form class="form" method = "post" action = "update.php" autocomplete="off">
+    <form class="form" method = "post" action = "" autocomplete="off">
         <div class="form__group">
           <input
             type="text"
