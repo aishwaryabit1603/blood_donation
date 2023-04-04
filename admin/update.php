@@ -33,13 +33,13 @@ try {
   }
   
   echo "<script type ='text/JavaScript'>";  
-  echo 'window.location.href = "http://localhost:8080/blood_donation/admin/display.php" ';
+  echo 'window.location.href = "http://localhost:8080/blood_donation/admin/update.php" ';
   echo '</script>';
 
 } catch(mysqli_sql_exception $e) {
     echo 'Message: ' . $e->getMessage();
     echo "<script type ='text/JavaScript'>";  
-    echo 'window.location.href = "http://localhost:8080/blood_donation/admin/update.html" ';
+    echo 'window.location.href = "http://localhost:8080/blood_donation/admin/update.php" ';
     echo '</script>';
   }  
 ?>
