@@ -134,7 +134,6 @@
                 <td><?php echo $row['district'] ?></td>
                 <td>
                 <?php 
-                    session_start();
                     $_session['row_id'] = $row['id_no'];
                 ?> 
                 <button class="Remove" id ="update">
