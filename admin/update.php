@@ -16,12 +16,12 @@
 
         $ids = $_GET['update_id'];
 
-        $sql = "UPDATE donors 
+        $res = "UPDATE donors 
                 SET name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',
                 mobile_no = '$mobile',email = '$email',state = '$state',district = '$district' 
                 WHERE id_no = $ids ";
 
-        $results = mysqli_query($connection,$sql);
+        $results = mysqli_query($connection,$res);
 
         if($results)
         {
