@@ -23,20 +23,21 @@
         {
             echo "<script type ='text/JavaScript'>";  
             echo "alert('Updated Successfully')";
-            echo 'window.location.href = "http://localhost:8080/blood_donation/admin/display.php" ';
             echo '</script>';
         }
         else
         {
             echo "<script type ='text/JavaScript'>";  
             echo "alert('Not Updated !!!')";
-            echo 'window.location.href = "http://localhost:8080/blood_donation/admin/display.php" ';
             echo '</script>';
             
             die(mysqli_error($connection));
         }
     }
   }
+  echo "<script type ='text/JavaScript'>";  
+echo 'window.location.href = "http://localhost:8080/blood_donation/admin/display.php" ';
+echo '</script>';
 ?>
 <!DOCTYPE html>
 <html lang="en">
