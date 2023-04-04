@@ -306,7 +306,7 @@
           
         <div class="form__group">
            <select name = "sex" class="form__input" required/>
-                <option value = "<?php echo $row['sex'] ?>"" disabled selected>GENDER</option>
+                <option value = "" disabled selected><?php echo $row['sex'] ?></option>
                 <option value = "male">Male</option>
                 <option value = "female">Female</option>
                 <option value = "other">Other</option>
@@ -315,7 +315,7 @@
         
         <div class="form__group">
           <select name = "blood_type"  class="form__input" required>
-            <option value = "<?php echo $row['bloodgroup'] ?>" selected disabled required></option>
+            <option value = "" selected disabled required><?php echo $row['bloodgroup'] ?></option>
             <option value = "A+">A RhD positive (A+)</option>
             <option value = "A-">A RhD negative (A-)</option>
             <option value = "B+">B RhD positive (B+)</option>
