@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 <?php
     require 'C:\xampp\htdocs\blood_donation\db_connection.php';
     session_start();
     if($_SESSION['admin'] != true)
     {
-    echo "<script>alert('login first !!')</script>";
-    header('Location: admin_login.php');
+      echo "<script>alert('login first !!')</script>";
+      header('Location: admin_login.php');
     }
-  if(isset($_POST['submit']))
+  if(isset($_POST['add']))
   {
   if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']) && !empty($_POST['password_1']))
   {
@@ -88,6 +79,19 @@
   }
   header('Location:C:\xampp\htdocs\blood_donation\admin\display.php');
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+        
+    ?>
     
 </body>
 </html>
