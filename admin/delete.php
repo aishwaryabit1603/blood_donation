@@ -3,9 +3,10 @@
     session_start();
     if($_SESSION['admin'] != true)
     {
-    echo "<script>alert('login first !!')</script>";
-    header('Location: admin_login.php');
+        echo "<script>alert('login first !!')</script>";
+        header('Location: admin_login.php');
     }
+
     if(isset($_GET['delete_id']))
     {
         $id = $_GET['delete_id'];
@@ -15,7 +16,10 @@
         if($result)
         {
             echo "<script>alert('Deleted Successfully !!')</script>";
-            header("Location : C:\xampp\htdocs\blood_donation\admin\display.php");
+
+            $URL="http://localhost:8080/blood_donation/admin/display.php";
+            echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+            echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
         }
         else
         {
