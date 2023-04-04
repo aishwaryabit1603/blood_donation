@@ -70,5 +70,7 @@
     echo '</script>';
     }
   }
-  header('Location:C:\xampp\htdocs\blood_donation\admin\display.php');
+  <script type="text/javascript">
+      window.location.href = 'http://localhost:8080/blood_donation/admin/display.php';
+  </script>
 ?>
