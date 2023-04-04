@@ -1,10 +1,5 @@
 <?php
   require 'C:\xampp\htdocs\blood_donation\db_connection.php';
-  $id = $_GET['update_id'];
-  $select = $query = "SELECT id_no, name, email, sex,dob, mobile_no, bloodgroup, state, district FROM donors where id_no = '$id'";
-  $data = mysqli_query($connection,$select);
-  $row = mysqli_fetch_array($data);
-
   if(isset($_POST['update']))
   {
     if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']))
@@ -287,26 +282,26 @@
           />
         </div>
         <div class="form__group">
-          <input type="text" name = "name" value = "<?php echo $row['name'] ?>" class="form__input" required />
+          <input type="text" name = "name"  class="form__input" required />
         </div>
         
         <div class="form__group">
-          <input type="email" value = "<?php echo $row['email'] ?>" name = "email" class="form__input" required />
+          <input type="email"  name = "email" class="form__input" required />
         </div>
         
         <div class="form__group">
-          <input type="tel"  value = "<?php echo $row['mobile_no'] ?>"" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form__input" name = "mobile_no" required/>
+          <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form__input" name = "mobile_no" required/>
         </div>
         <div class="form__group">
             
         <div class="form__group">
-          <input type="date" value = "<?php echo $row['dob'] ?>" name = "dob" class="form__input" required >
+          <input type="date"  name = "dob" class="form__input" required >
         </div>
         <div class="form__group">
           
         <div class="form__group">
            <select name = "sex" class="form__input" required/>
-                <option value = "" disabled selected><?php echo $row['sex'] ?></option>
+                <option value = "" disabled selected>Gender</option>
                 <option value = "male">Male</option>
                 <option value = "female">Female</option>
                 <option value = "other">Other</option>
@@ -315,7 +310,7 @@
         
         <div class="form__group">
           <select name = "blood_type"  class="form__input" required>
-            <option value = "" selected disabled required><?php echo $row['bloodgroup'] ?></option>
+            <option value = "" selected disabled required>BLOOD TYPE</option>
             <option value = "A+">A RhD positive (A+)</option>
             <option value = "A-">A RhD negative (A-)</option>
             <option value = "B+">B RhD positive (B+)</option>
@@ -330,7 +325,7 @@
       <div class="form__group">
         <select id="state_input" name="state_input" class="form__input"  required>
         </select>
-        <select name="district_input" id="district_input" class="form__input" value = "<?php echo $row['district'] ?>" required>
+        <select name="district_input" id="district_input" class="form__input"  required>
         </select>
         <script language="javascript">
             populateStates("state_input", "district_input");
