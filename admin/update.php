@@ -16,9 +16,9 @@
 
         $id = $_GET['update_id'];
 
-        $sql = "UPDATE donors set name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district' where id_no = '$id' ";
+        $sql = "UPDATE donors set name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district' where id_no = $id ";
         $result = mysqli_query($connection,$sql);
-        
+
         if($result)
         {
             echo "<script type ='text/JavaScript'>";  
