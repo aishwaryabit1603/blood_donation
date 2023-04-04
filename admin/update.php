@@ -4,7 +4,7 @@ try {
 
   if(isset($_POST['update'])) {
     if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) && !empty($_POST['state_input']) && !empty($_POST['district_input'])) {
-      $ids = $_POST['id'];
+      $ids = mysqli_real_escape_string($connection, $_POST['id']);
       $f_name = strtolower($_POST['name']) ;
       $f_name = ucfirst($f_name);
       $birthday = $_POST['dob'];
