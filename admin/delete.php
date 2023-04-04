@@ -15,7 +15,7 @@
         if($result)
         {
             echo "<script>alert('Deleted Successfully !!')</script>";
-            header('Location : C:\xampp\htdocs\blood_donation\admin\display.php');
+            header('Location : http://localhost:8080/blood_donation/admin/display.php');
         }
         else
         {
