@@ -16,10 +16,14 @@
 
         $ids = $_GET['update_id'];
 
-        $sql = "UPDATE donors SET name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district' WHERE id_no = $ids ";
-        $result = mysqli_query($connection,$sql);
+        $sql = "UPDATE donors 
+                SET name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',
+                mobile_no = '$mobile',email = '$email',state = '$state',district = '$district' 
+                WHERE id_no = $ids ";
 
-        if($result)
+        $results = mysqli_query($connection,$sql);
+
+        if($results)
         {
             echo "<script type ='text/JavaScript'>";  
             echo "alert('Updated Successfully')";
