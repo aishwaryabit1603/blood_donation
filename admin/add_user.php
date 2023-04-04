@@ -11,7 +11,7 @@
   if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']) && !empty($_POST['password_1']))
   {
       $error = 0;
-      $f_name = $_POST['name'];
+      $f_name = ucfirst($_POST['name']);
       $birthday = $_POST['dob'];
       $sex = $_POST['sex'];
       $blood = $_POST['blood_type'];
