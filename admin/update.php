@@ -67,12 +67,6 @@
       }
     }
   }  
-  else
-  {
-    echo "<script type ='text/JavaScript'>";  
-    echo "alert('Registration Failed')";  
-    echo '</script>';
-  }
   echo "<script type='text/javascript'>";
   echo 'window.location.href = "http://localhost:8080/blood_donation/admin/display.php" ';
   echo '</script>';
