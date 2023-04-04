@@ -37,7 +37,7 @@
 
         if($error == 0)
         {
-            $sql = "UPDATE donors set password = '$pw_1',name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district'";
+            $sql = "UPDATE donors set name = '$f_name',dob = '$birthday',sex = '$sex',bloodgroup = '$blood',mobile_no = '$mobile',email = '$email',state = '$state',district = '$district'";
             $result = mysqli_query($connection,$sql);
             if($result)
             {
