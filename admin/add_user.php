@@ -1,11 +1,5 @@
 <?php
     require 'C:\xampp\htdocs\blood_donation\db_connection.php';
-    session_start();
-    if($_SESSION['admin'] != true)
-    {
-      echo "<script>alert('login first !!')</script>";
-      header('Location: admin_login.php');
-    }
   if(isset($_POST['add']))
   {
   if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']) && !empty($_POST['password_1']))
