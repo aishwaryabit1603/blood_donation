@@ -6,7 +6,7 @@ try {
         require 'C:\xampp\htdocs\blood_donation\db_connection.php';
 
         // Sanitize input data
-        $ids = filter_var($_POST['id'], FILTER_SANITIZE_STRING);
+        $ids = $_POST['id'];
         $f_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
         $birthday = filter_var($_POST['dob'], FILTER_SANITIZE_STRING);
         $sex = filter_var($_POST['sex'], FILTER_SANITIZE_STRING);
@@ -26,7 +26,7 @@ try {
           echo "alert('Please fill all required fields')";
           echo '</script>';
           echo '<script type = "text/JavaScript">'; 
-          echo 'window.location.href = "http://localhost:8080/blood_donation/admin/update.html" ';
+          echo 'window.location.href = "http://localhost:8080/blood_donation/admin/update.php" ';
           echo '</script>';
         }
         
