@@ -1,10 +1,10 @@
 <?php
   require 'C:\xampp\htdocs\blood_donation\db_connection.php';
-  $id = $_GET['update_id'];
-  if(isset($_POST['update']))
+  if(isset($_POST['update']) && isset($_GET['update_id']))
   {
     if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']))
     {
+        $id = $_GET['update_id'];
         $error = 0;
         $f_name = ucfirst($_POST['name']);
         $birthday = $_POST['dob'];
