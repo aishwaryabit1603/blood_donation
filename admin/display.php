@@ -6,8 +6,6 @@
        echo "<script>alert('login first !!')</script>";
        header('Location: admin_login.php');
     }
-    
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +90,10 @@
         }
     </style>
     <script>
-        
+  // Override the browser back button
+    window.addEventListener('popstate', function(event) {
+        window.location.replace('index.php');
+    });
     </script>
 </head>
 <body>
