@@ -1,7 +1,6 @@
 <?php
      require 'C:\xampp\htdocs\blood_donation\db_connection.php';
      session_start();
-     session_register("row_id");
      if($_SESSION['admin'] != true)
      {
        echo "<script>alert('login first !!')</script>";
