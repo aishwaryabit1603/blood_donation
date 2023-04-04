@@ -330,7 +330,7 @@
       <div class="form__group">
         <select id="state_input" name="state_input" class="form__input"  required>
         </select>
-        <select name="district_input" id="district_input" class="form__input" required>
+        <select name="district_input" id="district_input" class="form__input" value = "<?php echo $row['district'] ?>" required>
         </select>
         <script language="javascript">
             populateStates("state_input", "district_input");
