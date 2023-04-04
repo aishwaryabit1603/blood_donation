@@ -282,15 +282,15 @@
           />
         </div>
         <div class="form__group">
-          <input type="text" name = "name"  class="form__input" required />
+          <input type="text" name = "name" placeholder = "Name" class="form__input" required />
         </div>
         
         <div class="form__group">
-          <input type="email"  name = "email" class="form__input" required />
+          <input type="email" placeholder = "email"  name = "email" class="form__input" required />
         </div>
         
         <div class="form__group">
-          <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form__input" name = "mobile_no" required/>
+          <input type="tel" placeholder = "123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form__input" name = "mobile_no" required/>
         </div>
         <div class="form__group">
             
