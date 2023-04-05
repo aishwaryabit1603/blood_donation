@@ -13,29 +13,6 @@
       $state = filter_var($_POST['state_input'], FILTER_SANITIZE_STRING);
       $district = filter_var($_POST['district_input'], FILTER_SANITIZE_STRING);
 
-      // Validate input data
-      if(empty($mobile) || empty($email) || empty($state) || empty($district))
-      {
-      // Handle validation errors
-        echo '<script type = "text/JavaScript">';  
-        echo "alert('Please fill all required fields')";
-        echo '</script>';
-        echo '<script type = "text/JavaScript">'; 
-        echo 'window.location.href = "http://localhost:8080/blood_donation/update.php" ';
-        echo '</script>';
-      }
-
-      if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-      {
-      // Handle email validation error
-        echo '<script type = "text/JavaScript">';  
-        echo "alert('Invalid email format')";
-        echo '</script>';
-        echo '<script type = "text/JavaScript">'; 
-        echo 'window.location.href = "http://localhost:8080/blood_donation/update.php" ';
-        echo '</script>';
-      }
-
       // Update query
       $res = "UPDATE donors 
       SET mobile_no = '$mobile', email = '$email', state = '$state', district = '$district' 
