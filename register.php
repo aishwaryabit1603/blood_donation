@@ -2,6 +2,7 @@
   require 'db_connection.php';
   if(isset($_POST['register']))
   {
+    echo "1";
     $error = 0;
     $f_name = strtolower($_POST['name']);
     $f_name = ucfirst($f_name);
@@ -43,6 +44,7 @@
 
     if($error == 0)
     {
+      echo "2";
       $query = "Select * from donors where email = '$email' || mobile_no = '$mobile' ";
       $res = mysqli_query($connection,$query);
       if($res)
@@ -55,6 +57,7 @@
       }
       else
       {
+        echo "3";
           $query1 = "INSERT INTO donors(password, name, dob, sex, bloodgroup, mobile_no, email, state, district)
           VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
           $result = mysqli_query($connection,$query1);
@@ -71,6 +74,13 @@
           }
       }
     }
+  }
+  else
+  {
+    echo '<script>';
+    echo 'alert("Registration UnSuccessful !! ")';
+    echo '</script>';
+    header('Location:register.html');
   }
 ?>
 <!DOCTYPE html>

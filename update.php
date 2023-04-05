@@ -9,19 +9,16 @@
   // if connection fails alert message box
   if(!$connection)
   {
-      die('Connect not Connect: '.mysqli_error($connection));
+    die('Connect not Connect: '.mysqli_error($connection));
   }
-
-  session_start();
-  $id = $_SESSION['email']; 
 
   if(isset($_POST['update'])) 
   {
-    if(!empty($_POST['mobile_no']) && !empty($_POST['state_input']) && !empty($_POST['district_input']))
-    {
+       $email = $_POST['email'];
+       $sql_query = 
     // Sanitize input data
       $mobile = filter_var($_POST['mobile_no'], FILTER_SANITIZE_STRING);
-      $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+      
       $state = filter_var($_POST['state_input'], FILTER_SANITIZE_STRING);
       $district = filter_var($_POST['district_input'], FILTER_SANITIZE_STRING);
 
@@ -44,7 +41,6 @@
         echo '</script>';
       }
     }
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -296,6 +292,10 @@
         <div class="form__group">
           <input type="text" value = "<?php echo $_SESSION['user'] ?>" class="form__input" style = "background-color:white;" disabled/>
         </div>
+
+        <div class="form__group">
+          <input type="text"  class="form__input" name = "email" placeholder = "Enter your orignal email" style = "background-color:white;" required/>
+        </div>
         
         <div class="form__group">
           <input type="tel" placeholder = "123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form__input" name = "mobile_no" required/>
@@ -313,7 +313,7 @@
         </div>
 
         <div class="form__group">
-          <input type="submit" value = "Update" class="form__input" name = "update" required/>
+          <input type="submit" value = "update" class="form__input" name = "update" required/>
         </div>
 
         <button class="btn" type="reset">Clear</button>
