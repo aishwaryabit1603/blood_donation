@@ -189,14 +189,6 @@
                   </div>
             </div>
       </div>
-      <div class="projects">
-          <h3></h3>
-          <div class="projects_data">
-                <div class="data">
-                  <h4><a href="update.php" style="color: red" style="font-size:30px";>UPDATE HERE</a></h4>
-                </div>
-          </div>
-      </div>
     
       <div class="projects">
           <h3></h3>
