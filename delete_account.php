@@ -1,6 +1,7 @@
 <?php
     require 'C:\xampp\htdocs\blood_donation\db_connection.php';
     $id = $_GET['email'];
+    
     $sql = "DELETE FROM donors WHERE id_no = '$id' ";
     $stmt = mysqli_query($connection, $sql);
     if($stmt)
