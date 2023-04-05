@@ -5,7 +5,7 @@
 
   if(isset($_POST['update'])) 
   {
-    if(!empty($_POST['mobile_no']) && !empty($_POST['email']) && !empty($_POST['state_input']) && !empty($_POST['district_input']))
+    if(!empty($_POST['mobile_no']) && !empty($_POST['state_input']) && !empty($_POST['district_input']))
     {
     // Sanitize input data
       $mobile = filter_var($_POST['mobile_no'], FILTER_SANITIZE_STRING);
