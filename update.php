@@ -305,7 +305,7 @@
           />
         </div>
         <div class="form__group">
-          <input type="text" value = "<?php echo $_SESSION['user'] ?>;" class="form__input" style = "background-color:white;" disabled/>
+          <input type="text" value = "<?php echo $_SESSION['user'] ?>" class="form__input" style = "background-color:white;" disabled/>
         </div>
         
         <div class="form__group">
