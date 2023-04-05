@@ -202,7 +202,7 @@
           <h3></h3>
           <div class="projects_data">
                 <div class="data">
-                  <h4><a href="logout.php" style="color: red" style="font-size:30px";>Log Out</a></h4>
+                  <h4><a href="logout.php" style="color: red" style="font-size:30px";>LOG OUT</a></h4>
                 </div>
           </div>
       </div>
@@ -210,7 +210,7 @@
           <h3></h3>
           <div class="projects_data">
                 <div class="data">
-                  <h4><a href="delete_account.php" style="color: red" style="font-size:30px";>Delete Account</a></h4>
+                  <h4><a href="delete_account.php" style="color: red" style="font-size:30px";>DELETE ACCOUNT</a></h4>
                 </div>
           </div>
       </div>
