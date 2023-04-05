@@ -32,8 +32,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
-      width: 500px;
-      height:800px;
+      width: 700px;
+      height:600px;
       display: flex;
       box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
     }
