@@ -55,7 +55,6 @@
             echo '<script>';
             echo 'alert("USER ALREADY EXISTS")';
             echo '</script>';
-
             header('location: register.html');
           }
           else
