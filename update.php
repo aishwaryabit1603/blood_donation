@@ -16,7 +16,7 @@
       // Update query
       $res = "UPDATE donors 
       SET mobile_no = '$mobile', email = '$email', state = '$state', district = '$district' 
-      WHERE id_no = '.$id.' ";
+      WHERE id_no = '$id' ";
 
       // Execute query
       $results = mysqli_query($connection, $res);
