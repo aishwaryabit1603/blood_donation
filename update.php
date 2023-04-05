@@ -305,7 +305,7 @@
           />
         </div>
         <div class="form__group">
-          <input type="text" name = "<?php echo $_SESSION['user'] ?>;" placeholder = "Name" class="form__input" disabled />
+          <input type="text" name = "<?php echo $_SESSION['user'] ?>;" class="form__input" disabled />
         </div>
         
         <div class="form__group">
