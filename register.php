@@ -80,7 +80,7 @@
     echo '<script>';
     echo 'alert("Registration UnSuccessful !! ")';
     echo '</script>';
-    header('Location:register.html');
+    header('Location:register.php');
   }
 ?>
 <!DOCTYPE html>
