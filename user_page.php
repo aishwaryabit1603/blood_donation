@@ -12,8 +12,8 @@
   <head>
     <title>USER PAGE</title>
     <link rel="icon" type="image/x-icon" href="images\icon2.ico" />
-    <style>
-          @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+  <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
     *{
       margin: 0;
@@ -141,6 +141,7 @@
           {
             while($result = mysqli_fetch_array($query_run))
             {
+              $_SESSION['user'] = $result['name'];
               $name = $result['name'];
               $blood = $result['bloodgroup'];
               $email = $result['email'];
@@ -150,6 +151,7 @@
             }
           }
         }
+        
       ?>
       <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
@@ -188,14 +190,30 @@
             </div>
       </div>
       <div class="projects">
-            <h3></h3>
-            <div class="projects_data">
-                 <div class="data">
-                   <h4><a href="logout.php" style="color: red" style="font-size:30px";>Log Out
-        </a></h4>
-              </div>
-            </div>
-    </div>
+          <h3></h3>
+          <div class="projects_data">
+                <div class="data">
+                  <h4><a href="update.php" style="color: red" style="font-size:30px";>UPDATE HERE</a></h4>
+                </div>
+          </div>
+      </div>
+    
+      <div class="projects">
+          <h3></h3>
+          <div class="projects_data">
+                <div class="data">
+                  <h4><a href="logout.php" style="color: red" style="font-size:30px";>Log Out</a></h4>
+                </div>
+          </div>
+      </div>
+      <div class="projects">
+          <h3></h3>
+          <div class="projects_data">
+                <div class="data">
+                  <h4><a href="delete_account.php" style="color: red" style="font-size:30px";>Delete Account</a></h4>
+                </div>
+          </div>
+      </div>
 </div>
     </div>
   </body>

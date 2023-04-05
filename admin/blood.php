@@ -207,7 +207,6 @@
 <section class="articles">
   <article>
     <div class="article-wrapper">
-        <center><img  src="C:\xampp\htdocs\blood_donation\images\O+.jpg" width = "200";alt="" /></center>
       <div class="article-body">
         <h2>BLOOD GROUP : O+</h2>
         <p>
@@ -218,7 +217,6 @@
   </article>
   <article>
     <div class="article-wrapper">
-        <center><img width = "200"; src="C:\xampp\htdocs\blood_donation\images\O-.jpg" alt="" /></center>
       <div class="article-body">
         <h2>BLOOD GROUP : O-</h2>
         <p>
@@ -229,7 +227,6 @@
   </article>
   <article>
     <div class="article-wrapper">
-        <center><img width = "200"; src="C:\xampp\htdocs\blood_donation\images\A+.png" alt="" /></center>
       <div class="article-body">
         <h2>BLOOD GROUP : A+</h2>
         <p>
@@ -240,7 +237,6 @@
   </article>
   <article>
     <div class="article-wrapper">
-        <center><img width = "200"; src="C:\xampp\htdocs\blood_donation\images\A-.png" alt="" /></center>
       <div class="article-body">
         <h2>BLOOD GROUP : A-</h2>
         <p>
@@ -251,7 +247,6 @@
   </article>
   <article>
     <div class="article-wrapper">
-        <center><img width = "200"; src="C:\xampp\htdocs\blood_donation\images\B+.jpg" alt="" /></center>
       <div class="article-body">
         <h2>BLOOD GROUP : B+</h2>
         <p>
@@ -262,7 +257,6 @@
   </article>
   <article>
     <div class="article-wrapper">
-        <center><img width = "200"; src="C:\xampp\htdocs\blood_donation\images\B-.jpg" alt="" /></center>
       <div class="article-body">
         <h2>BLOOD GROUP : B-</h2>
         <p>
@@ -273,7 +267,6 @@
   </article>
   <article>
     <div class="article-wrapper">
-        <center><img width = "200"; src="C:\xampp\htdocs\blood_donation\images\AB-.jpg" alt="" /></center>
       <div class="article-body">
         <h2>BLOOD GROUP : AB-</h2>
         <p>
@@ -284,7 +277,6 @@
   </article>
   <article>
     <div class="article-wrapper">
-        <center><img width = "200"; src="C:\xampp\htdocs\blood_donation\images\AB+.jpg" alt="" /></center>
       <div class="article-body">
         <h2>BLOOD GROUP : AB+</h2>
         <p>

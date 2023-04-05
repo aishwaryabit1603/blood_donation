@@ -1,87 +1,61 @@
 <?php
-require 'C:\xampp\htdocs\blood_donation\db_connection.php';
-try {
-  if(isset($_POST['update'])) {
-    if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) && !empty($_POST['state_input']) && !empty($_POST['district_input'])) {
-        require 'C:\xampp\htdocs\blood_donation\db_connection.php';
+  require 'C:\xampp\htdocs\blood_donation\db_connection.php';
+  session_start();
+  $id = $_SESSION['email']; 
 
-        // Sanitize input data
-        $ids = $_POST['id'];
-        $f_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-        $birthday = filter_var($_POST['dob'], FILTER_SANITIZE_STRING);
-        $sex = filter_var($_POST['sex'], FILTER_SANITIZE_STRING);
-        $blood = filter_var($_POST['blood_type'], FILTER_SANITIZE_STRING);
-        $mobile = filter_var($_POST['mobile_no'], FILTER_SANITIZE_STRING);
-        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-        $state = filter_var($_POST['state_input'], FILTER_SANITIZE_STRING);
-        $district = filter_var($_POST['district_input'], FILTER_SANITIZE_STRING);
-        
-        // Validate input data
-        if(empty($ids) || empty($f_name) || empty($birthday) || empty($sex) || empty($blood) || empty($mobile) || empty($email) || empty($state) || empty($district)) {
-          // Handle validation errors
-          echo '<script type = "text/JavaScript">'; 
-          echo  $ids;
-          echo '</script>';
-          echo '<script type = "text/JavaScript">';  
-          echo "alert('Please fill all required fields')";
-          echo '</script>';
-          echo '<script type = "text/JavaScript">'; 
-          echo 'window.location.href = "http://localhost:8080/blood_donation/admin/update.php" ';
-          echo '</script>';
-        }
-        
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          // Handle email validation error
-          echo '<script type = "text/JavaScript">';  
-          echo "alert('Invalid email format')";
-          echo '</script>';
-          echo '<script type = "text/JavaScript">'; 
-          echo 'window.location.href = "http://localhost:8080/blood_donation/admin/update.html" ';
-          echo '</script>';
-        }
-        
-        // Update query
-        $res = "UPDATE donors 
-                SET name = '$f_name', dob = '$birthday', sex = '$sex', bloodgroup = '$blood',
-                mobile_no = '$mobile', email = '$email', state = '$state', district = '$district' 
-                WHERE id_no = '$ids'";
-        
-        // Execute query
-        $results = mysqli_query($connection, $res);
-        
-        // Handle query result
-        if($results) {
-          echo '<script type = "text/JavaScript">';  
-          echo "alert('Updated Successfully')";
-          echo '</script>';
-          echo '<script type = "text/JavaScript">'; 
-          echo 'window.location.href = "http://localhost:8080/blood_donation/admin/display.php" ';
-          echo '</script>';
-        } else {
-          echo '<script type = "text/JavaScript">';  
-          echo "alert('Error updating record: " . mysqli_error($connection) . "')";
-          echo '</script>';
-        }
-      
+  if(isset($_POST['update'])) 
+  {
+    if(!empty($_POST['mobile_no']) && !empty($_POST['email']) && !empty($_POST['state_input']) && !empty($_POST['district_input']))
+    {
+    // Sanitize input data
+      $mobile = filter_var($_POST['mobile_no'], FILTER_SANITIZE_STRING);
+      $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+      $state = filter_var($_POST['state_input'], FILTER_SANITIZE_STRING);
+      $district = filter_var($_POST['district_input'], FILTER_SANITIZE_STRING);
 
-      if($results) {
+      // Validate input data
+      if(empty($mobile) || empty($email) || empty($state) || empty($district))
+      {
+      // Handle validation errors
+        echo '<script type = "text/JavaScript">';  
+        echo "alert('Please fill all required fields')";
+        echo '</script>';
+        echo '<script type = "text/JavaScript">'; 
+        echo 'window.location.href = "http://localhost:8080/blood_donation/update.php" ';
+        echo '</script>';
+      }
+
+      if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+      {
+      // Handle email validation error
+        echo '<script type = "text/JavaScript">';  
+        echo "alert('Invalid email format')";
+        echo '</script>';
+        echo '<script type = "text/JavaScript">'; 
+        echo 'window.location.href = "http://localhost:8080/blood_donation/update.php" ';
+        echo '</script>';
+      }
+
+      // Update query
+      $res = "UPDATE donors 
+      SET mobile_no = '$mobile', email = '$email', state = '$state', district = '$district' 
+      WHERE id_no = '.$id.' ";
+
+      // Execute query
+      $results = mysqli_query($connection, $res);
+
+      // Handle query result
+      if($results)
+      {
         echo '<script type = "text/JavaScript">';  
         echo "alert('Updated Successfully')";
         echo '</script>';
-        echo '<script type = "text/JavaScript">'; 
-        echo 'window.location.href = "http://localhost:8080/blood_donation/admin/display.php" ';
+        echo '<script type = "text/JavaScript">';
+        echo 'window.location.href = "http://localhost:8080/blood_donation/user_page.php" ';
         echo '</script>';
-      } else {
-        throw new Exception(mysqli_error($connection));
       }
     }
   }
-} catch(mysqli_sql_exception $e) {
-    echo 'Message: ' . $e->getMessage();
-    echo "<script type ='text/JavaScript'>"; 
-    echo '</script>';
-  }
-  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -330,47 +304,14 @@ try {
             "
           />
         </div>
-        <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>" >
         <div class="form__group">
-          <input type="text" name = "name" placeholder = "Name" class="form__input" required />
-        </div>
-        
-        <div class="form__group">
-          <input type="email" placeholder = "email"  name = "email" class="form__input" required />
+          <input type="text" name = "<?php echo $_SESSION['user'] ?>;" placeholder = "Name" class="form__input" disabled />
         </div>
         
         <div class="form__group">
           <input type="tel" placeholder = "123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form__input" name = "mobile_no" required/>
         </div>
         <div class="form__group">
-            
-        <div class="form__group">
-          <input type="date"  name = "dob" class="form__input" required >
-        </div>
-        <div class="form__group">
-          
-        <div class="form__group">
-           <select name = "sex" class="form__input" required/>
-                <option value = "" disabled selected>Gender</option>
-                <option value = "male">Male</option>
-                <option value = "female">Female</option>
-                <option value = "other">Other</option>
-           </select>
-        </div>
-        
-        <div class="form__group">
-          <select name = "blood_type"  class="form__input" required>
-            <option value = "" selected disabled required>BLOOD TYPE</option>
-            <option value = "A+">A RhD positive (A+)</option>
-            <option value = "A-">A RhD negative (A-)</option>
-            <option value = "B+">B RhD positive (B+)</option>
-            <option value = "B-">B RhD negative (B-)</option>
-            <option value = "O+">O RhD positive (O+)</option>
-            <option value = "O-">O RhD negative (O-)</option>
-            <option value = "AB+">AB RhD positive (AB+)</option>
-            <option value = "AB-">AB RhD negative (AB-)</option>
-          </select>
-        </div>
         
       <div class="form__group">
         <select id="state_input" name="state_input" class="form__input"  required>
