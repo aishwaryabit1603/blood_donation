@@ -9,7 +9,7 @@
     $sex = $_POST['sex'];
     $blood = $_POST['blood_type'];
     $mobile = $_POST['mobile_no'];
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $email = $_POST['email'];
     $state = $_POST['state_input'];
     $district = $_POST['district_input'];
     $pw_1  = $_POST['password_1'];
@@ -50,16 +50,14 @@
         $num = mysqli_num_rows($res);
         if($num > 0)
         {
-          echo '<script>';
-          echo "alert('USER ALREADY EXISTS')";
-          echo '</script>';
-          header('location: register.html');
+          header('location: login.html');
         }
       }
       else
       {
-          $sql = "INSERT INTO `donors`(`password`, `name`, `dob`, `sex`, `bloodgroup`, `mobile_no`, `email`, `state`, `district`) VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
-          $result = mysqli_query($connection,$sql);
+          $query1 = "INSERT INTO donors(password, name, dob, sex, bloodgroup, mobile_no, email, state, district)
+          VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
+          $result = mysqli_query($connection,$query1);
           if($result)
           {
             echo '<script>';
