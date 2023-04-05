@@ -28,7 +28,7 @@
         echo "alert('Updated Successfully')";
         echo '</script>';
         echo '<script type = "text/JavaScript">';
-        echo 'window.location.href = "http://localhost:8080/blood_donation/user_page.php" ';
+        echo 'window.location.href = "http://localhost:8080/blood_donation/login.html" ';
         echo '</script>';
       }
     }
