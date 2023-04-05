@@ -194,7 +194,7 @@
           <h3></h3>
           <div class="projects_data">
                 <div class="data">
-                  <h4><a href="logout.php" style="color: red" style="font-size:30px";>LOG OUT</a></h4>
+                  <h4><a href="logout.php?id=<?php echo $email ?>" style="color: red" style="font-size:30px";>LOG OUT</a></h4>
                 </div>
           </div>
       </div>
