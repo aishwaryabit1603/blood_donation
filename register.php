@@ -1,11 +1,12 @@
 <?php
   require 'db_connection.php';
-  if(isset($_POST['submit']))
+  if(isset($_POST['register']))
   {
   if(!empty($_POST['name']) && !empty($_POST['dob']) && !empty($_POST['sex']) && !empty($_POST['blood_type']) && !empty($_POST['mobile_no']) && !empty($_POST['email']) &&!empty($_POST['state_input']) && !empty($_POST['district_input']) && !empty($_POST['password_1']) &&!empty($_POST['password_2']))
   {
       $error = 0;
-      $f_name = $_POST['name'];
+      $f_name = strtolower($_POST['name']);
+      $f_name = ucfirst($f_name);
       $birthday = $_POST['dob'];
       $sex = $_POST['sex'];
       $blood = $_POST['blood_type'];
@@ -51,7 +52,10 @@
           $num = mysqli_num_rows($res);
           if($num > 0)
           {
-            echo '<script>alert("USER ALREADY EXISTS")</script>';
+            echo '<script>';
+            echo 'alert("USER ALREADY EXISTS")';
+            echo '</script>';
+
             header('location: register.html');
           }
           else
@@ -60,7 +64,9 @@
             $result = mysqli_query($connection,$sql);
             if($result)
             {
-              echo '<script>alert("Registration Successful !! ")</script>';
+              echo '<script>';
+              echo 'alert("Registration Successful !! ")';
+              echo '</script>';
               header('Location:login.html');
             }
             else
