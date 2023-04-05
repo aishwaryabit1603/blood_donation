@@ -15,7 +15,7 @@
     $ab_pos = 0;
     $ab_neg = 0;
 
-    while($row = mysqli_fetch_array($result))
+    while($row = mysqli_fetch_array($query))
     {
         if($row['bloodgroup'] == "O+"){
              $o_pos = $o_pos + 1;
