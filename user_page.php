@@ -141,10 +141,9 @@
           {
             while($result = mysqli_fetch_array($query_run))
             {
-              $_SESSION['user'] = $result['name'];
               $name = $result['name'];
               $blood = $result['bloodgroup'];
-              $email = $result['email'];
+              $emailid = $result['email'];
               $number = $result['mobile_no'];
               $state = $result['state'];
               $district = $result['district'];
@@ -168,7 +167,7 @@
             <div class="info_data">
                  <div class="data">
                    <h4>Email</h4>
-                    <p><?php echo $email; ?></p>
+                    <p><?php echo $emailid; ?></p>
                  </div>
                  <div class="data">
                    <h4>Phone</h4>

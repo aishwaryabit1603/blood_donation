@@ -12,5 +12,6 @@
     {
         die(mysqli_error($connection));
     }
+    mysqli_close($connection);
     
 ?>
