@@ -147,9 +147,9 @@
                     <tr>
                         <th>Name</th>
                         <th>Gender</th>
-                        <th>Email</th>
                         <th>Blood Type</th>
                         <th>Mobile No</th>
+                        <th>Email</th>
                         <th>State</th>
                         <th>district</th>
                     </tr>
