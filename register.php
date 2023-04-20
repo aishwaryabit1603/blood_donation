@@ -27,7 +27,7 @@
         if(is_string($birthday)) {
             $birthday = strtotime($birthday);
         }
-        $upper = 60;
+        
         // check
         // 31536000 is the number of seconds in a 365 days year.
         if(time() - $birthday < $age * 31536000)  {
