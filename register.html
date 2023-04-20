@@ -91,6 +91,20 @@
         button.addEventListener('click', function() {
           form.classList.add('form--no') 
         });
+
+        // Validating Name has only Alphabets and Spaces
+        function validateInput() {
+        var inputField = document.getElementById("inputField");
+        var inputValue = inputField.value;
+        var alphaExp = /^[a-zA-Z\s]+$/;
+        
+        if (!inputValue.match(alphaExp)) {
+          alert("Please enter only alphabets and spaces.");
+          inputField.value = "";
+          return false;
+        }
+        return true;
+      }
     </script>
     <style>
       $font-family:   "Roboto";
@@ -269,7 +283,7 @@
         </div>
 
         <div class="form__group">
-          <input type="text" name = "name" placeholder="Name" class="form__input" required />
+          <input type="text" name = "name" placeholder="Name" class="form__input" id="inputField" onblur="validateInput()" required />
         </div>
         
         <div class="form__group">
