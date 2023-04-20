@@ -76,13 +76,13 @@
     else
     {
       echo '<script>alert("Registration UnSuccessful !! ");</script>';
-      header('Location:register.php');
+      header('Location:register.html');
     }
   }
   else
   {
     echo '<script>alert("Registration UnSuccessful !! ");</script>';
-    header('Location:register.php');
+    header('Location:register.html');
   }
 ?>
 <!DOCTYPE html>
