@@ -45,7 +45,6 @@
     {
       $query = "Select * from donors where email = '$email' || mobile_no = '$mobile' ";
       $res = mysqli_query($connection,$query);
-      echo $res;
       if($res)
       {
         $num = mysqli_num_rows($res);
