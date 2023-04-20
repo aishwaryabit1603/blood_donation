@@ -73,6 +73,11 @@
           }
       }
     }
+    else
+    {
+      echo '<script>alert("Registration UnSuccessful !! ");</script>';
+      header('Location:register.php');
+    }
   }
   else
   {
