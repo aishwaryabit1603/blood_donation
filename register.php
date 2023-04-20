@@ -52,6 +52,7 @@
         $num = mysqli_num_rows($res);
         if($num > 0)
         {
+          echo '<script>alert("Donor Already Exists !!")</script>';
           header('location: login.html');
         }
       }
