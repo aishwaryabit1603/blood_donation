@@ -51,7 +51,7 @@
         if($num > 0)
         {
           echo '<script>alert("Donor Already Exists !!")</script>';
-          header('location: login.html');
+          header('location:login.html');
         }
       }
       else
