@@ -47,9 +47,11 @@
       $res = mysqli_query($connection,$query);
       if($res)
       {
+        echo "m";
         $num = mysqli_num_rows($res);
         if($num > 0)
         {
+          echo "n";
           header('location:login.html');
         }
       }
