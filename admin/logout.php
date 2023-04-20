@@ -1,5 +1,5 @@
 <?php
     session_start();
     unset($_SESSION['email']);
-    header('location:C:\xampp\htdocs\blood_donation\index.html');
+    echo '<script>window.location="http://localhost:8080/blood_donation/"</script>';
 ?>
