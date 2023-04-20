@@ -78,13 +78,13 @@
     else
     {
       echo '<script>alert("Registration UnSuccessful !! ");</script>';
-      header('Location:register.html');
+      header('Location:index.html');
     }
   }
   else
   {
     echo '<script>alert("Registration UnSuccessful !! ");</script>';
-    header('Location:register.html');
+    header('Location:index.html');
   }
 ?>
 <!DOCTYPE html>
