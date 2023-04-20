@@ -56,7 +56,6 @@
       }
       else
       {
-        echo "3";
           $query1 = "INSERT INTO donors(password, name, dob, sex, bloodgroup, mobile_no, email, state, district)
           VALUES ('$pw_1','$f_name','$birthday','$sex','$blood','$mobile','$email','$state','$district')";
           $result = mysqli_query($connection,$query1);
