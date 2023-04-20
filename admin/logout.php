@@ -1,5 +1,5 @@
 <?php
     session_start();
     unset($_SESSION['email']);
-    header('location:index.html');
+    header('location:C:\xampp\htdocs\blood_donation\index.html');
 ?>
