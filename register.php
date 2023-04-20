@@ -76,9 +76,7 @@
   }
   else
   {
-    echo '<script>';
-    echo 'alert("Registration UnSuccessful !! ")';
-    echo '</script>';
+    echo '<script>alert("Registration UnSuccessful !! ");</script>';
     header('Location:register.php');
   }
 ?>
