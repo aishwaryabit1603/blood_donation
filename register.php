@@ -2,7 +2,6 @@
   require 'db_connection.php';
   if(isset($_POST['register']))
   {
-    echo "1";
     $error = 0;
     $f_name = strtolower($_POST['name']);
     $f_name = ucfirst($f_name);
@@ -44,12 +43,11 @@
 
     if($error == 0)
     {
-      echo "2";
       $query = "Select * from donors where email = '$email' || mobile_no = '$mobile' ";
       $res = mysqli_query($connection,$query);
+      echo $res;
       if($res)
       {
-        echo "m";
         $num = mysqli_num_rows($res);
         if($num > 0)
         {
